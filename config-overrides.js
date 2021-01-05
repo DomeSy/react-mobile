@@ -1,7 +1,20 @@
 const { override, fixBabelImports, addLessLoader, addWebpackAlias } = require('customize-cra');
 const path = require('path')
-const fs = require('fs')
 const theme = require('./src/style/theme.jsx')
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
+
+const addCustomize = () => config => {
+  if (process.env.NODE_ENV === 'production') {
+    // 添加js打包gzip配置
+    config.plugins.push(
+      new CompressionWebpackPlugin({
+        test: /\.js$|\.css$/,
+        threshold: 1024,
+      }),
+    )
+  }
+  return config;
+}
 
 module.exports = override(
   fixBabelImports('import', {
@@ -17,5 +30,6 @@ module.exports = override(
   }),
   addWebpackAlias({
     ["@"]: path.resolve(__dirname, "src")
-  })
+  }),
+  addCustomize(),
 );
