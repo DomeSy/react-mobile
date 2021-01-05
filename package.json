@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd-mobile": "^2.3.4",
+    "compression-webpack-plugin": "^5.0.1",
     "customize-cra": "^1.0.0",
     "react": "^17.0.1",
     "react-app-rewired": "^2.1.8",
@@ -42,7 +43,6 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.13.3",
-    "compression-webpack-plugin": "^7.1.1",
     "less": "^4.0.0",
     "less-loader": "^7.2.1"
   }
