@@ -21,5 +21,13 @@
 ## 项目配置
 
   - [x] react-app-rewired,customize-cra :react-app-rewired的作用就是在不eject的情况下,覆盖create-react-app的配置形成config-overrides.js
+  - [x] babel-plugin-import 是一个用于按需加载组件代码和样式的 babel 插件
+  - [x] antd-mobile:移动端组件库
+  - [x] compression-webpack-plugin:  压缩js为gzip
+  - [x] less less-loader 配置less
 
 ## 项目功能
+
+  - [x] antd-mobile
+  - [x] less
+  - [x] 别名
