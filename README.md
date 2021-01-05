@@ -14,6 +14,7 @@
     |   |-- components                        # 业务组件
     |   |-- pages                             # 页面模板
     |   |-- styles                            # 全局css文件
+    |   |   |-- theme.jsx                     # 全局css颜色样式
     |   |-- unilts                            # 公共方法
     |-- .gitignore                            # git忽略文件
     |-- package.js                            # 配置文件
@@ -29,5 +30,5 @@
 ## 项目功能
 
   - [x] antd-mobile
-  - [x] less
+  - [x] less（配置全局less文件）
   - [x] 别名
