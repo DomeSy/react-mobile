@@ -26,9 +26,14 @@
   - [x] antd-mobile:移动端组件库
   - [x] compression-webpack-plugin:  压缩js为gzip
   - [x] less less-loader 配置less
+  - [x] postcss-px2rem-exclude：px转化为rem
+  - [x] lib-flexible：移动端适配问题
 
 ## 项目功能
 
   - [x] antd-mobile
   - [x] less（配置全局less文件）
+  - [x] 别名
+  - [x] 装饰器
+  - [x] 开发模式下，单位px，打包模式下rem
   - [x] 别名
