@@ -1,17 +1,19 @@
-const { override, fixBabelImports, addLessLoader, addWebpackAlias } = require('customize-cra');
+const { override, fixBabelImports, addLessLoader, addWebpackAlias, addPostcssPlugins, addDecoratorsLegacy } = require('customize-cra');
 const path = require('path')
 const theme = require('./src/style/theme.jsx')
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
+// 配置开发模式和打包模式
 const addCustomize = () => config => {
   if (process.env.NODE_ENV === 'production') {
+    config.devtool = false; //去除map文件
+
     // 添加js打包gzip配置
-    config.plugins.push(
-      new CompressionWebpackPlugin({
-        test: /\.js$|\.css$/,
-        threshold: 1024,
-      }),
-    )
+    config.plugins = [...config.plugins, new CompressionWebpackPlugin({
+      test: /\.js$|\.css$/,
+      threshold: 1024,
+    })]
+  } else if(process.env.NODE_ENV === 'development'){
   }
   return config;
 }
@@ -29,7 +31,12 @@ module.exports = override(
     }
   }),
   addWebpackAlias({
-    ["@"]: path.resolve(__dirname, "src")
+    ["@components"]: path.resolve(__dirname, "src/components"),
+    ["@pages"]: path.resolve(__dirname, "src/pages"),
+    ["@assets"]: path.resolve(__dirname, "src/assets"),
+    ["@unilts"]: path.resolve(__dirname, "src/unilts")
   }),
+  process.env.NODE_ENV === 'production' ? addPostcssPlugins([require("postcss-px2rem-exclude")({ remUnit: 75, exclude: /node_modules/i })]) : null,
+  addDecoratorsLegacy(),
   addCustomize(),
 );
