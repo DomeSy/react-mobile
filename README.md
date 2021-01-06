@@ -26,9 +26,10 @@
   - [x] antd-mobile:移动端组件库
   - [x] compression-webpack-plugin:  压缩js为gzip
   - [x] less less-loader 配置less
-  - [x] postcss-px2rem-exclude：px转化为rem
+  - [x] postcss-px2rem-exclude：px转化为rem（页面以375）
   - [x] lib-flexible：移动端适配问题
-
+  - [x] @babel/plugin-proposal-decorators: 装饰器语法
+  - [x] hot-react-loader react-app-rewire-hot-loader @hot-loader/react-dom: 实现局部刷新，即同个页面上，某一处的数据修改不会让整个页面一起刷新
 ## 项目功能
 
   - [x] antd-mobile

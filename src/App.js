@@ -1,5 +1,6 @@
 import './App.less'
-import { arr } from '@/components/index'
+import { hot } from 'react-hot-loader/root'
+import { arr } from '@components/index'
 
 function App() {
   return (
@@ -10,4 +11,6 @@ function App() {
   );
 }
 
-export default App;
+const AppHot = process.env.NODE_ENV === 'development' ? hot(App) : App
+
+export default AppHot;

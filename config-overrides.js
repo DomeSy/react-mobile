@@ -36,7 +36,7 @@ module.exports = override(
     ["@assets"]: path.resolve(__dirname, "src/assets"),
     ["@unilts"]: path.resolve(__dirname, "src/unilts")
   }),
-  process.env.NODE_ENV === 'production' ? addPostcssPlugins([require("postcss-px2rem-exclude")({ remUnit: 75, exclude: /node_modules/i })]) : null,
+  process.env.NODE_ENV === 'production' ? addPostcssPlugins([require("postcss-px2rem-exclude")({ remUnit: 37.5, exclude: /node_modules/i })]) : null,
   addDecoratorsLegacy(),
   addCustomize(),
 );
