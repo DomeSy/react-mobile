@@ -8,11 +8,19 @@ const addCustomize = () => config => {
   if (process.env.NODE_ENV === 'production') {
     config.devtool = false; //去除map文件
 
+    const { promisify } = require('util');
+    const clear = require('clear')
+    const chalk = require('chalk')
+    const figlet =  promisify(require('figlet'))
+    clear()
+    const log = content => console.log(chalk.blue(content))
+    figlet('DOMESY !').then(res => log(res))
+
     // 添加js打包gzip配置
     config.plugins = [...config.plugins, new CompressionWebpackPlugin({
       test: /\.js$|\.css$/,
       threshold: 1024,
-    })]
+    })]    
   } else if(process.env.NODE_ENV === 'development'){
   }
   return config;
