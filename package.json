@@ -10,8 +10,11 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd-mobile": "^2.3.4",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
     "compression-webpack-plugin": "^5.0.1",
     "customize-cra": "^1.0.0",
+    "figlet": "^1.5.0",
     "react": "^17.0.1",
     "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.1",
@@ -19,7 +22,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "react-app-rewired start ",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
