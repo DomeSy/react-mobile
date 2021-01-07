@@ -33,6 +33,7 @@
   - [x] lib-flexible：移动端适配问题
   - [x] @babel/plugin-proposal-decorators: 装饰器语法
   - [x] hot-react-loader react-app-rewire-hot-loader @hot-loader/react-dom: 实现局部刷新，即同个页面上，某一处的数据修改不会让整个页面一起刷新
+  - [x] react-router-dom: 路由
   
 ## 项目功能
 
