@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import 'lib-flexible'
+import 'lib-flexible';
+import '@style/common.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
