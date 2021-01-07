@@ -42,6 +42,7 @@ module.exports = override(
     ["@components"]: path.resolve(__dirname, "src/components"),
     ["@pages"]: path.resolve(__dirname, "src/pages"),
     ["@assets"]: path.resolve(__dirname, "src/assets"),
+    ["@style"]: path.resolve(__dirname, "src/style"),
     ["@unilts"]: path.resolve(__dirname, "src/unilts")
   }),
   process.env.NODE_ENV === 'production' ? addPostcssPlugins([require("postcss-px2rem-exclude")({ remUnit: 37.5, exclude: /node_modules/i })]) : null,
