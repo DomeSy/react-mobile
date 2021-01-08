@@ -5,6 +5,7 @@ import App from './App';
 import 'lib-flexible';
 import '@style/common.css';
 import reportWebVitals from './reportWebVitals';
+import './mock'
 
 ReactDOM.render(
   <React.StrictMode>
