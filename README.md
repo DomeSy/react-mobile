@@ -11,6 +11,7 @@
     |-- public                                
     |-- src                                   # 开发目录
     |   |-- assets                            # 本地静态资源
+    |   |-- mock                              # 模拟接口数据
     |   |-- components                        # 业务组件
     |   |-- pages                             # 页面模板
     |   |-- styles                            # 全局css文件
@@ -34,7 +35,8 @@
   - [x] @babel/plugin-proposal-decorators: 装饰器语法
   - [x] hot-react-loader react-app-rewire-hot-loader @hot-loader/react-dom: 实现局部刷新，即同个页面上，某一处的数据修改不会让整个页面一起刷新
   - [x] react-router-dom: 路由
-  
+  - [x] axios: 请求
+  - [x] mockjs: 模拟数据
 ## 项目功能
 
   - [x] antd-mobile
@@ -42,4 +44,4 @@
   - [x] 别名
   - [x] 装饰器
   - [x] 开发模式下，单位px，打包模式下rem
-  - [x] 别名
+  - [x] 模拟数据开发列表
