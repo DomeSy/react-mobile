@@ -1,45 +1,20 @@
 import Mock from 'mockjs'
 import url from 'url'
-/*
-mock.mock()
-参数1：请求地址 选填  url
-参数2: 请求类型 选填  type
-参数3：数据模板 | 函数   
-*/
-var data = Mock.mock({
-    "data|100":[   //意思是data数组中有100条数据
-        {  //这个对象是用来写数据模板的
-          "id|+1":0,   //初始值是0每次id都+1
-          "goodsName":"@ctitle(3, 5)",   //看官网，这个名字是3-5之间的
-          "goodsPrice|+1":100,   //这个类似上面的id一个，只是初始值是从100开始的
-          "address":"@county(true)",   //这个是地址，@county(true)  对象的属性值都是mock.mock()提供的方法，直接拿过来用就可以了
-          "tel":/^1(3|5|7|8|9)\d{9}$/,   //正则写的电话后面1开头，正则不懂自己去学！！！！！！！！！！！很重要
-          "goodsImg":"@image('200x100', '#894FC4', '#FFF', 'alley')", // 图片
-          "date":'@date("yyyy-MM-dd M:dd:d")',  //时间
-          "email":"@email()",  //邮箱
-          "name":"@ctitle(10, 30)", //10-30
-          "text":"@cparagraph(1, 3)", //备注用
-          "img":"@dataImage('200x100', 'Hello')", //图片200*100
-          "datetime":'@datetime("yyyy-MM-dd A HH:mm:ss")', //"1974-01-08 PM 23:54:57"
-          "string":'@string("lower", 5)', //"string5"
-          "array|1-10": [
-            {
-              "name|+1": [
-                "Hello",
-                "Mock.js",
-                "!"
-              ]
-            }
-          ],//数组中含有数组的
-          
-          'dds':'caiyufu'
+
+let data = Mock.mock({
+    "data|2":[   
+        {  
+          "id|+1":0,   //id:初始化，
+          "name":"@ctitle(3, 5)",  // @ctitle(3,5): 随机3-5个中文字
+          "address":"@county(1)"
+
         }
     ],
     code:200,
     message:'请求数据成功'
 })
  
-console.log(data,'ddw');//打印这Mock.mock() 赋值的内容，直接在终端运行就 可以了
+console.log(data);
  
 //  .........这个是通过get  拦截的AJAX
 Mock.mock(/\goods\/goodsList/,"get",function(options){
