@@ -11,6 +11,7 @@
     |-- public                                
     |-- src                                   # 开发目录
     |   |-- assets                            # 本地静态资源
+    |   |-- router                            # 路由配置
     |   |-- mock                              # 模拟接口数据
     |   |-- components                        # 业务组件
     |   |-- pages                             # 页面模板
