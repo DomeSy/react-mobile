@@ -14,6 +14,7 @@
     |   |-- router                            # 路由配置
     |   |-- mock                              # 模拟接口数据
     |   |-- components                        # 业务组件
+    |   |   |-- Canvas                        # Canvas组件库
     |   |-- pages                             # 页面模板
     |   |-- styles                            # 全局css文件
     |   |   |-- theme.jsx                     # 全局css颜色样式
