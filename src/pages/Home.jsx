@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { LineAnimation } from '@components/Canvas'
+import { DWriteText } from '@components/Animation'
 // import axios from "axios";
 // import Mock from 'mockjs';
 // import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
@@ -37,13 +37,13 @@ export default class Home extends Component {
 
   test = () => {
 
-    console.log(this.props,'---')
+    // console.log(this.props,'---')
   }
 
   render() {
     return (
       <div>
-        <LineAnimation />
+        <DWriteText />
         {/* <div onClick={this.props.hai}>niasldll1</div> */}
         {/* <Router>
           <Link to='/'>用户</Link>
