@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react'
 import { DWriteText } from '@components/Animation'
+import ListPage from './ListPage/ListPage';
+
 // import axios from "axios";
 // import Mock from 'mockjs';
 // import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
@@ -43,7 +45,8 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <DWriteText />
+        <ListPage />
+        {/* <DWriteText /> */}
         {/* <div onClick={this.props.hai}>niasldll1</div> */}
         {/* <Router>
           <Link to='/'>用户</Link>
