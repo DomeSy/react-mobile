@@ -12,7 +12,7 @@
  *  #333333(黑色) #E5E5E5(灰色) #CCCCCC(灰色1)
  * 
  * 背景色
- *  #ECF5FD(浅青色) #C5D9E8(深青色)
+ *  #ECF5FD(浅青色) #C5D9E8(深青色) #FFFFFF
  */
 
 
@@ -28,6 +28,7 @@ const theme = {
   '@top': '#CCCCCC',
   '@border': '#ECF5FD',
   '@border1': '#C5D9E8',
+  '@white': '#FFFFFF',
 }
 
 module.exports = theme
