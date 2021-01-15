@@ -16,6 +16,9 @@
     |   |-- images                            # 图片库
     |   |-- components                        # 业务组件
     |   |   |-- Animation                     # 动画组件库
+    |   |   |-- G2                            # G2组件库
+    |   |   |-- Icon                          # 小组件
+    |   |   |-- ShowTime                      # 展示组件
     |   |-- pages                             # 页面模板
     |   |-- styles                            # 全局css文件
     |   |   |-- theme.jsx                     # 全局css颜色样式
