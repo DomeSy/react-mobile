@@ -13,6 +13,7 @@
     |   |-- assets                            # 本地静态资源
     |   |-- router                            # 路由配置
     |   |-- mock                              # 模拟接口数据
+    |   |-- images                            # 图片库
     |   |-- components                        # 业务组件
     |   |   |-- Animation                     # 动画组件库
     |   |-- pages                             # 页面模板
