@@ -26,6 +26,8 @@ const theme = {
   '@yellow': '#FFC82C',
   '@color': '#333333',
   '@top': '#CCCCCC',
+  '@border': '#ECF5FD',
+  '@border1': '#C5D9E8',
 }
 
 module.exports = theme
