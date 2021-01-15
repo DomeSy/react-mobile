@@ -12,7 +12,8 @@ export default class componentName extends Component {
       // 是否在打字中
       isTyping: false,
       //等待被打字的数组
-      waitToType: ["今天是星期一,","又要起床去上班啦TnT,","又是为了生存的一天。","那好吧，","我现在起床。"] ,
+      waitToType: ["今天是星期一,又要起床去上班啦TnT又是为了生存的一天。"],
+      // waitToType: ["今天是星期一,","又要起床去上班啦TnT,","又是为了生存的一天。","那好吧，","我现在起床。"] ,
       //延迟时间
       delayTime: this.props.delayTime || 1,
     }
