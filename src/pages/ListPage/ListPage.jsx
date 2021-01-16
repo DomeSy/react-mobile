@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { List } from '@components/ShowTime'
+import { List } from './component'
 
 import './ListPage'
 
