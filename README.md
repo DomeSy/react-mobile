@@ -20,6 +20,7 @@
     |   |   |-- Icon                          # 小组件
     |   |   |-- ShowTime                      # 展示组件
     |   |-- pages                             # 页面模板
+    |   |-- store                             # 状态库
     |   |-- styles                            # 全局css文件
     |   |   |-- theme.jsx                     # 全局css颜色样式
     |   |-- unilts                            # 公共方法
