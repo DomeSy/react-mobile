@@ -42,6 +42,7 @@ module.exports = override(
     ["@mock"]: path.resolve(__dirname, "src/mock"),
     ["@components"]: path.resolve(__dirname, "src/components"),
     ["@pages"]: path.resolve(__dirname, "src/pages"),
+    ["@store"]: path.resolve(__dirname, "src/store"),
     ["@router"]: path.resolve(__dirname, "src/router"),
     ["@images"]: path.resolve(__dirname, "src/images"),
     ["@assets"]: path.resolve(__dirname, "src/assets"),
