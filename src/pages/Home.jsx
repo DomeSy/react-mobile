@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import { appState } from '@store'
 import { DWriteText } from '@components/Animation'
 import ListPage from './ListPage/ListPage';
 
@@ -11,6 +12,8 @@ import ListPage from './ListPage/ListPage';
 // import UserPage from "@pages/Router/UserPage"
 // import LoginPage from "@pages/Router/LoginPage"
 // import _404Page from "@pages/Router/_404Page"
+import TimerView from './Mobx/TimerView';
+
 
 export default class Home extends Component {
 
@@ -45,7 +48,8 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <ListPage />
+        <TimerView appState={appState}/>
+        {/* <ListPage /> */}
         {/* <DWriteText /> */}
         {/* <div onClick={this.props.hai}>niasldll1</div> */}
         {/* <Router>
