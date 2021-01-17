@@ -8,8 +8,13 @@ const appState = observable({
   timer: 0
 });
 
+// 定义方法
+appState.resetTimer = action(function reset(){
+  appState.timer = 0
+})
+
 setInterval(
-  // 通过action来触发状态的变化
+  // 通过action来触发状态的变化 
   action(function tick(){
     appState.timer += 1
   }),
