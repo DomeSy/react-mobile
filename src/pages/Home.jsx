@@ -14,6 +14,7 @@ import ListPage from './ListPage/ListPage';
 // import _404Page from "@pages/Router/_404Page"
 import TimerView from './Mobx/TimerView';
 import TodoView from './Mobx/TodoView';
+import UseLocalStore from './Mobx/UseLocalStore';
 
 
 export default class Home extends Component {
@@ -49,6 +50,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
+        {/* <UseLocalStore /> */}
         <TodoView todoStore={todoStore}/>
         {/* <TimerView appState={appState}/> */}
         {/* <ListPage /> */}
