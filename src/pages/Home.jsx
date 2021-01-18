@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { appState } from '@store'
+import { appState, todoStore } from '@store'
 import { DWriteText } from '@components/Animation'
 import ListPage from './ListPage/ListPage';
 
@@ -13,6 +13,7 @@ import ListPage from './ListPage/ListPage';
 // import LoginPage from "@pages/Router/LoginPage"
 // import _404Page from "@pages/Router/_404Page"
 import TimerView from './Mobx/TimerView';
+import TodoView from './Mobx/TodoView';
 
 
 export default class Home extends Component {
@@ -48,7 +49,8 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <TimerView appState={appState}/>
+        <TodoView todoStore={todoStore}/>
+        {/* <TimerView appState={appState}/> */}
         {/* <ListPage /> */}
         {/* <DWriteText /> */}
         {/* <div onClick={this.props.hai}>niasldll1</div> */}
