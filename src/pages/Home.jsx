@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react'
 import { appState, todoStore } from '@store'
+// import store from '@store'
+
 import { DWriteText } from '@components/Animation'
 import ListPage from './ListPage/ListPage';
 
@@ -48,10 +50,11 @@ export default class Home extends Component {
   }
 
   render() {
+    // console.log(todoStore, '00')
     return (
       <div>
         {/* <UseLocalStore /> */}
-        <TodoView todoStore={todoStore}/>
+        <TodoView/>
         {/* <TimerView appState={appState}/> */}
         {/* <ListPage /> */}
         {/* <DWriteText /> */}

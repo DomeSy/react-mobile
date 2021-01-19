@@ -16,7 +16,7 @@ class todoView extends Component {
   render() {
 
     const { input, count } = this.state;
-    console.log(this.props)
+
     return (
       <div>
         <h1>TodoList</h1>

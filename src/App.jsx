@@ -3,15 +3,20 @@ import { hot } from 'react-hot-loader/root'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import _404Page from "@pages/Router/_404Page"
 import HomePage from "@pages/Router/HomePage"
+import { Provider } from 'mobx-react'
+import store from '@store/index'
 
 
 import Home from '@pages/Home';
 
 function App() {
+  console.log(store, '000111')
   return (
-    <div className='App'>
-      <Home />
-    </div>
+    <Provider {...store}>
+      <div className='App'>
+        <Home />
+      </div>
+    </Provider>
   );
 }
 
