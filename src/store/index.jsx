@@ -1,3 +1,8 @@
-export { default as appState } from './mobx/appState.jsx';
-export { default as todoStore } from './mobx/todoStore.jsx';
+import appState from './mobx/appState'
+import todoStore from './mobx/todoStore'
 
+
+export default {
+  appState,
+  todoStore
+}
