@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { List } from './component'
 
 import './ListPage'
-import { Button } from '@components/ShowTime';
+import { Button } from '@components/AntD';
 import Base from '@images/icon/base.png'
 import Img1 from '@images/icon/img1.png'
 import Img2 from '@images/icon/img2.png'

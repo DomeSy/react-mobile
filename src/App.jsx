@@ -5,6 +5,8 @@ import _404Page from "@pages/Router/_404Page"
 import HomePage from "@pages/Router/HomePage"
 
 import 'antd-mobile/dist/antd-mobile.less'; 
+import { Provider } from 'react-redux';
+import configStore from './store'
 
 
 import Home from '@pages/Home';

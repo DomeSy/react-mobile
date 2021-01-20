@@ -2,7 +2,8 @@
 import React, { Component } from 'react'
 import ListPage from './ListPage/ListPage';
 import { DWriteText } from '@components/Animation'
-import { Button } from '@components/ShowTime';
+import { Button } from '@components/AntD';
+import Counter from './Counter/Counter';
 
 export default class Home extends Component {
   constructor(props){
@@ -43,9 +44,10 @@ export default class Home extends Component {
     const { text } = this.state
     return (
       <div>
+        <Counter />
         {/* <ListPage /> */}
-        <DWriteText text={text} />
-        <Button onClick={()=> this.click()}></Button>
+        {/* <DWriteText text={text} /> */}
+        {/* <Button onClick={()=> this.click()}></Button> */}
       </div>
     )
   }
