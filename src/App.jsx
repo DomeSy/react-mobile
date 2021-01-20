@@ -7,15 +7,18 @@ import HomePage from "@pages/Router/HomePage"
 import 'antd-mobile/dist/antd-mobile.less'; 
 import { Provider } from 'react-redux';
 import configStore from './store'
-
+const store = configStore()
 
 import Home from '@pages/Home';
 
 function App() {
   return (
-    <div className='App'>
-      <Home />
-    </div>
+    <Provider store={store}>
+      <div className='App'>
+        <Home />
+      </div>
+    </Provider>
+  
   );
 }
 
