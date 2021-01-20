@@ -60,4 +60,4 @@
   - [x] 页面大小，开发模式下，单位px，打包模式下rem
   - [x] 模拟数据开发列表
   - [x] redux-logger：开发模式下存在，打包模式下删除looger
-  - [x] redux-persist：数据持久化（默认以see）
+  - [x] redux-persist：数据持久化（默认以session存储）
