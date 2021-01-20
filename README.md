@@ -7,23 +7,23 @@
 #### 如果本项目对你有帮助，请不要吝啬你的star
 
 ## 目录结构
-
     |-- public                                
     |-- src                                   # 开发目录
-    |   |-- assets                            # 本地静态资源
+    |   |-- action                            # action
     |   |-- router                            # 路由配置
     |   |-- mock                              # 模拟接口数据
-    |   |-- images                            # 图片库
     |   |-- components                        # 业务组件
     |   |   |-- Animation                     # 动画组件库
     |   |   |-- G2                            # G2组件库
     |   |   |-- Icon                          # 小组件
     |   |   |-- ShowTime                      # 展示组件
+    |   |-- constants                         # constants
+    |   |-- images                            # 存储图片 
     |   |-- pages                             # 页面模板
     |   |-- store                             # 状态库
     |   |-- styles                            # 全局css文件
     |   |   |-- theme.jsx                     # 全局css颜色样式
-    |   |-- unilts                            # 公共方法
+    |   |-- unilts                            # 方法库
     |-- .gitignore                            # git忽略文件
     |-- package.js                            # 配置文件
     |-- config-overrides.js                   # 项目配置
