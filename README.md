@@ -46,13 +46,18 @@
   - [x] react-redux: react专门封装redux的库
   - [x] redux-thunk: 使dispatch支持传函数参数
   - [x] redux-logger: 打印日志
+  - [x] redux-persist: 数据持久化
   - [x] axios: 请求
   - [x] mockjs: 模拟数据
+  
+
 ## 项目功能
 
-  - [x] antd-mobile
+  - [x] antd-mobile组件库
   - [x] less（配置全局less文件）
   - [x] 别名
   - [x] 装饰器
-  - [x] 开发模式下，单位px，打包模式下rem
+  - [x] 页面大小，开发模式下，单位px，打包模式下rem
   - [x] 模拟数据开发列表
+  - [x] redux-logger：开发模式下存在，打包模式下删除looger
+  - [x] redux-persist：数据持久化（默认以see）
