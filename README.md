@@ -42,8 +42,10 @@
   - [x] @babel/plugin-proposal-decorators: 装饰器语法
   - [x] hot-react-loader react-app-rewire-hot-loader @hot-loader/react-dom: 实现局部刷新，即同个页面上，某一处的数据修改不会让整个页面一起刷新
   - [x] react-router-dom: 路由
-  - [x] mobx: 提供observable、action、computed等API的库，类比redux
-  - [x] mobx-react: 提供Provider、inject、observer、Observer、userObserver、userAsObservableSource、useLoacalStore等API的库。最新版的mobx-react中包括了mobx-react-lite
+  - [x] redux: 态管理工具
+  - [x] react-redux: react专门封装redux的库
+  - [x] redux-thunk: 使dispatch支持传函数参数
+  - [x] redux-logger: 打印日志
   - [x] axios: 请求
   - [x] mockjs: 模拟数据
 ## 项目功能

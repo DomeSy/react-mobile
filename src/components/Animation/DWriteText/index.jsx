@@ -6,13 +6,14 @@ const typingRate = 250;
 export default class componentName extends Component {
   constructor(props) {
     super(props);
+    console.log(props.text,'000')
     this.state={
       //打字出的文字
       textAreaShow: "",
       // 是否在打字中
       isTyping: false,
       //等待被打字的数组
-      waitToType: ["今天是星期一,又要起床去上班啦TnT又是为了生存的一天。"],
+      waitToType: [props.text],
       // waitToType: ["今天是星期一,","又要起床去上班啦TnT,","又是为了生存的一天。","那好吧，","我现在起床。"] ,
       //延迟时间
       delayTime: this.props.delayTime || 1,

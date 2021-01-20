@@ -1,28 +1,17 @@
 
 import React, { Component } from 'react'
-import { appState, todoStore } from '@store'
-// import store from '@store'
-
-import { DWriteText } from '@components/Animation'
 import ListPage from './ListPage/ListPage';
-
-// import axios from "axios";
-// import Mock from 'mockjs';
-// import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-
-// import HomePage from "@pages/Router/HomePage"
-// import UserPage from "@pages/Router/UserPage"
-// import LoginPage from "@pages/Router/LoginPage"
-// import _404Page from "@pages/Router/_404Page"
-import TimerView from './Mobx/TimerView';
-import TodoView from './Mobx/TodoView';
-import UseLocalStore from './Mobx/UseLocalStore';
-
+import { DWriteText } from '@components/Animation'
+import { Button } from '@components/ShowTime';
 
 export default class Home extends Component {
-
+  constructor(props){
+    super(props)
+    this.state = {
+      text: '你好,我们是神，我们想要上天吗'
+    }
+  }
   componentDidMount = async() =>{
-    this.test()
     // axios.get("/goods/goodsList", {   //这个是通过get发送的
     //   params: {
     //     limit: 5,  //一页有5条数据
@@ -44,34 +33,19 @@ export default class Home extends Component {
     // })
   }
 
-  test = () => {
-
-    // console.log(this.props,'---')
+  click = () => {
+    this.setState({
+      text: '11231231312'
+    })
   }
 
   render() {
-    // console.log(todoStore, '00')
+    const { text } = this.state
     return (
       <div>
-        {/* <UseLocalStore /> */}
-        <TodoView/>
-        {/* <TimerView appState={appState}/> */}
         {/* <ListPage /> */}
-        {/* <DWriteText /> */}
-        {/* <div onClick={this.props.hai}>niasldll1</div> */}
-        {/* <Router>
-          <Link to='/'>用户</Link>
-          <Link to='/login'>登录</Link>
-          <Link to='/product/123'>商品</Link>
-
-          <Switch>
-            <Route exact path="/" component={UserPage} />
-            <Route path="/login" component={LoginPage} />
-            <Route path="/home" component={HomePage} />
-
-    Î       <Route component={_404Page} />
-          </Switch>
-        </Router> */}
+        <DWriteText text={text} />
+        <Button onClick={()=> this.click()}></Button>
       </div>
     )
   }
