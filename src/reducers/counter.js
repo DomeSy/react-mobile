@@ -5,6 +5,7 @@ const INITIAL_STATE = {
 }
 
 export default function counter (state = INITIAL_STATE, action) {
+  console.log('11213',action)
   switch (action.type) {
     case ADD:
       return {
