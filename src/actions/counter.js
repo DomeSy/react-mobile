@@ -1,7 +1,4 @@
-import {
-  ADD,
-  MINUS
-} from '../constants/counter'
+import { ADD, MINUS } from '@constants/counter'
 
 export const add = () => {
   return {
