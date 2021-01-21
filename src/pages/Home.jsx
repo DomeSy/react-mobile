@@ -1,9 +1,13 @@
 
 import React, { Component } from 'react'
 import ListPage from './ListPage/ListPage';
-import { DWriteText } from '@components/Animation'
+import { DWriteText } from '@components/Animation';
 import { Button } from '@components/AntD';
-import Counter from './Counter/Counter';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import _404Page from "@pages/Router/_404Page"
+import HomePage from "@pages/Router/HomePage"
+import LoginPage from "@pages/Router/LoginPage"
+import UserPage from "@pages/Router/UserPage"
 
 export default class Home extends Component {
   constructor(props){
@@ -44,10 +48,23 @@ export default class Home extends Component {
     const { text } = this.state
     return (
       <div>
-        <Counter />
         {/* <ListPage /> */}
         {/* <DWriteText text={text} /> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
+        <Router>
+          <Link to='/'>首页</Link>
+          <Link to='/user'>用户中心</Link>
+          <Link to='/login'>登录</Link>
+          <Link to='/product/123'>商品</Link>
+      
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route path='/user' component={UserPage} />
+            <Route path='/login' component={LoginPage} />
+            <Route component={_404Page} />
+          </Switch>
+        </Router>
+        
       </div>
     )
   }
