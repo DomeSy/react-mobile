@@ -49,21 +49,21 @@ export default class Home extends Component {
     return (
       <div>
         {/* <ListPage /> */}
-        <DWriteText text={text} />
+        {/* <DWriteText text={text} /> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
-        {/* <Router>
+        {/* <Router> */}
           <Link to='/'>首页</Link>
           <Link to='/user'>用户中心</Link>
           <Link to='/login'>登录</Link>
           <Link to='/product/123'>商品</Link>
       
-          <Switch>
+          {/* <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path='/user' component={UserPage} />
             <Route path='/login' component={LoginPage} />
             <Route component={_404Page} />
-          </Switch>
-        </Router> */}
+          </Switch> */}
+        {/* </Router> */}
         
       </div>
     )
