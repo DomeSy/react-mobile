@@ -42,6 +42,7 @@
   - [x] @babel/plugin-proposal-decorators: 装饰器语法
   - [x] hot-react-loader react-app-rewire-hot-loader @hot-loader/react-dom: 实现局部刷新，即同个页面上，某一处的数据修改不会让整个页面一起刷新
   - [x] react-router-dom: 路由
+  - [x] react-router-config: 辅助react-router的插件，集中管理路由
   - [x] redux: 态管理工具
   - [x] react-redux: react专门封装redux的库
   - [x] redux-thunk: 使dispatch支持传函数参数
