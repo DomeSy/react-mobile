@@ -8,6 +8,7 @@ import _404Page from "@pages/Router/_404Page"
 import HomePage from "@pages/Router/HomePage"
 import LoginPage from "@pages/Router/LoginPage"
 import UserPage from "@pages/Router/UserPage"
+import Edit from './Edit/Edit';
 
 export default class Home extends Component {
   constructor(props){
@@ -52,10 +53,10 @@ export default class Home extends Component {
         {/* <DWriteText text={text} /> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
         {/* <Router> */}
-          <Link to='/'>首页</Link>
+          {/* <Link to='/'>首页</Link>
           <Link to='/user'>用户中心</Link>
           <Link to='/login'>登录</Link>
-          <Link to='/product/123'>商品</Link>
+          <Link to='/product/123'>商品</Link> */}
       
           {/* <Switch>
             <Route exact path='/' component={HomePage} />
@@ -64,7 +65,7 @@ export default class Home extends Component {
             <Route component={_404Page} />
           </Switch> */}
         {/* </Router> */}
-        
+        <Edit/>
       </div>
     )
   }

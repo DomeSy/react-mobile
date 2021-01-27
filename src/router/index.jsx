@@ -7,7 +7,7 @@ import UserPage from '@pages/Router/UserPage';
 const routes = [
   {
     path: '/',
-    component: HomePage,
+    component: Home,
     routes: [
       // {
       //   path: '/HomePage',
@@ -22,7 +22,11 @@ const routes = [
         component: UserPage
       }
     ]
-  }
+  },
+  {
+    path: '/login',
+    component: Login
+  },
 ]
 
 export default routes
