@@ -47,33 +47,25 @@ export default class Home extends Component {
 
   render() {
     const { text } = this.state
-    const arr =`var a = "hello world";
-    let run = new Date();
-    let div = {
-      rin
-    }
-    `
     return (
       <div>
         {/* <ListPage /> */}
         {/* <DWriteText text={text} /> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
-        {/* <Router> */}
-          {/* <Link to='/'>首页</Link>
+        <Router>
+          <Link to='/'>首页</Link>
           <Link to='/user'>用户中心</Link>
           <Link to='/login'>登录</Link>
-          <Link to='/product/123'>商品</Link> */}
+          <Link to='/product/123'>商品</Link>
       
-          {/* <Switch>
-            <Route exact path='/' component={HomePage} />
-            <Route path='/user' component={UserPage} />
-            <Route path='/login' component={LoginPage} />
+          <Switch>
+            <Route exact path='/' component={HomePage}/>
+            <Route path='/user' component={UserPage}/>
+            <Route path='/login' component={LoginPage}/>
             <Route component={_404Page} />
-          </Switch> */}
-        {/* </Router> */}
-        <EditHight>
-          {arr}
-        </EditHight>
+          </Switch>
+        </Router>
+
       </div>
     )
   }

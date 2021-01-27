@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/lib/integration/react';
 import 'antd-mobile/dist/antd-mobile.less'; 
 import { Provider } from 'react-redux';
 import { renderRoutes } from 'react-router-config';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import routes from './router';
 import configStore from './store'
 const config = configStore()
@@ -13,16 +13,16 @@ import Home from '@pages/Home';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Provider store={config.store}>
         <PersistGate persistor={config.persistor}>
-          {/* <div className='App'>
+          <div className='App'>
             <Home />
-          </div> */}
-          {renderRoutes(routes)}
+          </div>
+          {/* {renderRoutes(routes)} */}
         </PersistGate>
       </Provider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
