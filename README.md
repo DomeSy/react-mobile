@@ -50,6 +50,7 @@
   - [x] redux-persist: 数据持久化
   - [x] axios: 请求
   - [x] mockjs: 模拟数据
+  - [x] react-highlight: React语法高亮
   
 
 ## 项目功能
