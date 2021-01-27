@@ -8,7 +8,7 @@ import _404Page from "@pages/Router/_404Page"
 import HomePage from "@pages/Router/HomePage"
 import LoginPage from "@pages/Router/LoginPage"
 import UserPage from "@pages/Router/UserPage"
-import Edit from './Edit/Edit';
+import { EditHight } from '@components/Icon';
 
 export default class Home extends Component {
   constructor(props){
@@ -47,6 +47,12 @@ export default class Home extends Component {
 
   render() {
     const { text } = this.state
+    const arr =`var a = "hello world";
+    let run = new Date();
+    let div = {
+      rin
+    }
+    `
     return (
       <div>
         {/* <ListPage /> */}
@@ -65,7 +71,9 @@ export default class Home extends Component {
             <Route component={_404Page} />
           </Switch> */}
         {/* </Router> */}
-        <Edit/>
+        <EditHight>
+          {arr}
+        </EditHight>
       </div>
     )
   }
