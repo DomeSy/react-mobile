@@ -42,7 +42,7 @@
   - [x] @babel/plugin-proposal-decorators: 装饰器语法
   - [x] hot-react-loader react-app-rewire-hot-loader @hot-loader/react-dom: 实现局部刷新，即同个页面上，某一处的数据修改不会让整个页面一起刷新
   - [x] react-router-dom: 路由
-  - [x] react-router-config: 辅助react-router的插件，集中管理路由
+  - [x] react-keeper: 更适用于移动端，原因是具备缓存页面的功能，类似于具备Vue的keep-alive的功能
   - [x] redux: 态管理工具
   - [x] react-redux: react专门封装redux的库
   - [x] redux-thunk: 使dispatch支持传函数参数
@@ -63,3 +63,9 @@
   - [x] 模拟数据开发列表
   - [x] redux-logger：开发模式下存在，打包模式下删除looger
   - [x] redux-persist：数据持久化（默认以session存储）
+
+
+## 模块说明
+
+  路由： 
+    看了很多关于路由的组件，如react-router-config,react-keeper管理路由的方式，但我始终感觉不太好，我想根据已有的react-router-dom进行封装简单实现react-router-config,react-keeper的功能
