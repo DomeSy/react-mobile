@@ -4,7 +4,6 @@ import { PersistGate } from 'redux-persist/lib/integration/react';
 
 import 'antd-mobile/dist/antd-mobile.less'; 
 import { Provider } from 'react-redux';
-import { renderRoutes } from 'react-router-config';
 import { BrowserRouter } from 'react-router-dom';
 import routes from './router';
 import configStore from './store'

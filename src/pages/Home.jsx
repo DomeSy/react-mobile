@@ -60,7 +60,7 @@ export default class Home extends Component {
       
           <Switch>
             <Route exact path='/' component={HomePage}/>
-            <Route path='/user' component={UserPage}/>
+            <Route exact path='/user' component={UserPage}/>
             <Route path='/login' component={LoginPage}/>
             <Route component={_404Page} />
           </Switch>
