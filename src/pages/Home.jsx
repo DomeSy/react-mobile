@@ -9,23 +9,24 @@ import HomePage from "@pages/Router/HomePage"
 import LoginPage from "@pages/Router/LoginPage"
 import UserPage from "@pages/Router/UserPage"
 import { EditHight } from '@components/Icon';
+import axios from 'axios'
 
 export default class Home extends Component {
   constructor(props){
     super(props)
     this.state = {
-      text: '你好,我们是神，我们想要上天吗'
+      text: '你好,我们是神，我们想要上天吗',
+      number: 0
     }
   }
-  componentDidMount = async() =>{
-    // axios.get("/goods/goodsList", {   //这个是通过get发送的
+  componentDidMount = async () =>{
+    // const data = await axios.get("/goods/goodsList", {   //这个是通过get发送的
     //   params: {
     //     limit: 5,  //一页有5条数据
     //     page: 1   //第几页
     //   }
-    // }).then((data) => {
-    //   console.log(data, '00000');
-    // });
+    // })
+    // console.log(data,'008')
      
     // axios.post('/postdata1', {
     //   params: {
@@ -45,14 +46,23 @@ export default class Home extends Component {
     })
   }
 
+  onClick = (number) => {
+
+    this.setState({
+      number: number+1
+    })
+  }
+
   render() {
-    const { text } = this.state
+    const { text, number } = this.state
     return (
       <div>
+        HomePage
+        {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
         {/* <ListPage /> */}
         {/* <DWriteText text={text} /> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
-        <Router>
+        {/* <Router>
           <Link to='/'>首页</Link>
           <Link to='/user'>用户中心</Link>
           <Link to='/login'>登录</Link>
@@ -64,8 +74,7 @@ export default class Home extends Component {
             <Route path='/login' component={LoginPage}/>
             <Route component={_404Page} />
           </Switch>
-        </Router>
-
+        </Router> */}
       </div>
     )
   }

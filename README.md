@@ -45,6 +45,7 @@
   - [x] react-keeper: 更适用于移动端，原因是具备缓存页面的功能，类似于具备Vue的keep-alive的功能
   - [x] redux: 态管理工具
   - [x] react-redux: react专门封装redux的库
+  - [x] react-loadable: 路由懒加载
   - [x] redux-thunk: 使dispatch支持传函数参数
   - [x] redux-logger: 打印日志
   - [x] redux-persist: 数据持久化
@@ -63,6 +64,7 @@
   - [x] 模拟数据开发列表
   - [x] redux-logger：开发模式下存在，打包模式下删除looger
   - [x] redux-persist：数据持久化（默认以session存储）
+  - [x] 实现路由懒加载
 
 
 ## 模块说明

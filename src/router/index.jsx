@@ -6,25 +6,18 @@ import UserPage from '@pages/Router/UserPage';
 const routes = [
   {
     path: '/',
+    name: 'Home',
     component: Home,
-    routes: [
-      // {
-      //   path: '/HomePage',
-      //   component: HomePage
-      // },
-      {
-        path: '/login',
-        component: Login
-      },
-      {
-        path: '/user',
-        component: UserPage
-      }
-    ]
   },
   {
     path: '/login',
+    name: 'login',
     component: Login
+  },
+  {
+    path: '/user',
+    name: 'user',
+    component: UserPage
   },
 ]
 

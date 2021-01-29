@@ -24,9 +24,9 @@ const persistConfig = {
   // blacklist: ['counter'] //数组，可去除不要的本地数据
 }
 
-if (process.env.NODE_ENV === 'development' && process.env.TARO_ENV !== 'quickapp') {
-  middlewares.push(require('redux-logger').createLogger())
-}
+// if (process.env.NODE_ENV === 'development' && process.env.TARO_ENV !== 'quickapp') {
+//   middlewares.push(require('redux-logger').createLogger())
+// }
 
 const enhancer = composeEnhancers(
   applyMiddleware(...middlewares),
