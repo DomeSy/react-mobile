@@ -1,7 +1,10 @@
 import Home from '@pages/Home';
+
+import { LoadAble } from '@unilts'
 import HomePage from '@pages/Router/HomePage';
 import Login from '@pages/Router/LoginPage';
 import UserPage from '@pages/Router/UserPage';
+
 
 const routes = [
   {
@@ -12,7 +15,7 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: Login
+    component: LoadAble(() => import('@pages/Router/LoginPage'))
   },
   {
     path: '/user',
