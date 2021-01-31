@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 // import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import { HashRouter as Router, Route } from 'react-keeper';
-
 
 class Index extends Component {
   constructor(props){
@@ -17,22 +15,17 @@ class Index extends Component {
   render(){
     const { routes } = this.props;
 
-    // console.log(,'11')
+    console.log(routes,'11')
     return (
       <>
         <Router>
-          <>
+          <Switch>
             {
               routes.map((item, index) => (
-                <Route
-                  exact
-                  index={item.index ? true: false}
-                  path={item.path}
-                  component={item.component}
-                  key={index}/>
+                <Route exact path={item.path} component={item.component} key={index}/>
               ))
             }
-          </>
+          </Switch>
         </Router>
       </>
     )

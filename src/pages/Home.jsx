@@ -3,13 +3,17 @@ import React, { Component } from 'react'
 import ListPage from './ListPage/ListPage';
 import { DWriteText } from '@components/Animation';
 import { Button } from '@components/AntD';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import _404Page from "@pages/Router/_404Page"
 import HomePage from "@pages/Router/HomePage"
 import LoginPage from "@pages/Router/LoginPage"
 import UserPage from "@pages/Router/UserPage"
 import { EditHight } from '@components/Icon';
 import axios from 'axios'
+import { Axios } from '@unilts'
+// import { HashRouter, Route } from 'react-keeper';
+
+
 
 export default class Home extends Component {
   constructor(props){
@@ -20,14 +24,8 @@ export default class Home extends Component {
     }
   }
   componentDidMount = async () =>{
-    // const data = await axios.get("/goods/goodsList", {   //这个是通过get发送的
-    //   params: {
-    //     limit: 5,  //一页有5条数据
-    //     page: 1   //第几页
-    //   }
-    // })
-    // console.log(data,'008')
-     
+    const res = await Axios({limit: 5, page:1}, {url: '/goods/goodsList'})
+    // console.log(res, '00')
     // axios.post('/postdata1', {
     //   params: {
     //       name: 'jack'
@@ -57,10 +55,13 @@ export default class Home extends Component {
     const { text, number } = this.state
     return (
       <div>
-        HomePage
-        {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
+        
+        {/* 傻大2 */}
+      
+        
+        <div onClick={()=> this.onClick(number)}> 点击{number}</div>
         {/* <ListPage /> */}
-        {/* <DWriteText text={text} /> */}
+        <DWriteText text={text} />
         {/* <Button onClick={()=> this.click()}></Button> */}
         {/* <Router>
           <Link to='/'>首页</Link>
@@ -75,6 +76,7 @@ export default class Home extends Component {
             <Route component={_404Page} />
           </Switch>
         </Router> */}
+
       </div>
     )
   }

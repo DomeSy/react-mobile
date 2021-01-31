@@ -10,17 +10,19 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    index: true,
     component: Home,
   },
   {
     path: '/login',
     name: 'login',
-    component: LoadAble(() => import('@pages/Router/LoginPage'))
+    component: Login
   },
   {
     path: '/user',
     name: 'user',
-    component: UserPage
+    component: UserPage,
+    loadComponent: '@pages/Router/UserPage'
   },
 ]
 
