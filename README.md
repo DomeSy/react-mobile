@@ -50,6 +50,7 @@
   - [x] redux-logger: 打印日志
   - [x] redux-persist: 数据持久化
   - [x] axios: 请求
+  - [x] qs: 
   - [x] mockjs: 模拟数据
   - [x] react-highlight: React语法高亮
   

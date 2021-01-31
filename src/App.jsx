@@ -1,26 +1,22 @@
-import './App.less'
-import { hot } from 'react-hot-loader/root'
-import { PersistGate } from 'redux-persist/lib/integration/react';
-import { Provider } from 'react-redux';
-import routes from './router';
-import configStore from './store';
-import Home from '@pages/Home';
-import { Router } from './unilts';
 
-import 'antd-mobile/dist/antd-mobile.less'; 
+
+import routes from './router';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+
+import { Router } from './unilts';
+import configStore from './store';
+
+import 'antd-mobile/dist/antd-mobile.less';
+import './App.less'
 
 const config = configStore()
 
-// const Routers = new Router()
-
 function App() {
-
-  // console.log(routes, '001', Routers)
   return (
     <Provider store={config.store}>
       <PersistGate persistor={config.persistor}>
-        <div className='App'>
-          {/* <Home /> */}
+        <div className="App">
           <Router routes={routes} />
         </div>
       </PersistGate>
@@ -28,6 +24,4 @@ function App() {
   );
 }
 
-const AppHot = process.env.NODE_ENV === 'development' ? hot(App) : App
-
-export default AppHot;
+export default App;
