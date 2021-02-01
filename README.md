@@ -53,6 +53,7 @@
   - [x] qs: 
   - [x] mockjs: 模拟数据
   - [x] react-highlight: React语法高亮
+  - [x] react-typewriter-hook: 打字机效果
   
 
 ## 项目功能
