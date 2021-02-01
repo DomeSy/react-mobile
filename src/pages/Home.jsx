@@ -27,7 +27,8 @@ export default class Home extends Component {
   }
   componentDidMount = async () =>{
 
-    const res = await Axios({limit: 5, page:1}, {url: '/goods/goodsList'})
+    const res = await Axios({}, {url: '/api/goodslist'})
+    console.log(res, '00988')
     // console.log(res, '00')
     // axios.post('/postdata1', {
     //   params: {
@@ -68,9 +69,9 @@ export default class Home extends Component {
     const { text, number } = this.state
     return (
       <div>
-        <Title> 你好</Title>
+        
         {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
-        {/* <ListPage /> */}
+        <ListPage />
         {/* <DWriteText text={text} /> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
         {/* <Router>
