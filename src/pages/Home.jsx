@@ -10,7 +10,9 @@ import LoginPage from "@pages/Router/LoginPage"
 import UserPage from "@pages/Router/UserPage"
 import { EditHight } from '@components/Icon';
 import axios from 'axios'
-import { Axios } from '@unilts'
+import { Axios } from '@unilts';
+import { Control } from 'react-keeper';
+import { Jump } from '@unilts';
 // import { HashRouter, Route } from 'react-keeper';
 
 
@@ -24,6 +26,7 @@ export default class Home extends Component {
     }
   }
   componentDidMount = async () =>{
+
     const res = await Axios({limit: 5, page:1}, {url: '/goods/goodsList'})
     // console.log(res, '00')
     // axios.post('/postdata1', {
@@ -39,13 +42,23 @@ export default class Home extends Component {
   }
 
   click = () => {
-    this.setState({
-      text: '11231231312'
-    })
+    Jump.go({url:'login',params:'1111'});
+    // Jump.go({params: 'sss' });
+    // console.log(this.props,'00')
+    // 重定向
+    // Control.replace('/login', {name: '123'})
+    // Control.go('login',{name: '123'})
+
+
+    // this.props.pathname = '/login'
+    // this.props.history.push('/login')
+    // this.props.history.push({pathname: '/login',state:{name: 1123}})
+    // this.setState({
+    //   text: '11231231312'
+    // })
   }
 
   onClick = (number) => {
-
     this.setState({
       number: number+1
     })
@@ -55,14 +68,10 @@ export default class Home extends Component {
     const { text, number } = this.state
     return (
       <div>
-        
-        {/* 傻大2 */}
-      
-        
-        <div onClick={()=> this.onClick(number)}> 点击{number}</div>
+        {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
         {/* <ListPage /> */}
-        <DWriteText text={text} />
-        {/* <Button onClick={()=> this.click()}></Button> */}
+        {/* <DWriteText text={text} /> */}
+        <Button onClick={()=> this.click()}></Button>
         {/* <Router>
           <Link to='/'>首页</Link>
           <Link to='/user'>用户中心</Link>
@@ -76,7 +85,6 @@ export default class Home extends Component {
             <Route component={_404Page} />
           </Switch>
         </Router> */}
-
       </div>
     )
   }
