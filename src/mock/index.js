@@ -1,5 +1,3 @@
-// eslint-disable
-// import Mock from 'mockjs'
 import homeList from './home/homeList'
 import { Mock } from '@unilts'
 
