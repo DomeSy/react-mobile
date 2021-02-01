@@ -13,7 +13,7 @@ async function Axios(params = {},{method = 'get', url = ''}){
   return new Promise((resolve, reject) => {
     axios({
       method,
-      url,
+      url: `/api/${url}`,
       params: method == 'post' ? qs.stringify(params) : params,
     }).then(data => {
       resolve(data.data)

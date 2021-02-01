@@ -1,4 +1,4 @@
-export default homeList = [
+const homeList = [
   {
     title: '全部信息',
     tip: '我是谁，我在那'
@@ -8,3 +8,5 @@ export default homeList = [
     tip: '我是谁，我在那'
   }
 ]
+ 
+export default homeList;

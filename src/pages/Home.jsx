@@ -27,7 +27,7 @@ export default class Home extends Component {
   }
   componentDidMount = async () =>{
 
-    const res = await Axios({}, {url: '/api/goodslist'})
+    const res = await Axios({}, {url: 'homeList'})
     console.log(res, '00988')
     // console.log(res, '00')
     // axios.post('/postdata1', {
