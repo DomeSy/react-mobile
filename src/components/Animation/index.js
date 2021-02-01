@@ -1,1 +1,1 @@
-export { default as DWriteText } from './DWriteText';
+export { default as MagicText } from './MagicText';

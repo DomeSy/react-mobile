@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import ListPage from './ListPage/ListPage';
-import { DWriteText } from '@components/Animation';
+import { MagicText } from '@components/Animation';
 import { Button } from '@components/AntD';
 // import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import _404Page from "@pages/Router/_404Page"
@@ -66,12 +66,21 @@ export default class Home extends Component {
 
   render() {
     const { text, number } = this.state
+
+
+    const MagicOcean = [
+      "Yo, did you see that?",
+      "Fine, I' ll show you again.",
+      "事不过三，bye.",
+      "事不过1，bye.",
+      "事不过2，bye.",
+    ];
     return (
       <div>
         
         {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
-        <ListPage />
-        {/* <DWriteText text={text} /> */}
+        {/* <ListPage /> */}
+        <MagicText/>
         {/* <Button onClick={()=> this.click()}></Button> */}
         {/* <Router>
           <Link to='/'>首页</Link>
