@@ -16,7 +16,7 @@ async function Axios(params = {},{method = 'get', url = ''}){
       url,
       params: method == 'post' ? qs.stringify(params) : params,
     }).then(data => {
-      resolve(data)
+      resolve(data.data)
     }).catch(err => {
       console.log(err, '----')
     })
