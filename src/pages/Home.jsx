@@ -8,7 +8,7 @@ import _404Page from "@pages/Router/_404Page"
 import HomePage from "@pages/Router/HomePage"
 import LoginPage from "@pages/Router/LoginPage"
 import UserPage from "@pages/Router/UserPage"
-import { EditHight } from '@components/Icon';
+import { EditHight, Title } from '@components/Icon';
 import axios from 'axios'
 import { Axios } from '@unilts';
 import { Control } from 'react-keeper';
@@ -42,7 +42,7 @@ export default class Home extends Component {
   }
 
   click = () => {
-    Jump.go({url:'login',params:'1111'});
+    // Jump.go({url:'login',params:'1111'});
     // Jump.go({params: 'sss' });
     // console.log(this.props,'00')
     // 重定向
@@ -68,10 +68,11 @@ export default class Home extends Component {
     const { text, number } = this.state
     return (
       <div>
+        <Title> 你好</Title>
         {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
         {/* <ListPage /> */}
         {/* <DWriteText text={text} /> */}
-        <Button onClick={()=> this.click()}></Button>
+        {/* <Button onClick={()=> this.click()}></Button> */}
         {/* <Router>
           <Link to='/'>首页</Link>
           <Link to='/user'>用户中心</Link>
