@@ -13,10 +13,7 @@ import axios from 'axios'
 import { Axios } from '@unilts';
 import { Control } from 'react-keeper';
 import { Jump } from '@unilts';
-// import { HashRouter, Route } from 'react-keeper';
-
-
-
+import Content from './Content'
 export default class Home extends Component {
   constructor(props){
     super(props)
@@ -67,17 +64,9 @@ export default class Home extends Component {
   render() {
     const { text, number } = this.state
 
-
-    const MagicOcean = [
-      "Yo, did you see that?",
-      "Fine, I' ll show you again.",
-      "事不过三，bye.",
-      "事不过1，bye.",
-      "事不过2，bye.",
-    ];
     return (
       <div>
-        
+        <Content />
         {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
         {/* <ListPage /> */}
         {/* <MagicText/> */}
