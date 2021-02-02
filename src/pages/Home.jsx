@@ -80,7 +80,7 @@ export default class Home extends Component {
         
         {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
         {/* <ListPage /> */}
-        <MagicText/>
+        {/* <MagicText/> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
         {/* <Router>
           <Link to='/'>首页</Link>

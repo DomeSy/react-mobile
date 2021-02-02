@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Axios } from '@unilts';
-import { List } from './component'
+import { Head, List } from './component'
 
 import './ListPage'
 
@@ -33,6 +33,7 @@ export default class ListPage extends Component {
 
     return (
       <div className="ListPage">
+        <Head />
         <List list={list}/>
       </div>
     )
