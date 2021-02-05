@@ -25,7 +25,7 @@ const theme = {
   '@red': '#FF4949',
   '@yellow': '#FFC82C',
   '@color': '#333333',
-  '@top': '#CCCCCC',
+  '@tip': '#CCCCCC',
   '@border': '#ECF5FD',
   '@border1': '#C5D9E8',
   '@white': '#FFFFFF',
