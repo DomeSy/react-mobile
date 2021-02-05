@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-import { Accordion } from './component';
+import { Accordion } from '@components/HighOrder';
 
 import './index.less'
 class Index extends Component {

@@ -1,0 +1,70 @@
+.DAccorion{
+  padding: 8px 12px;
+  &-List{
+    background: @white;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .04);
+    padding: 10px 8px;
+    margin-bottom: 12px;
+    &:last-of-type{
+      margin-bottom: 0px;
+    }
+    &-Name{
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 17px;
+      line-height: 27px;
+    }
+    &-Border{
+      border-bottom: 1px solid @tip;
+    }
+    &-Children{
+      margin-left: 8px;
+      padding: 8px 0px 8px 0px;
+      font-size: 13px;
+      line-height: 23px;
+      border-bottom: 1px solid @tip;
+      &:last-of-type{
+        border-bottom: 0px;
+        padding-bottom: 0px;
+      }
+      p{
+        color: @color;
+      }
+    }
+    &-Roate{
+      animation: roate 0.2s linear forwards;
+    }
+    &-Roates{
+      animation: roates 0.2s linear forwards;
+    }
+  }
+}
+
+@keyframes roate{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(45deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes roates{
+  0%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(45deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
