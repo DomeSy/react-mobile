@@ -23,8 +23,8 @@ export default class Home extends Component {
     }
   }
   componentDidMount = async () =>{
-
-    Modal.alert()
+    Modal.alert('112131')
+    // Modal.confirm({},() => {console.log('确认')},() => {console.log('取消')})
     // console.log(res, '00')
     // axios.post('/postdata1', {
     //   params: {
