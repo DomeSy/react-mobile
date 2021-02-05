@@ -3,10 +3,11 @@ import { Control } from 'react-keeper';
 /**
  * @module 跳转逻辑封装（并获取参数）
  * 
- *  go: 跳转，记录地址栏，一个参数可传字符串(默认跳转首页)
- *  back: 回退(默认回退1)
- *  replace：重定向（与go一样）
- *  get：获取地址栏参数
+ * @param go 跳转，记录地址栏，一个参数可传字符串(默认跳转首页)
+ * @param back 回退(默认回退1)
+ * @param replace 重定向（与go一样）
+ * @param get 获取地址栏参数
+ * @param goSrc 跳转外部地址
  */
 
 class Jump{
@@ -36,6 +37,10 @@ class Jump{
 
   static get = () => {
     return Control.state;
+  }
+
+  static goSrc = (url = 'https://www.baidu.com/') => {
+    window.location.href = url
   }
 } 
 export default Jump
