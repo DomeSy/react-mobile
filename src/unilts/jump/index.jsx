@@ -10,7 +10,7 @@ import { Control } from 'react-keeper';
  * @param goSrc 跳转外部地址
  */
 
-class Index{
+class Jump{
   static go = ({url='/', params={}}) => {
     if(typeof params === 'string'){
       Control.go(url, {params})
@@ -43,4 +43,4 @@ class Index{
     window.location.href = url
   }
 } 
-export default Index
+export default Jump

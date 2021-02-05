@@ -12,7 +12,7 @@ import { EditHight, Title } from '@components/Icon';
 import axios from 'axios'
 import { Axios } from '@unilts';
 import { Control } from 'react-keeper';
-import { Jump } from '@unilts';
+import { Jump, Modal } from '@unilts';
 import Content from './Content'
 export default class Home extends Component {
   constructor(props){
@@ -24,7 +24,7 @@ export default class Home extends Component {
   }
   componentDidMount = async () =>{
 
-
+    Modal.alert()
     // console.log(res, '00')
     // axios.post('/postdata1', {
     //   params: {
