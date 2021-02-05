@@ -85,6 +85,7 @@ class Index extends Component {
 
   goView = (item) => {
     console.log(item)
+    // if(item)
   }
 
   render() {
