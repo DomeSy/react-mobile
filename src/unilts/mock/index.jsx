@@ -4,7 +4,7 @@ import Mock from 'mockjs'
 /**
  * 模拟请求
  */
-class Mock {
+class MockDate {
 
   static get = ({url='', message='成功', list = []}) => {
     Mock.mock(`/api/${url}`, 'get', {
@@ -24,4 +24,4 @@ class Mock {
 
 }
 
-export default Mock
+export default MockDate
