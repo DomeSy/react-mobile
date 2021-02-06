@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Modal } from '@unilts';
 import { HashRouter as Router, Route } from 'react-keeper';
 
 
@@ -14,6 +15,22 @@ import { HashRouter as Router, Route } from 'react-keeper';
 class Index extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      routes: []
+    }
+  }
+
+  componentDidMount = () => {
+    const { routes } = this.props;
+  
+    if(Object.keys(routes).length === 0){
+      Modal.alert('暂未配置路由, 请去配置')
+      return;
+    }
+
+    console.log(routes,'000')
+    // routes.forEach = 
+
   }
 
   render(){

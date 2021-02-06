@@ -11,6 +11,7 @@ const routes = [
     path: '/',
     name: 'Home',
     index: true,
+    title: '烈璇',
     component: Home,
   },
   {
