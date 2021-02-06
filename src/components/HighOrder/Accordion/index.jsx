@@ -70,17 +70,23 @@ class Index extends Component {
 
   // 这里应该首先判断是否有children，用来判断是否跳转
   ChangeName = (listAll, item) => {
+    let list = []
     if (item.children) {
-      const list = listAll.map(ele => {
+      list = listAll.map(ele => {
         ele.active = ele.name === item.name ? item.active === 1 ? 2 : 1 : ele.active ? 2 : '';
         return ele
       } );
-      this.setState({
-        list
-      });
     } else {
+      list = listAll.map(ele => {
+        ele.active = ele.name === item.name ? item.active === 1 ? 2 : '' : ele.active ? 2 : '';
+        return ele
+      } );
       this.goView(item);
     }
+
+    this.setState({
+      list
+    });
   }
 
   goView = (item) => {

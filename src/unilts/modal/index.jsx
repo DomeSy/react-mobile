@@ -14,7 +14,7 @@ import { Modal } from 'antd-mobile';
  * @param fn 确认时的回调
  * @param fn1 取消时的回调
  */
-class Index{
+class ModalView{
   static alert = (data, fn=()=>{}) => {
     let { title='提示', msg='提示内容', button='确认' } = data
     if(typeof data === 'string') msg = data
@@ -36,4 +36,4 @@ class Index{
   }
 }
 
-export default Index
+export default ModalView

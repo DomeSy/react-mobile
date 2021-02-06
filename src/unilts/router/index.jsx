@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { HashRouter as Router, Route } from 'react-keeper';
 
 
+/**
+ * @module 路由模块
+ * 
+ * @param routes 数组，包含所需要的每项
+ * @param exact 是否完全匹配(默认完全匹配)
+ * @param path 页面路径
+ * @param title 页面标题
+ * @param component 组件
+ */
 class Index extends Component {
   constructor(props){
     super(props);
   }
-
-  componentDidMount =  async () => {
-    const { routes } = this.props;
-
-  }
-
 
   render(){
     const { routes } = this.props;
@@ -25,10 +27,14 @@ class Index extends Component {
             {
               routes.map((item, index) => (
                 <Route
-                  exact
-                  index={item.index ? true: false}
+                  exact={item.exact ? false : true}
+                  index={item.index ? true : false}
                   path={item.path}
-                  component={item.component}
+                  // component={item.component}
+                  loadComponent = {(callback) => {
+                    item.title ? document.title = item.title : ''
+                    callback(item.component)
+                  }}
                   key={index}/>
               ))
             }
