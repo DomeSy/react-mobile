@@ -22,10 +22,9 @@ const FailData = {
  * @message 对应的返会数据
  */
 class MockDate {
-
   static get = ({url='', message='成功', list = [], children = []}) => {
-    if(children.length != 0) {
-      Mock.mock(RegExp(`/api/${url}` + '.*') , 'get', (options) => {
+    Mock.mock(RegExp(`/api/${url}` + '.*') , 'get', (options) => {
+      if(children.length != 0){
         const query = urlData.parse(options.url, true).query;
         for(let i = 0;i < children.length; i++){
           if(JSON.stringify(query) === JSON.stringify(children[i].params)){
@@ -37,14 +36,14 @@ class MockDate {
           }
         }
         return FailData
-      })
-    } else {
-      Mock.mock(`/api/${url}`, 'get', {
-        status: 200,
-        message,
-        'data': [...list]
-      })
-    }
+      }else{
+        return {
+          status: 200,
+          message,
+          'data': [...list]
+        }
+      }
+    })
   }
 
   static post = ({url='', message='成功', list = []}) => {

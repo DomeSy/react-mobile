@@ -1,14 +1,12 @@
 
 import React, { Component } from 'react'
-import ListPage from './ListPage/ListPage';
-import { MagicText } from '@components/Animation';
+import ListView from './ListView/ListView';
 import { Button } from '@components/AntD';
 // import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import _404Page from "@pages/Router/_404Page"
 import HomePage from "@pages/Router/HomePage"
 import LoginPage from "@pages/Router/LoginPage"
 import UserPage from "@pages/Router/UserPage"
-import { EditHight, Title } from '@components/Icon';
 import axios from 'axios'
 import { Axios } from '@unilts';
 import { Control } from 'react-keeper';
@@ -67,7 +65,7 @@ export default class Home extends Component {
       <div>
         {/* <Content /> */}
         {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
-        <ListPage />
+        <ListView />
         {/* <MagicText/> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
         {/* <Router>
