@@ -7,7 +7,10 @@ import { Control } from 'react-keeper';
  * @param back 回退(默认回退1)
  * @param replace 重定向（与go一样）
  * @param get 获取地址栏参数
- * @param goSrc 跳转外部地址
+ * @param goSrc 跳转外部地址 
+ * 
+ * @param url 跳转的地址
+ * @param params 跳转时所带的参数
  */
 
 class Jump{
@@ -43,8 +46,14 @@ class Jump{
     return Control.state;
   }
 
-  static goSrc = (url = 'https://www.baidu.com/') => {
-    window.location.href = url
+  static goSrc = (url = 'https://www.baidu.com/', params={}) => {
+    let str = ''
+    if(Object.keys(params).length != 0){
+      for(let name in params){
+        str += `${name}=${params[name]}&`
+      }
+    }
+    window.location.href = str.length === 0 ? url : `${url}?${str.substring(0, str.length-1)}`
   }
 } 
 export default Jump
