@@ -4,6 +4,7 @@ import { LoadAble } from '@unilts'
 import HomePage from '@pages/Router/HomePage';
 import Login from '@pages/Router/LoginPage';
 import UserPage from '@pages/Router/UserPage';
+import _404Page from '@pages/_404';
 
 
 const routes = [
@@ -12,7 +13,7 @@ const routes = [
     name: 'Home',
     index: true,
     title: '烈璇',
-    component: Home,
+    component: Home
   },
   {
     path: '/login',
@@ -22,8 +23,12 @@ const routes = [
   {
     path: '/user',
     name: 'user',
-    component: UserPage,
-    loadComponent: '@pages/Router/UserPage'
+    component: UserPage
+  },{
+    path: '/_404',
+    name: '_404',
+    miss: true,
+    component: _404Page
   },
 ]
 

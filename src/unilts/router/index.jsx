@@ -12,6 +12,7 @@ import { HashRouter as Router, Route } from 'react-keeper';
  * @param title 页面标题
  * @param component 组件
  */
+
 class Index extends Component {
   constructor(props){
     super(props);
@@ -46,10 +47,11 @@ class Index extends Component {
                 <Route
                   exact={item.exact ? false : true}
                   index={item.index ? true : false}
+                  miss={item.miss ? true : false}
                   path={item.path}
                   // component={item.component}
                   loadComponent = {(callback) => {
-                    item.title ? document.title = item.title : ''
+                    item.title ? document.title = item.title : '';
                     callback(item.component)
                   }}
                   key={index}/>
