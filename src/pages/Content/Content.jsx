@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import { Accordion } from '@components/HighOrder';
 
-import './index.less'
+import './Content'
 class Index extends Component {
 
   onChange = (key) => {
