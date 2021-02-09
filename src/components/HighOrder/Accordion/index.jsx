@@ -1,68 +1,9 @@
 import React, { Component } from 'react';
 import { Icon } from 'antd-mobile';
-import { Jump, Modal } from '@unilts'
+import { Jump, Modal } from '@unilts';
+import listTest from './test'
 
 import './index.less'
-
-// active 控制状态，并控制下级的列表，1代表展开，2代表关闭，初始值无
-const list = [
-  {
-    name: '标题1',
-    children: [
-      {
-        name: 'message',
-        message: '暂无内容'
-      },
-      {
-        name: '外链',
-        src: 'https://www.baidu.com/',
-      },
-      {
-        name: '本地',
-        path: '/',
-      },
-    ]
-  },
-  {
-    name: '标题2',
-    children: [
-      {
-        name: '外链+参数',
-        src: 'https://www.baidu.com/',
-        params: {
-          text: '1'
-        }
-      },
-      {
-        name: '本地+参数',
-        path: '/',
-        params: {
-          text: '1'
-        }
-      },
-      {
-        name: '下级2',
-      }
-    ]
-  },
-  {
-    name: '标题3',
-    children: [
-      {
-        name: '下级1',
-      },
-      {
-        name: '下级2',
-      },
-      {
-        name: '下级2',
-      }
-    ]
-  },
-  {
-    name: '标题4',
-  }
-]
 
 /**
  * @module 手风琴列表
@@ -75,14 +16,30 @@ const list = [
  * @param params 跳转地址携带的参数
  * 
  * 层级关系 path > src > message , 如果都没有进入404页面
+ * active 控制状态，并控制下级的列表，1代表展开，2代表关闭，初始值无
+ * 
  */
 
 class Index extends Component {
   constructor(props){
     super(props);
     this.state = {
-      list
+      list: []
     } 
+  }
+
+  static getDerivedStateFromProps(prevProps, prevState){
+    const { list = listTest } = prevProps;
+    if(list != prevState.list){
+      return {
+        list
+      }
+    }
+    return null;
+  }
+
+  componentDidMount = () => {
+    this.setState()
   }
 
   // 这里应该首先判断是否有children，用来判断是否跳转
@@ -124,7 +81,6 @@ class Index extends Component {
   }
 
   render() {
-
     const { list } = this.state;
 
     return (
