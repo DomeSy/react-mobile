@@ -11,7 +11,7 @@ import axios from 'axios'
 import { Axios } from '@unilts';
 import { Control } from 'react-keeper';
 import { Jump, Modal } from '@unilts';
-import Content from './Content'
+import Content from './Content/Content'
 export default class Home extends Component {
   constructor(props){
     super(props)

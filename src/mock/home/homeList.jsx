@@ -11,16 +11,29 @@ const homeList = [
   {
     title: 'React',
     tip: '包含react、react-redux、mobx等',
-    src: Base
+    src: Base,
+    children: [
+      {
+        name: 'Hook',
+        children: [
+          {
+            name: 'useState'
+          },
+          {
+            name: 'useEffect'
+          }
+        ]
+      }
+    ]
   },
   {
     title: '组件展示',
-    tip: '包含AntD组件的封装及使用',
+    tip: '包含AntD、G2组件的封装及使用',
     src: Img1
   },
   {
-    title: 'G2',
-    tip: '包含折线图，柱状图，饼状图等的封装',
+    title: 'Web全栈',
+    tip: '包含Vue，Node，Webpack等的语言',
     src: Img2
   },
   {

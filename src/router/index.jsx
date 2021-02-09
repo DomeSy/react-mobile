@@ -1,8 +1,5 @@
 import Home from '@pages/Home';
-
-import { LoadAble } from '@unilts'
-import HomePage from '@pages/Router/HomePage';
-import Login from '@pages/Router/LoginPage';
+import Content from '@pages/Content/Content';
 import UserPage from '@pages/Router/UserPage';
 import _404Page from '@pages/_404';
 
@@ -16,9 +13,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/login',
-    name: 'login',
-    component: Login
+    path: '/Content',
+    name: 'Content',
+    component: Content
   },
   {
     path: '/user',

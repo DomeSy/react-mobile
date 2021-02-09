@@ -5,7 +5,7 @@ import { Head, List } from './component'
 import './ListView'
 
 
-export default class ListView extends Component {
+class ListView extends Component {
 
   constructor(props){
     super(props);
@@ -38,3 +38,5 @@ export default class ListView extends Component {
     )
   }
 }
+
+export default ListView
