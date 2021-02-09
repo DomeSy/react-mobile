@@ -77,5 +77,4 @@ let data = Mock.mock({
     message:'请求数据成功'
 })
  
-console.log(data);
  

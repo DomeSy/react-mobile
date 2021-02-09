@@ -7,7 +7,6 @@ import './index.less'
 class Index extends Component {
 
   onChange = (key) => {
-    console.log(key);
   }
 
   render() {

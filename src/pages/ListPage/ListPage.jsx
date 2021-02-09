@@ -22,7 +22,6 @@ export default class ListPage extends Component {
   }
 
   click = () =>{
-    console.log('11')
     this.setState({
       list: listTest2
     })

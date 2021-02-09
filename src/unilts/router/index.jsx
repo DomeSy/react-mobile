@@ -28,10 +28,6 @@ class Index extends Component {
       Modal.alert('暂未配置路由, 请去配置')
       return;
     }
-
-    console.log(routes,'000')
-    // routes.forEach = 
-
   }
 
   render(){
