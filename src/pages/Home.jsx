@@ -65,9 +65,9 @@ export default class Home extends Component {
 
     return (
       <div>
-        <Content />
+        {/* <Content /> */}
         {/* <div onClick={()=> this.onClick(number)}> 点击{number}</div> */}
-        {/* <ListPage /> */}
+        <ListPage />
         {/* <MagicText/> */}
         {/* <Button onClick={()=> this.click()}></Button> */}
         {/* <Router>

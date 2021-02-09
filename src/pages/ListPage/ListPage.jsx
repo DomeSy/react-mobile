@@ -15,10 +15,11 @@ export default class ListPage extends Component {
   }
 
   componentDidMount =  async () => {
-    const res = await Axios({}, {url: 'homeList'})
-    this.setState({
-      list: res.data
-    })
+    const res = await Axios({id: 1, iid: 21}, {url: 'homeList'})
+    console.log(res,'00')
+    // this.setState({
+    //   list: res.data
+    // })
   }
 
   click = () =>{

@@ -52,7 +52,7 @@ Mock.mock('/api/goodslist', 'get', {
 })
  
 Mock.mock(/\goods\/goodsList/,"get",function(options){
-    let {limit,page} = url.parse(options.url,true).query;// 解构赋值，结合上面看就懂了
+    let {limit,page} = url.parse(options.url, true).query;// 解构赋值，结合上面看就懂了
     // return data.data.slice(0,4);//获取0-4条的数据，
     return data.data.slice((page-1)*limit,(limit*page)-1)  //data.data是上面的数据，这里获取的是
 })
