@@ -6,11 +6,4 @@ export const DHomeInit = (payload) => reduxRequest({
   type: HOMEINIT,
   cb: res => ({...res, msg: '欢迎来到Domsey'}),
   payload
-}) 
-
-export const DHomeActive = (payload) => {
-  return {
-    type: HOMEACTIVE,
-    payload
-  }
-}
+})
