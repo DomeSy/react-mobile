@@ -28,9 +28,15 @@ class Index extends Component {
   render() {
     const { homeActive } = this.state;
 
+    if(homeActive.length === 0) {
+      return (
+        <div></div>
+      )
+    }
+
     return (
       <div>
-        <HeadTitle />
+        <HeadTitle data={homeActive} />
         <Accordion list={homeActive.children}/>
       </div>
     )
