@@ -35,9 +35,9 @@ class Index extends Component {
 
     // console.log(,'11')
     return (
-      <>
+      <div>
         <Router>
-          <>
+          <div>
             {
               routes.map((item, index) => (
                 <Route
@@ -53,9 +53,9 @@ class Index extends Component {
                   key={index}/>
               ))
             }
-          </>
+          </div>
         </Router>
-      </>
+      </div>
     )
   }
 }

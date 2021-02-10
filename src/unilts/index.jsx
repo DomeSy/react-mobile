@@ -1,6 +1,7 @@
 export { default as Router } from './router'
 export { default as LoadAble } from './LoadAble'
 export { default as Axios } from './request'
+export { default as reduxRequest } from './reduxRequest'
 export { default as Jump } from './jump'
 export { default as Mock } from './mock'
 export { default as Modal } from './Modal'

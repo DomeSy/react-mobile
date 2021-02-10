@@ -15,8 +15,7 @@ import { Control } from 'react-keeper';
  */
 
 class Jump{
-  static go = (data) => {
-    let { url='/', params={} } = data;
+  static go = (url='/', params = {}) => {
     if(typeof data === 'string') url = data;
     if(typeof params === 'string'){
       Control.go(url, {params})
@@ -31,8 +30,7 @@ class Jump{
     Control.go(Number(back))
   }
 
-  static replace = (data) => {
-    let { url='/', params={} } = data;
+  static replace = (url='/', params = {}) => {
     if(typeof data === 'string') url = data;
     if(typeof params === 'string'){
       Control.replace(url, {params})

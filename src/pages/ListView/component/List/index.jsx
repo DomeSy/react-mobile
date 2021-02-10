@@ -11,9 +11,9 @@ import { listTest } from './test'
 */
 function Index({list = listTest}) {
 
-  const goView = (children = false) => {
+  const goView = (children = false, title = false) => {
     if(children){
-      Jump.go('Content')
+      Jump.go('Content', title)
     }else{
       Jump.go('_404')
     }
@@ -23,7 +23,7 @@ function Index({list = listTest}) {
     <div className="DList">
       {
         list.map((item, index) => 
-          <div className="DList-Show" key={index} onClick={() => goView(item.children)}>
+          <div className="DList-Show" key={index} onClick={() => goView(item.children, item.title)}>
             <Circular src={item.src}/>
             <div className="DList-Show-Text">
               <p>{item.title}</p>

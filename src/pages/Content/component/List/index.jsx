@@ -3,7 +3,8 @@ import { Accordion } from '@components/HighOrder';
 import { connect } from 'react-redux';
 import { Jump } from '@unilts';
 
-// import './index.less'
+import './index.less'
+@connect(({ home }) => ({...home}))
 class Index extends Component {
 
   constructor(props){

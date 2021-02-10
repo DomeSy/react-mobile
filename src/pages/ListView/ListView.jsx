@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { Axios } from '@unilts';
 import { Head, List } from './component'
+import { connect } from 'react-redux'
+import * as homeActions from '@actions/home'
 
 import './ListView'
 
-
+@connect(({ home }) => ({ ...home }), { ...homeActions })
 class ListView extends Component {
 
   constructor(props){
@@ -15,25 +16,15 @@ class ListView extends Component {
   }
 
   componentDidMount =  async () => {
-    const res = await Axios({}, {url: 'homeList'})
-    this.setState({
-      list: res.data
-    })
-  }
-
-  click = () =>{
-    this.setState({
-      list: listTest2
-    })
+    this.props.DHomeInit()
   }
 
   render() {
-    const { list } = this.state;
-
+    const { homeList } = this.props;
     return (
       <div className="ListView">
         <Head />
-        <List list={list}/>
+        <List list={Object.values(homeList)}/>
       </div>
     )
   }

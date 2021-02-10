@@ -2,6 +2,7 @@ import Home from '@pages/Home';
 import Content from '@pages/Content/Content';
 import UserPage from '@pages/Router/UserPage';
 import _404Page from '@pages/_404';
+import ListView from '@pages/ListView/ListView';
 
 
 const routes = [
