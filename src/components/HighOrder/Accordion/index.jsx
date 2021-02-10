@@ -70,7 +70,7 @@ class Index extends Component {
       return;
     }else if(item.src){
       const params = item.params || {}
-      Jump.goSrc(item.goSrc, params)
+      Jump.href(item.goSrc, params)
       return;
     }else if(item.message){
       Modal.alert(item.message)

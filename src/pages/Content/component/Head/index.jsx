@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Jump } from '@unilts';
 
 import './index.less'
-// @connect(({ home }) => ({...home}))
+@connect(({ home }) => ({...home}))
 class Index extends Component {
 
   constructor(props){
@@ -19,7 +19,7 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <Accordion/>
+       你好
       </div>
     )
   }
