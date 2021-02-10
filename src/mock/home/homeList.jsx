@@ -55,7 +55,20 @@ const homeList = [
     title: '高阶组件',
     value: 'highOrder',
     tip: '包含复合组件、高级组件的使用',
-    src: Img5
+    src: Img5,
+    children: [
+      {
+        name: '手风琴列表',
+        children: [
+          {
+            name: 'useState'
+          },
+          {
+            name: 'useEffect'
+          }
+        ]
+      }
+    ]
   },
   {
     title: '轮子起源',

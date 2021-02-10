@@ -1,4 +1,4 @@
-import { HOMEINIT } from '@constants/home'
+import { HOMEINIT, HOMEACTIVE } from '@constants/home'
 import { reduxRequest } from '@unilts'
 
 export const DHomeInit = (payload) => reduxRequest({
@@ -7,3 +7,10 @@ export const DHomeInit = (payload) => reduxRequest({
   cb: res => ({...res, msg: '欢迎来到Domsey'}),
   payload
 }) 
+
+export const DHomeActive = (payload) => {
+  return {
+    type: HOMEACTIVE,
+    payload
+  }
+}

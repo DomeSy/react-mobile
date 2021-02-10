@@ -1,8 +1,8 @@
-import { ADD, MINUS } from '@constants/counter'
-import { HOMEINIT } from '@constants/home'
+import { HOMEINIT, HOMEACTIVE } from '@constants/home'
 
 const INITIAL_STATE = {
-  homeList: {}
+  homeList: {},
+  homeActive: {}
 }
 
 function getData(list){
@@ -20,11 +20,19 @@ export default function counter (state = INITIAL_STATE, action) {
       const homeList = getData(action.payload.data);
       return {
         homeList: {
-          ...homeList
+          ...homeList,
+          ...state
         }
       }
     }
-  
+    case HOMEACTIVE: {
+      const { homeList } = state;
+      const homeActive = Object.values(homeList).filter(item => item.title === action.payload);
+      return {
+        homeActive: homeActive[0],
+        ...state
+      }
+    }
     default:
       return state
   }

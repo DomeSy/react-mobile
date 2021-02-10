@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Accordion } from '@components/HighOrder';
 import { connect } from 'react-redux';
 import { Jump } from '@unilts';
-import { List } from './component'
+import * as homeActions from '@actions/home'
 
-// import './index.less'
+import './Content.less'
+@connect(({ home }) => ({...home}), {...homeActions})
 class Index extends Component {
 
   constructor(props){
@@ -12,14 +13,17 @@ class Index extends Component {
   }
 
   componentDidMount = () => {
-    console.log(Jump.get())
-    console.log(this.props)
+    const title = Jump.get().params
+    Jump.title(title)
+    this.props.DHomeActive(title)
   }
 
   render() {
+    console.log(this.props, '000')
+
     return (
       <div>
-        <List />
+        <Accordion/>
       </div>
     )
   }
