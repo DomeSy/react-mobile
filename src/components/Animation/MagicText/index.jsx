@@ -7,7 +7,7 @@ import './index.less'
 /**
  * @module 打字组件
  * 
- * @param text 文本，可为字符串，活数组，如果为数组，则会循环播放
+ * @param text 文本，可为字符串，或数组，如果为数组，则会循环播放
  */
 let index = 0;
 function Index({text = MagicArr}) {
