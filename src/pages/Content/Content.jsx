@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Accordion } from '@components/HighOrder';
 import { connect } from 'react-redux';
 import { Jump } from '@unilts';
-import { Head } from './component'
+import { HeadTitle } from './component'
 
 import './Content.less'
 @connect(({ home }) => ({...home}))
@@ -30,7 +30,7 @@ class Index extends Component {
 
     return (
       <div>
-        <Head />
+        <HeadTitle />
         <Accordion list={homeActive.children}/>
       </div>
     )

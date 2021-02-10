@@ -1,7 +1,8 @@
-.Head{
+.HeadTitle{
   padding: 30px 12px;
   height: 110px;
   background: @border1;
+  margin-bottom: 20px;
   &-git{
     p{
       position: absolute;
@@ -13,19 +14,17 @@
       background-size: 100% 100%;
     }
   }
-  &-Info{
+  &-title{
+    padding-top: 20px;
     display: flex;
     justify-content: left;
     align-items: center;
-    img{
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-    }
-    div{
+    &-name{
       font-size: 21px;
       line-height: 31px;
-      margin-left: 8px;
+      font-weight: bolder;
+      color: @color;
+      margin-left: 12px;
     }
   }
 }
