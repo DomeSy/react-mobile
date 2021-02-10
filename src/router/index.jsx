@@ -11,7 +11,7 @@ const routes = [
     name: 'Home',
     index: true,
     title: '烈璇',
-    component: Home
+    component: ListView
   },
   {
     path: '/Content',

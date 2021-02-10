@@ -9,6 +9,7 @@ import configStore from './store';
 
 import 'antd-mobile/dist/antd-mobile.less';
 import './App.less'
+import Home from '@pages/Home';
 
 const config = configStore()
 
@@ -18,6 +19,7 @@ function App() {
       <PersistGate persistor={config.persistor}>
         <div className="App">
           <Router routes={routes} />
+          {/* <Home /> */}
         </div>
       </PersistGate>
     </Provider>

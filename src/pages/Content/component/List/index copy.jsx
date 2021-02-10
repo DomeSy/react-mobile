@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Accordion } from '@components/HighOrder';
 import { connect } from 'react-redux';
 import { Jump } from '@unilts';
-import { List } from './component'
 
-// import './index.less'
+import './index.less'
+// @connect(({ home }) => ({...home}))
 class Index extends Component {
 
   constructor(props){
@@ -13,13 +13,13 @@ class Index extends Component {
 
   componentDidMount = () => {
     console.log(Jump.get())
-    console.log(this.props)
+    console.log(this.props,'001')
   }
 
   render() {
     return (
       <div>
-        <List />
+        <Accordion/>
       </div>
     )
   }

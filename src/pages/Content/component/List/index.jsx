@@ -13,7 +13,7 @@ class Index extends Component {
 
   componentDidMount = () => {
     console.log(Jump.get())
-    console.log(this.props)
+    console.log(this.props,'001')
   }
 
   render() {

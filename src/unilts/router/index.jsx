@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal } from '@unilts';
 import { HashRouter as Router, Route } from 'react-keeper';
-
+import Home from '@pages/Home';
 
 /**
  * @module 路由模块
@@ -33,7 +33,7 @@ class Index extends Component {
   render(){
     const { routes } = this.props;
 
-    // console.log(,'11')
+    console.log(routes,'11')
     return (
       <div>
         <Router>
@@ -45,10 +45,11 @@ class Index extends Component {
                   index={item.index ? true : false}
                   miss={item.miss ? true : false}
                   path={item.path}
+                  children={item.component}
                   // component={item.component}
                   loadComponent = {(callback) => {
                     item.title ? document.title = item.title : '';
-                    callback(item.component)
+                    callback(Home)
                   }}
                   key={index}/>
               ))
