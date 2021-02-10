@@ -1,0 +1,52 @@
+.Skeleton {
+  padding: 16px 12px;
+  &-Info{
+    display: flex;
+    justify-content: space-between;
+    div{
+      &:first-of-type{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      &:last-of-type{
+        width: calc(100vw - 80px);
+        p{
+          height: 13px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+  p{
+    height: 18px;
+    margin-top: 8px;
+  }
+  &-right1{
+    margin-right: 10%;
+  }
+  &-right2{
+    margin-right: 20%;
+  }
+  &-right3{
+    margin-right: 30%;
+  }
+  &-right4{
+    margin-right: 40%;
+  }
+  &-animation{
+    background: rgb(234, 234, 234);
+    background-image: linear-gradient(90deg,rgba(255, 255, 255, 0.15) 25%, transparent 25%);
+    background-size: 20rem 20rem;
+    animation: SkeletonAction 1s linear infinite;
+  }
+}
+
+@keyframes SkeletonAction {
+  from {
+    background-position: 0 0 ;
+  }
+  to {
+    background-position: 20rem 0;
+  }
+}

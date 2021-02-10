@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Head, List } from './component'
 import { connect } from 'react-redux'
 import * as homeActions from '@actions/home'
+import { Skeleton } from '@components/Animation'
 
 import './ListView'
 
@@ -23,8 +24,9 @@ class ListView extends Component {
     const { homeList } = this.props;
     return (
       <div className="ListView">
-        <Head />
-        <List list={Object.values(homeList)}/>
+        <Skeleton />
+        {/* <Head /> */}
+        {/* <List list={Object.values(homeList)}/> */}
       </div>
     )
   }
