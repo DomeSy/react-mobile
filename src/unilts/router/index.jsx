@@ -33,7 +33,6 @@ class Index extends Component {
   render(){
     const { routes } = this.props;
 
-    console.log(routes,'11')
     return (
       <div>
         <Router>
