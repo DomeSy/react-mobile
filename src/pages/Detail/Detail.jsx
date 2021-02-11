@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Method } from '@unilts'
 
 import './Detail.less'
-import copy from 'copy-to-clipboard'
 
 class Detail extends Component {
 
   click = () => {
-    copy('aaa')
-    
+    Method.copy('复制的内容')
   }
 
   render() {
