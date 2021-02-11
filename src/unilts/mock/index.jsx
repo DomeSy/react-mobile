@@ -19,7 +19,7 @@ const FailData = {
  * @children的参数
  * @param params 请求的参数
  * @param list 对应的数据
- * @message 对应的返会数据
+ * @param message 对应的返会数据
  */
 class MockDate {
   static get = ({url='', message='成功', list = [], children = []}) => {
