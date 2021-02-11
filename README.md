@@ -50,10 +50,11 @@
   - [x] redux-logger: 打印日志
   - [x] redux-persist: 数据持久化
   - [x] axios: 请求
-  - [x] qs: 
+  - [x] qs: 序列化成URL的形式
   - [x] mockjs: 模拟数据
   - [x] react-highlight: React语法高亮
   - [x] react-typewriter-hook: 打字机效果
+  - [x] copy-to-clipboard: 复制
   
 
 ## 项目功能
@@ -71,5 +72,4 @@
 
 ## 模块说明
 
-  路由： 
-    看了很多关于路由的组件，如react-router-config,react-keeper管理路由的方式，但我始终感觉不太好，我想根据已有的react-router-dom进行封装简单实现react-router-config,react-keeper的功能
+  
