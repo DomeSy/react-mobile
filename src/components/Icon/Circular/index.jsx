@@ -6,8 +6,8 @@ import './index.less'
 /**
  * @module 小图标
  * 
- * src 接收的图片地址，
- * block: 形状方形，默认圆形
+ * @param src 接收的图片地址，
+ * @param block 形状方形，默认圆形
  */
 
 function index({src = Base, block = false}) {
