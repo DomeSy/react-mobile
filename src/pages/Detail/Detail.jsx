@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Method } from '@unilts'
-
+import { EditHight } from '@components/Icon'
 import './Detail.less'
 
 class Detail extends Component {
@@ -11,8 +11,9 @@ class Detail extends Component {
 
   render() {
     return (
-      <div onClick={() => this.click()}>
+      <div>
        Detail
+      
       </div>
     );
   }
