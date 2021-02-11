@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 
 import './Detail.less'
+import copy from 'copy-to-clipboard'
 
 class Detail extends Component {
+
+  click = () => {
+    copy('aaa')
+    
+  }
+
   render() {
     return (
-      <div>
+      <div onClick={() => this.click()}>
        Detail
       </div>
     );
