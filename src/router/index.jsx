@@ -10,8 +10,8 @@ const routes = [
     name: 'Home',
     index: true,
     title: 'Domesy',
-    component: Detail
-    // component: ListView
+    // component: Detail
+    component: ListView
   },
   {
     path: '/Content',

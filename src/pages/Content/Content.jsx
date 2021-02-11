@@ -26,6 +26,10 @@ class Index extends Component {
     Jump.title(title)
   }
 
+  goView = (msg) => {
+    console.log(msg,'----')
+  }
+
   render() {
     const { homeActive } = this.state;
 
@@ -38,7 +42,7 @@ class Index extends Component {
     return (
       <div>
         <HeadTitle data={homeActive} />
-        <Accordion list={homeActive.children}/>
+        <Accordion list={homeActive.children} />
       </div>
     )
   }

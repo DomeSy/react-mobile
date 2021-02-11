@@ -8,6 +8,9 @@ import './index.less'
 /**
  * @module 手风琴列表
  *  
+ * @param list 数组
+ * @param fn 回调
+ * 
  * @param name 标题
  * @param children 子列表
  * @param path 跳转本地页面
@@ -15,7 +18,7 @@ import './index.less'
  * @param message 弹出的信息（比如满足一定的条件才能跳转，如果不满足给出弹框，作为提示）
  * @param params 跳转地址携带的参数
  * 
- * 层级关系 path > src > message , 如果都没有进入404页面
+ * 层级关系 fn > path > src > message , 如果都没有进入404页面
  * active 控制状态，并控制下级的列表，1代表展开，2代表关闭，初始值无
  * 
  */
@@ -64,7 +67,11 @@ class Index extends Component {
   }
 
   goView = (item) => {
-    if(item.path){
+    console.log(this.props)
+    if(this.props.fn){
+      console.log(item, '00')
+      this.props.fn(item)
+    }else if(item.path){
       const params = item.params || {}
       Jump.go({url: item.path, params})
       return;
