@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Accordion } from '@components/HighOrder';
+import { Skeleton } from '@components/Animation';
 import { connect } from 'react-redux';
 import { Jump } from '@unilts';
 import { HeadTitle } from './component'
@@ -30,7 +31,7 @@ class Index extends Component {
 
     if(homeActive.length === 0) {
       return (
-        <div></div>
+        <Skeleton></Skeleton>
       )
     }
 

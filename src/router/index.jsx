@@ -1,8 +1,7 @@
-import Home from '@pages/Home';
 import Content from '@pages/Content/Content';
-import UserPage from '@pages/Router/UserPage';
 import _404Page from '@pages/_404';
 import ListView from '@pages/ListView/ListView';
+import Detail from '@pages/Detail/Detail';
 
 
 const routes = [
@@ -10,8 +9,9 @@ const routes = [
     path: '/',
     name: 'Home',
     index: true,
-    title: '烈璇',
-    component: ListView
+    title: 'Domesy',
+    component: Detail
+    // component: ListView
   },
   {
     path: '/Content',
@@ -19,9 +19,9 @@ const routes = [
     component: Content
   },
   {
-    path: '/user',
-    name: 'user',
-    component: UserPage
+    path: '/Detail',
+    name: 'Detail',
+    component: Detail
   },{
     path: '/_404',
     name: '_404',
