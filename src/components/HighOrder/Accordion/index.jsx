@@ -67,9 +67,7 @@ class Index extends Component {
   }
 
   goView = (item) => {
-    console.log(this.props)
     if(this.props.fn){
-      console.log(item, '00')
       this.props.fn(item)
     }else if(item.path){
       const params = item.params || {}
