@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import { Accordion } from '@components/HighOrder';
-import { Skeleton } from '@components/Animation';
-import { connect } from 'react-redux';
-import { Jump } from '@unilts';
+import React, { Component } from 'react'
+import { Accordion } from '@components/HighOrder'
+import { Skeleton } from '@components/Animation'
+import { connect } from 'react-redux'
+import { Jump } from '@unilts'
 import { HeadTitle } from './component'
+import * as DeatilAction from '@actions/detail'
 
 import './Content.less'
-@connect(({ home }) => ({...home}))
+@connect(({ home }) => ({...home}), {...DeatilAction})
 class Index extends Component {
 
   constructor(props){
@@ -26,14 +27,12 @@ class Index extends Component {
     Jump.title(title)
   }
 
-  goView = (msg, homeActive) => {
-    console.log(msg,'----', homeActive)
-
+  goView = async (msg, homeActive) => {
     if(homeActive.goView){
       // 不跳转统一页面
     }else{
-      console.log('11')
-      Jump.go('Detail')
+      await this.props.DDetailInit({url: homeActive.value, data: msg.value})
+      Jump.go('Detail', msg.name)
     }
   }
 
