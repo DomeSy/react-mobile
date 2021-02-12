@@ -1,4 +1,5 @@
 import reactMock from './reactMock'
+import jsMock from './jsMock'
 
 import Base from '@images/icon/base.png'
 import Img1 from '@images/icon/img1.png'
@@ -37,7 +38,8 @@ const homeList = [
     value: 'js',
     content: '封装常见的JS方法，使其高效开发',
     tip: '包含项目中常用的一些方法',
-    src: Img3
+    src: Img3,
+    children: jsMock
   },
   {
     title: '算法',
