@@ -26,8 +26,15 @@ class Index extends Component {
     Jump.title(title)
   }
 
-  goView = (msg) => {
-    console.log(msg,'----')
+  goView = (msg, homeActive) => {
+    console.log(msg,'----', homeActive)
+
+    if(homeActive.goView){
+      // 不跳转统一页面
+    }else{
+      console.log('11')
+      Jump.go('Detail')
+    }
   }
 
   render() {
@@ -42,7 +49,7 @@ class Index extends Component {
     return (
       <div>
         <HeadTitle data={homeActive} />
-        <Accordion list={homeActive.children} />
+        <Accordion list={homeActive.children} fn={(msg) => this.goView(msg, homeActive)} />
       </div>
     )
   }

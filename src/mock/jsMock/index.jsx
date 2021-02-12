@@ -1,10 +1,11 @@
 import ArrayTree from './ArrayTree'
 
-export default jsMock = [
+const jsMock = [
   {
     params: {
-      data: 'ArrayTree',
-      list: ArrayTree
-    }
+      data: 'ArrayTree'
+    },
+    list: ArrayTree
   }
 ]
+export default jsMock;
