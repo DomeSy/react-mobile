@@ -39,7 +39,6 @@ class Method{
     });
 
     const result = Method.ArrayRepeat(tree, filterArr, id)
-
     return result;
   }
 

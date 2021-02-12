@@ -16,6 +16,12 @@
   &-normal{
     color: @color;
   }
+  &-note{
+    text-indent: 0px;
+    font-size: 14px;
+    line-height: 24px;
+    color: @red;
+  }
   &-List{
     div{
       font-size: 14px;
@@ -28,8 +34,11 @@
         }
       }
       &::before{
-        content: '⊙';
+        content: '○';
+        font-size: 8px;
+        line-height: 24px;
         margin-right: 4px;
+        margin-top: -3px;
       }
     }
   }

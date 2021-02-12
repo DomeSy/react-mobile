@@ -10,6 +10,7 @@ import './index.less'
  * 
  * @normal 说明 (默认)
  * @content 说明内容（字体蓝色） 
+ * @note 说明内容（字体红色） 
  * @tip 提示内容 
  * @list 数组，用于展示参数 
  */
@@ -17,9 +18,9 @@ function Index({content = '', type = 'normal'}) {
   return (
     <div className="ContentList">
       {
-        (type === 'normal' || type === 'content' || type === 'tip')
+        (type === 'normal' || type === 'content' || type === 'tip' || type === 'note')
         &&
-        <div className={type === 'normal' ? 'ContentList-content ContentList-normal' : type === 'content' ? 'ContentList-content' : 'ContentList-tip'}>{content}</div>
+        <div className={type === 'normal' ? 'ContentList-content ContentList-normal' : type === 'note' ? 'ContentList-content ContentList-note' : type === 'content' ? 'ContentList-content' : 'ContentList-tip'}>{content}</div>
       }
       {
         type === 'list' &&
