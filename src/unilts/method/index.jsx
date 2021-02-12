@@ -1,5 +1,6 @@
 import copy from 'copy-to-clipboard'
 import { Modal } from '@unilts';
+import { ArrayRepeat } from './array'
 
 /**
  * @module 通用方法
@@ -16,5 +17,32 @@ class Method{
     copy(content);
     Modal.info(message)
   }
+
+  /**
+   * @module 树形数组
+   * 
+   * @param arrList 数组集合
+   * @param id 子id
+   * @param fid 父id
+   * @param children 将子id放入fid的名字，默认children
+   */ 
+  static ArrayTree = (allList, id, fid, children = 'children') => {
+    let deeplist = JSON.parse(JSON.stringify(allList));
+    let filterArr = []
+    const tree = deeplist.map( (parent) => {
+      let item = deeplist.filter( (child) => parent[id] == child[fid]);
+      if (item.length > 0) {
+        parent[children] = item;
+        filterArr = [...filterArr, ...item]; 
+      }
+      return parent;
+    });
+
+    const result = Method.ArrayRepeat(tree, filterArr, id)
+
+    return result;
+  }
+
+  static ArrayRepeat = ArrayRepeat
 }
 export default Method
