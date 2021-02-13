@@ -1,5 +1,10 @@
 import reactMock from './reactMock'
+import componentMock from './componentMock'
+import webMock from './webMock'
 import jsMock from './jsMock'
+import algorithmMock from './algorithmMock'
+import highOrderMock from './highOrderMock'
+import weelMock from './weelMock'
 
 import Base from '@images/icon/base.png'
 import Img1 from '@images/icon/img1.png'
@@ -24,14 +29,16 @@ const homeList = [
     tip: '包含AntD、G2组件的封装及使用',
     content: '基于组件库的二次封装，是开发更加简洁',
     value: 'component',
-    src: Img1
+    src: Img1,
+    children: componentMock
   },
   {
     title: 'Web全栈',
     value: 'web',
     content: '前端语言的学习笔记',
     tip: '包含Vue，Node，Webpack等的语言',
-    src: Img2
+    src: Img2,
+    children: webMock
   },
   {
     title: 'JS方法',
@@ -46,7 +53,8 @@ const homeList = [
     value: 'algorithm',
     content: '算法是锻炼思维的利器',
     tip: '包含快排、背包等常见算法',
-    src: Img4
+    src: Img4,
+    children: algorithmMock
   },
   {
     title: '高阶组件',
@@ -54,26 +62,15 @@ const homeList = [
     content: '封装较为复杂的组件，使其在业务上更好的开发',
     tip: '包含复合组件、高级组件的使用',
     src: Img5,
-    children: [
-      {
-        name: '手风琴列表',
-        children: [
-          {
-            name: 'useState'
-          },
-          {
-            name: 'useEffect'
-          }
-        ]
-      }
-    ]
+    children: highOrderMock
   },
   {
     title: '轮子起源',
     value: 'wheel',
     content: '天天造轮子，舍我其谁',
     tip: '包含加密解密、防抖等轮子',
-    src: Img6
+    src: Img6,
+    children: weelMock
   }
 ]
  

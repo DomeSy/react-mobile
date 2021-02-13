@@ -6,12 +6,3 @@ Mock.get({url: 'homeList', list: homeList, message: '返回首页数据成功'})
 
 Mock.get({url: 'js', message: '返回数据成功', children: jsMock})
 
-// Mock.get({url: 'js', message: '返回首页数据成功', children: [
-//   {
-//     params: {
-//       id: '1',
-//       iid: '2'
-//     },
-//     list: homeList
-//   }
-// ]})
