@@ -11,14 +11,17 @@ import './index.less'
  * @param back 返回的层数（默认1）
  */
 function Index() {
-  const { title = false, text = '上一页', back = -1 } = Jump.get();
+  let text = '返回首页'
+
+  // if(!Jump.get()){
+  //   console.log('11')
+  //   // const text = '返回首页'
+  // }else{
+  //   const { title = false, text = '上一页', back = -1 } = Jump.get();
+  // }
 
   const go = () => {
-    Jump.back(back)
-  }
-
-  if(title){
-    Jump.title(title)
+    Jump.go('/')
   }
 
   return (

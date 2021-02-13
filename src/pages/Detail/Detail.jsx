@@ -31,11 +31,8 @@ import './Detail.less'
 class Detail extends Component {
 
   render() {
-    console.log(Jump.get().params,'000')
     const { detail } = this.props;
 
-    console.log(detail.data[3],'--')
-    const Component = detail.data[3].component;
     return (
       <div className="Detail">
         <Title>{Jump.get().params}({detail.name})</Title>

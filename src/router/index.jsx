@@ -2,6 +2,7 @@ import Content from '@pages/Content/Content';
 import _404Page from '@pages/_404';
 import ListView from '@pages/ListView/ListView';
 import Detail from '@pages/Detail/Detail';
+import DetailShow from '@pages/DetailShow/DetailShow';
 
 
 const routes = [
@@ -11,7 +12,7 @@ const routes = [
     index: true,
     title: 'Domesy',
     // component: Detail
-    component: ListView
+    component: ListView,
   },
   {
     path: '/Content',
@@ -21,8 +22,16 @@ const routes = [
   {
     path: '/Detail',
     name: 'Detail',
-    component: Detail
-  },{
+    component: Detail,
+    children: [
+      {
+        path: 'test',
+        name: 'test',
+        component: DetailShow
+      }
+    ]
+  },
+  {
     path: '/_404',
     name: '_404',
     miss: true,
