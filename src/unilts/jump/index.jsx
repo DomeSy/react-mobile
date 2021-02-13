@@ -42,6 +42,9 @@ class Jump{
   }
 
   static get = () => {
+    if(Control.state === null){
+      Jump.replace()
+    }
     return Control.state;
   }
 
