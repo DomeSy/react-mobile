@@ -28,8 +28,6 @@ class MockDate {
         const query = urlData.parse(options.url, true).query;
         for(let i = 0;i < children.length; i++){
           if(JSON.stringify(query) === JSON.stringify(children[i].params)){
-            console.log( typeof children[i].list,'--111')
-            console.log( children[i].list,'--111')
             return {
               status: 200,
               message: children[i].message || message,
