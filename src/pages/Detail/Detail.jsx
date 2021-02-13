@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { EditHight, Title, ContentList } from '@components/Icon'
 import { connect } from 'react-redux'
-import { Jump } from '@unilts'
+import { Jump, ComponentShow } from '@unilts'
 
 import './Detail.less'
 
@@ -15,6 +15,7 @@ import './Detail.less'
  * @method
  * @param edit => EditHight组件
  * @param content => ContentList组件
+ * @param component => ComponentShow组件
  * 
  * @edit
  * @param copy 是否复制
@@ -45,10 +46,8 @@ class Detail extends Component {
                 <EditHight copy={item.copy}>{item.content}</EditHight> :
                 item.method === 'content' ?
                 <ContentList content={item.content} type={item.type} /> :
-                item.component ? 
-                <div>
-                  <Component />
-                </div>
+                item.method === 'component' ? 
+                  ComponentShow[item.content]()
                 :
                 <></>
               }

@@ -23,13 +23,11 @@ const routes = [
     path: '/Detail',
     name: 'Detail',
     component: Detail,
-    children: [
-      {
-        path: 'test',
-        name: 'test',
-        component: DetailShow
-      }
-    ]
+  },
+  {
+    path: '/DetailShow',
+    name: 'DetailShow',
+    component: DetailShow,
   },
   {
     path: '/_404',

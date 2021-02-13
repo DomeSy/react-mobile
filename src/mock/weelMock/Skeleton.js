@@ -17,8 +17,8 @@ const Index = [
   },
   {
     title: '示例',
-    content: 'arr',
-    method: 'content',
+    content: 'Skeleton',
+    method: 'component',
   },
   {
     title: '代码',
