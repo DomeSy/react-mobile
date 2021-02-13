@@ -12,12 +12,13 @@ import { Axios, Modal } from '@unilts';
 export default function createAction({url, path = false, payload = {}, type, cb, method = 'get'}){
   return async (dispatch) => {
     const res = await Axios(payload, {method, url, path});
-    const { status, message } = res;
+    const { status } = res;
     if(status === 200 || status === '200'){
       dispatch({ type, payload: cb ? cb(res) : res })
       return res
     }else{
-      Modal(message)
+      Modal.alert(res.mesage)
+      return false
     }
   }
 }
