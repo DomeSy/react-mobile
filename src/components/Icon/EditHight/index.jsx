@@ -20,9 +20,8 @@ function Index({children = ``, copy = false}) {
 
   return (
     <div className="EditHight">
-      {copy && <div className="EditHight-copy" onClick={() => goCopy(children)}>复制</div>}
+      {copy && <div className="EditHight-copy" onClick={() => goCopy(children)}></div>}
       <HighLight className="EditHight-centent">
-        {/* <div className="EditHight-copy" onClick={() => console.log('1')}> 复制</div> */}
         {
           stripIndent`${children}`
         }
