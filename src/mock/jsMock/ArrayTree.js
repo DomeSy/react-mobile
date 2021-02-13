@@ -127,7 +127,6 @@ const ArrayTree = [
   {
     title: '代码',
     content:  `
-      // 树形数组
       static ArrayTree = (allList, id, fid, children = 'children') => {
         let deeplist = JSON.parse(JSON.stringify(allList));
         let filterArr = []
