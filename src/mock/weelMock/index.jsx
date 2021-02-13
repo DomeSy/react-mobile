@@ -1,6 +1,6 @@
-import ArrayTree from './ArrayTree'
+import Skeleton from './Skeleton'
 
 const weelMock = [
-  { params: { data: 'ArrayTree' }, list: ArrayTree}
+  { params: { data: 'Skeleton' }, list: Skeleton}
 ]
 export default weelMock;
