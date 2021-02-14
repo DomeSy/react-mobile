@@ -23,6 +23,60 @@ const BubbleSort = arr => {
 }
 
 /**
+ * 快速排序
+ */
+const QuickSort = arr => {
+  return quick(arr, 0, arr.length - 1)
+}
+
+const quick = (array, left, right) => {
+  let index;
+  if(array.length > 1){
+    index = partition(array, left, right)
+    if(left < index - 1){
+      quick(array, left, index - 1)
+    }
+    if (index < right) {
+      quick(array, index, right)
+    }
+  }
+  return array;
+}
+
+// 分治函数
+const partition = (array, left, right) => {
+  // ⽤index取中间值⽽⾮splice
+  const pivot = array[Math.floor((right + left) / 2)];
+  let i = left;
+  let j = right;
+  while (i <= j) {
+    while (compare(array[i], pivot) === -1) { 
+      i++ 
+    }
+    while (compare(array[j], pivot) === 1) {
+      j--
+    }
+    if (i <= j) {
+      swap(array, i, j)
+      i++;
+      j--;
+    }
+  }
+  return i
+}
+
+const swap = (array, a, b) => {
+  [array[a], array[b]] = [array[b], array[a]]
+}
+
+const compare = (a, b) => {
+  if (a === b) {
+    return 0;
+  }
+  return a < b ? -1 : 1;
+}
+
+/**
  * @module 希尔排序
  */
 const ShellSort = arr => {
@@ -78,6 +132,7 @@ const merge = (left, right) => {
 
 export {
   BubbleSort,
+  QuickSort,
   ShellSort,
   MergeSort
 }

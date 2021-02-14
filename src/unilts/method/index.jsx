@@ -1,7 +1,7 @@
 import copy from 'copy-to-clipboard'
 import { Modal } from '@unilts';
 import { ArrayRepeat } from './array'
-import { BubbleSort, ShellSort, MergeSort } from './sort'
+import { BubbleSort, ShellSort, MergeSort, QuickSort } from './sort'
 
 /**
  * @module 通用方法
@@ -47,6 +47,7 @@ class Method{
 
   // 排序
   static BubbleSort = BubbleSort
+  static QuickSort = QuickSort
   static ShellSort = ShellSort
   static MergeSort = MergeSort
 }

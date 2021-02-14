@@ -1,6 +1,6 @@
 import BubbleSort from './BubbleSort'
 import ShellSort from './ShellSort'
-import QuickSort from './MergeSort'
+import QuickSort from './QuickSort'
 import MergeSort from './MergeSort'
 
 const algorithmMock = [
