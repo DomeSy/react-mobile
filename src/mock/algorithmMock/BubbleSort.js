@@ -1,19 +1,20 @@
-const ArrayTree = [
+const BubbleSort = [
   {
     title: '',
-    content: '在工作中常常遇到一种场景，通过接口获得全部数据，而这些数据具有层级关系，如果元素B的id等于元素A的子id，那么B属于A，即A是B的上级',
+    content: '冒泡排序是十大排序中最基本的一种排序',
     method: 'content',
     type: 'blue'
   },
   {
-    title: '适用场景',
-    content: '将数组转化为树形数组',
-    method: 'content',
-  },
-  {
     title: '设计思路',
-    content: '通过数组遍历，过滤出id等于fid的并进行赋值，之后在通过两数组去重的方式，来获得最终的树形数组',
+    content: [
+      '⽐较相邻的元素。如果第⼀个⽐第⼆个⼤，就交换他们两个。',
+      '对每⼀对相邻元素作同样的⼯作，从开始第⼀对到结尾的最后⼀对。这步做完后，最后的元素会是最⼤的数。',
+      '针对所有的元素重复以上的步骤，除了最后⼀个。',
+      '持续每次对越来越少的元素重复上⾯的步骤，直到没有任何⼀对数字需要⽐较。'
+    ],
     method: 'content',
+    type: 'listAll',
   },
   {
     title: '示例',
@@ -175,4 +176,4 @@ const ArrayTree = [
   }
 ]
 
-export default ArrayTree
+export default BubbleSort

@@ -12,7 +12,8 @@ import './index.less'
  * @blue 说明内容（字体蓝色） 
  * @red 说明内容（字体红色） 
  * @tip 提示内容 
- * @list 数组，用于展示参数 
+ * @list 数组，用于展示参数 (参数和说明)
+ * @listAll 数组，用于展示参数 （说明）
  */
 function Index({content = '', type = 'normal'}) {
   return (
@@ -31,6 +32,18 @@ function Index({content = '', type = 'normal'}) {
                 <span>{item.name}</span>
                 ：
                 <span>{item.value}</span>
+              </div>
+            ))
+          }
+        </div>
+      }
+      {
+        type === 'listAll' &&
+        <div className="ContentList-List ContentList-ListAll">
+          {
+            content.map((item, index) => (
+              <div key={index}>
+                <span>{item}</span>
               </div>
             ))
           }

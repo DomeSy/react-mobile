@@ -1,6 +1,6 @@
-import ArrayTree from './ArrayTree'
+import BubbleSort from './BubbleSort'
 
 const algorithmMock = [
-  { params: { data: 'ArrayTree' }, list: ArrayTree}
+  { params: { data: 'BubbleSort' }, list: BubbleSort}
 ]
 export default algorithmMock;

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import _404Page from "@pages/Router/_404Page"
+import { Method } from '@unilts'
 
 class Home extends Component {
   constructor(props){
@@ -10,6 +11,10 @@ class Home extends Component {
 
   componentDidMount = () => {
     // console.log(this.props,'--')
+
+    const arr = [19, 3, 4, 10, 1, 3, 8]
+    const res = Method.BubbleSort(arr)
+    console.log(res, '11')
   }
 
   render() {

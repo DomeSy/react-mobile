@@ -1,7 +1,7 @@
 import copy from 'copy-to-clipboard'
 import { Modal } from '@unilts';
 import { ArrayRepeat } from './array'
-import { BubbleSort1 } from './sort'
+import { BubbleSort } from './sort'
 
 /**
  * @module 通用方法
@@ -45,6 +45,6 @@ class Method{
 
   static ArrayRepeat = ArrayRepeat
 
-  static BubbleSort1 = BubbleSort1
+  static BubbleSort = BubbleSort
 }
 export default Method
