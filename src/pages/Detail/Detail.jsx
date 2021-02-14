@@ -54,7 +54,7 @@ class Detail extends Component {
             </div>
           ))
         }
-        <Buttom />
+        <Buttom content={detail.name} />
       </div>
     );
   }
