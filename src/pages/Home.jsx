@@ -12,9 +12,9 @@ class Home extends Component {
   componentDidMount = () => {
     // console.log(this.props,'--')
 
-    const arr = [19, 3, 4, 10, 1, 3, 8]
-    const res = Method.QuickSort(arr)
-    console.log(res, '11')
+    // const arr = [19, 3, 4, 10, 1, 3, 8]
+    // const res = Method.QuickSort(arr)
+    // console.log(res, '11')
   }
 
   render() {

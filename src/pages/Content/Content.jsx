@@ -31,7 +31,6 @@ class Index extends Component {
     if(homeActive.goView){
       // 不跳转统一页面
     }else{
-      console.log(homeActive.value,msg.value )
       const res = await this.props.DDetailInit({url: homeActive.value, data: msg.value})
       if(!res) return;
       Jump.go('Detail', msg.name)
