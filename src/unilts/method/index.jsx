@@ -43,6 +43,41 @@ class Method{
     return result;
   }
 
+  /**
+   * @module 防抖
+   * 
+   * @param fn 包裹的函数
+   * @param delay 时长，默认1000
+   */
+  static Debounce = (fn, delay=1000) => {
+    let timer = null;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(this, args);
+      }, delay);
+    };
+  };
+
+  /**
+   * 节流
+   * 
+   * @param fn 包裹的函数
+   * @param delay 时长，默认1000
+   */
+  static Throttle = (fn, delay = 1000) => {
+    let flag = true;
+    return (...args) => {
+      if (!flag) return;
+      flag = false;
+      setTimeout(() => {
+        fn.apply(this, args);
+        flag = true;
+      },
+      delay);
+    };
+  };
+
   static ArrayRepeat = ArrayRepeat
 
   // 排序
