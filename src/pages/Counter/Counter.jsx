@@ -8,7 +8,6 @@ import * as counterActions from '@actions/counter'
 class Counter extends Component {
 
   render() {
-    console.log(this.props)
     return (
       <div className="Counter">
         <Button onClick={() => this.props.add()}>+</Button>

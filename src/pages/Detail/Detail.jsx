@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { EditHight, Title, ContentList } from '@components/Icon'
+import { EditHight, Title, ContentList, Buttom } from '@components/Icon'
 import { connect } from 'react-redux'
 import { Jump, ComponentShow } from '@unilts'
 
@@ -54,6 +54,7 @@ class Detail extends Component {
             </div>
           ))
         }
+        <Buttom />
       </div>
     );
   }

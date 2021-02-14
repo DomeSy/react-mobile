@@ -1,0 +1,52 @@
+.DButton{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  div{
+    &:first-of-type{
+      width: 200px;
+      height: 143px;
+      background: url('../../../images/Info/game.jpeg');
+      background-size: 100% 100%;
+    }
+    &:last-of-type{
+      margin-right: 16px;
+      width: calc(100% - 200px);
+      height: 65px;
+      background: rgb(221, 221, 221);
+      border-radius: 5px;
+      padding: 4px 8px;
+      font-size: 12px;
+      line-height: 18px;
+      span{
+        color: @info;
+        &:first-of-type{
+          color: @red;
+        }
+      }
+      p{
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: url('../../../images/Info/github.png');
+        background-size: 100% 100%;
+        margin-left: 8px;
+        position: absolute;
+      }
+      &::after{
+        content:'';
+        position:absolute;
+        right: calc(100% - 180px);
+        bottom: 90px;
+        width: 25px;
+        height:16px;
+        border: 0px solid transparent;
+        margin-right:-12px;
+        border-top-width:17px;
+        border-top-color:currentColor;
+        border-radius:40px 0 0 0;
+        color:#dddddd;
+      }
+    }
+  }
+}
