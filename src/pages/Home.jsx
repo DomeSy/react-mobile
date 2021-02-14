@@ -13,7 +13,7 @@ class Home extends Component {
     // console.log(this.props,'--')
 
     const arr = [19, 3, 4, 10, 1, 3, 8]
-    const res = Method.ShellSort(arr)
+    const res = Method.MergeSort(arr)
     console.log(res, '11')
   }
 
