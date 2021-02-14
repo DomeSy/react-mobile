@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Head, List } from './component'
 import { connect } from 'react-redux'
 import * as homeActions from '@actions/home'
-import { Skeleton } from '@components/Animation'
 
 import './ListView'
 
