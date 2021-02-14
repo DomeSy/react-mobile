@@ -1,3 +1,5 @@
+import { DSkeleton } from '../constants/weel'
+
 const Index = [
   {
     title: '',
@@ -17,7 +19,7 @@ const Index = [
   },
   {
     title: '示例',
-    content: 'Skeleton',
+    content: DSkeleton,
     method: 'component',
   },
   {
