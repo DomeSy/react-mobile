@@ -19,161 +19,85 @@ const BubbleSort = [
   {
     title: '示例',
     content: `
-    [
-      {
-        name: '司令',
-        content: '我是司令，统领全军',
-        id: 'SSS',
-        fid: '0'
-      },
-      {
-        name: '军长',
-        content: '我是军长，除了司令，我最大',
-        id: 'SS',
-        fid: 'SSS'
-      },
-      {
-        name: '师长1',
-        content: '我是师长1，隶属于军长',
-        id: 'S1',
-        fid: 'SS'
-      },
-      {
-        name: '师长2',
-        content: '我是师长2，隶属于军长',
-        id: 'S2',
-        fid: 'SS'
-      },
-      {
-        name: '炸弹',
-        content: '我是炸弹，可轰炸所有人',
-        id: 'SSSSS',
-        fid: '1'
-      },
-      {
-        name: '旅长1',
-        content: '我是旅长1，隶属于师长1',
-        id: 'A',
-        fid: 'S1'
-      },
-      {
-        name: '旅长2',
-        content: '我是旅长2，隶属于师长1',
-        id: 'A',
-        fid: 'S1'
-      },
-      {
-        name: '旅长3',
-        content: '我是旅长3，隶属于师长1',
-        id: 'A',
-        fid: 'S1'
-      }
-    ]
+      const arr = [19, 3, 4, 10, 1, 3, 8]
     `,
     method: 'edit',
-    copy: true
   },
   {
     title: '运行结果',
-    content:  `[
-      {
-       name: '司令',
-       content: '我是司令，统领全军',
-       id: 'SSS',
-       fid: '0',
-       children: [
-         {
-           name: '师长1',
-           content: '我是师长1，隶属于军长',
-           id: 'S1',
-           fid: 'SS,
-           children: [
-             {
-               name: '旅长1',
-               content: '我是旅长1，隶属于师长1',
-               id: 'A',
-               fid: 'S1'
-             },
-             {
-               name: '旅长2',
-               content: '我是旅长2，隶属于师长1',
-               id: 'A',
-               fid: 'S1'
-             },
-             {
-               name: '旅长3',
-               content: '我是旅长3，隶属于师长1',
-               id: 'A',
-               fid: 'S1'
-             }
-           ]
-         },
-         {
-           name: '师长2',
-           content: '我是师长2，隶属于军长',
-           id: 'S1',
-           fid: 'SS'
-         }
-       ]
-      },
-      {
-       name: '炸弹',
-       content: '我是炸弹，可轰炸所有人',
-       id: 'SSSSS',
-       fid: '1'
-      }
-    ]`,
+    content: `[1, 3, 3, 4, 8, 10, 19]`,
     method: 'edit',
   },
   {
     title: '代码',
     content:  `
-    
-      static ArrayTree = (allList, id, fid, children = 'children') => {
-        let deeplist = JSON.parse(JSON.stringify(allList));
-        let filterArr = []
-        const tree = deeplist.map( (parent) => {
-          let item = deeplist.filter( (child) => parent[id] == child[fid]);
-          if (item.length > 0) {
-            parent[children] = item;
-            filterArr = [...filterArr, ...item]; 
+      const BubbleSort1 = arr => {
+        console.time('初始耗时');
+        const len = arr.length;
+        for(let i = 0;i < len; i++){
+          for(let j = 0;j < len - 1 - i; j++ ){
+            if(arr[i] > arr[j+1]){
+              let temp = arr[j+1];
+              arr[j+1] = arr[j];
+              arr[j] = temp;
+            }
           }
-          return parent;
-        });
-    
-        const result = Method.ArrayRepeat(tree, filterArr, id)
-        return result;
+        }
+        console.timeEnd('初始耗时'); 
+        return arr
       }
     `,
     method: 'edit',
     copy: true
   },
   {
-    title: '',
-    content: [
-      {
-        name: 'arrList',
-        value: '数组集合'
-      },{
-        name: 'id',
-        value: '子id'
-      },{
-        name: 'fid',
-        value: '父id'
-      },{
-        name: 'children',
-        value: '将子id放入fid的名字，默认children'
-      }
-    ],
-    method: 'content',
-    type: 'list'
+    title: '初始耗时',
+    content:  `
+      0.01318359375 ms
+    `,
+    method: 'edit',
   },
   {
-    title: '',
-    content: '注：ArrayRepeat为两数组过滤',
+    title: '优化思路',
+    content: '设置⼀标志性变量pos,⽤于记录每趟排序中最后⼀次进⾏交换的位置。由于pos位置之后的记录均已交换到位,故 在进⾏下⼀趟排序时只要扫描到pos位置即可。',
     method: 'content',
-    type: 'red'
-  }
+  },
+  {
+    title: '最终代码',
+    content:  `
+      const BubbleSort = arr => {
+        console.time('改进后冒泡排序耗时');
+        let i = arr.length-1;
+        //初始时,最后位置保持不变
+        while ( i> 0) {
+          let pos= 0;
+          //每趟开始时,⽆记录交换
+          for (let j= 0; j< i; j++)
+            if (arr[j]> arr[j+1]) {
+              pos= j;
+              //记录交换的位置
+              let tmp = arr[j];
+              arr[j]=arr[j+1];
+              arr[j+1]=tmp;
+            }
+          i= pos; 
+          //为下⼀趟排序作准备
+        }
+        console.timeEnd('改进后冒泡排序耗时'); 
+        return arr;
+      }
+    `,
+    method: 'edit',
+    copy: true
+  },
+  {
+    title: '改进后冒泡排序耗时',
+    content:  `
+      0.010986328125 ms
+    `,
+    method: 'edit',
+  },
+
 ]
 
 export default BubbleSort
