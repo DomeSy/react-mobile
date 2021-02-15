@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-
+import { Button } from '@components/AntD'
+import { Modal } from '@unilts' 
+import { ComponentShow } from '@unilts'
 class Index extends Component {
   render() {
     return (
       <div>
-        show
+        {ComponentShow.Modal()}
       </div>
     )
   }
