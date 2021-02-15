@@ -33,7 +33,7 @@ class Index extends Component {
     }else{
       const res = await this.props.DDetailInit({url: homeActive.value, data: msg.value})
       if(!res) return;
-      Jump.go('Detail', msg.name)
+      Jump.go('Detail', {name: msg.name})
     }
   }
 

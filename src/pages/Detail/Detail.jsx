@@ -30,15 +30,14 @@ import './Detail.less'
  */
 @connect(({ detail }) => ({...detail}))
 class Detail extends Component {
-
+  
   render() {
-    const { detail } = this.props;
-
+    const { data, name, extra:{noTitle = false} } = this.props.detail;
     return (
       <div className="Detail">
-        <Title>{Jump.get().params}({detail.name})</Title>
+        <Title>{Jump.get().name}{noTitle ? '':  <>({name})</>}</Title>
         {
-          detail.data.map((item, index) => (
+          data.map((item, index) => (
             <div key={index}>
               { item.title &&  <Title blue>{item.title}</Title>}
               {
@@ -54,7 +53,7 @@ class Detail extends Component {
             </div>
           ))
         }
-        <Buttom content={detail.name} />
+        <Buttom content={noTitle ? Jump.get().name : name} />
       </div>
     );
   }
