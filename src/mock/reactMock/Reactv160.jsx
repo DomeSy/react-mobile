@@ -1,9 +1,16 @@
+import img from '@images/react/v160.png'
 const ArrayTree = [
   {
     title: '',
-    content: '在工作中常常遇到一种场景，通过接口获得全部数据，而这些数据具有层级关系，如果元素B的id等于元素A的子id，那么B属于A，即A是B的上级',
+    content: 'React v16.0主要分为四个阶段,分别是Initialization、Mounting、Updation、Unmounting四个阶段',
     method: 'content',
     type: 'blue'
+  },
+  {
+    content: img,
+    height: '200px',
+    style: 'height:200px;width:100%',
+    method: 'imgs'
   },
   {
     title: '适用场景',

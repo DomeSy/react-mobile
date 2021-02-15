@@ -16,6 +16,7 @@ import './Detail.less'
  * @param edit => EditHight组件
  * @param content => ContentList组件
  * @param component => ComponentShow组件
+ * @param imgs => 配置图片
  * 
  * @edit
  * @param copy 是否复制
@@ -33,6 +34,8 @@ class Detail extends Component {
   
   render() {
     const { data, name, extra:{noTitle = false} } = this.props.detail;
+
+    console.log(data, '000')
     return (
       <div className="Detail">
         <Title>{Jump.get().name}{noTitle ? '':  <>({name})</>}</Title>
@@ -46,8 +49,11 @@ class Detail extends Component {
                 item.method === 'content' ?
                 <ContentList content={item.content} type={item.type} /> :
                 item.method === 'component' ? 
-                  ComponentShow[item.content]()
-                :
+                  ComponentShow[item.content]() :
+                item.method === 'imgs' ?
+                <div className='Detail-img'> 
+                  <img  style={{height: item.height}} src={item.content} /> 
+                </div> :
                 <></>
               }
             </div>
