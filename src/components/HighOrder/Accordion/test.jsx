@@ -1,6 +1,6 @@
 const list = [
   {
-    name: '标题1',
+    name: '基本使用',
     children: [
       {
         name: 'message',
@@ -17,7 +17,7 @@ const list = [
     ]
   },
   {
-    name: '标题2',
+    name: '使用+参数',
     children: [
       {
         name: '外链+参数',
@@ -40,20 +40,6 @@ const list = [
   },
   {
     name: '标题3',
-    children: [
-      {
-        name: '下级1',
-      },
-      {
-        name: '下级2',
-      },
-      {
-        name: '下级2',
-      }
-    ]
-  },
-  {
-    name: '标题4',
   }
 ]
 

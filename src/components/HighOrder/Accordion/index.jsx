@@ -71,7 +71,7 @@ class Index extends Component {
       this.props.fn(item)
     }else if(item.path){
       const params = item.params || {}
-      Jump.go({url: item.path, params})
+      Jump.go(item.path, params)
       return;
     }else if(item.src){
       const params = item.params || {}
@@ -81,7 +81,7 @@ class Index extends Component {
       Modal.alert(item.message)
       return;
     }else{
-      Jump.go({url: '_404', params:{text: '返回', title: item.name}})
+      Jump.go('_404',{text: '返回', title: item.name})
     }
   }
 
