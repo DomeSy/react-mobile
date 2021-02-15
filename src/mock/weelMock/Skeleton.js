@@ -18,7 +18,7 @@ const Index = [
     method: 'content',
   },
   {
-    title: '示例',
+    title: '效果展示',
     content: DSkeleton,
     method: 'component',
   },
