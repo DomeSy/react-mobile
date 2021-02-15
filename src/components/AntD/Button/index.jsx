@@ -8,10 +8,10 @@ import './index.less'
 /**
  * @module 按钮
 */
-function Index({children, onClick=()=>{}}) {
+function Index({children, onClick=()=>{}, type="primary"}) {
   return (
     <div className="DButton">
-      <Button type="primary" onClick={() => onClick()}>{children || '确认'}</Button>
+      <Button className="DButton-btn" type={type} onClick={() => onClick()}>{children || '确认'}</Button>
     </div>
   )
 }
