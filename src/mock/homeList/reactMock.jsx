@@ -8,7 +8,7 @@ const reactMock = [
       },
       {
         name: 'React v16.4',
-        value: 'Reactv16.0'
+        value: 'Reactv16.4'
       },
       {
         name: 'v16.0对比v16.4',
