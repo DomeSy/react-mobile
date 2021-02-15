@@ -27,7 +27,7 @@ const homeList = [
   {
     title: '组件展示',
     tip: '包含AntD、G2组件的封装及使用',
-    content: '基于组件库的二次封装，是开发更加简洁',
+    content: '基于组件库的二次封装，使开发更加简洁',
     value: 'component',
     src: Img1,
     children: componentMock

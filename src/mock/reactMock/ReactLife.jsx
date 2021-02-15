@@ -37,7 +37,8 @@ const ReactLife = [
       '如果props传入的内容不需要影响到你的state，那么就需要返回一个null，这个返回值是必须的，所以尽量将其写到函数的末尾。',
       '在组件创建时和更新时的render方法之前调用，它应该返回一个对象来更新状态，或者返回null来不更新任何内容。'
     ],
-    method: 'list',
+    method: 'content',
+    type: 'listAll'
   },
   {
     title: 'getSnapshotBeforeUpdate(prevProps,prevState)',
@@ -47,7 +48,8 @@ const ReactLife = [
       '可以读取，但无法使用DOM的时候，在组件可以在可能更改之前从DOM捕获一些信息（例如滚动位置）',
       '返回的任何指都将作为参数传递给componentDidUpdate（)'
     ],
-    method: 'list',
+    method: 'content',
+    type: 'listAll'
   }
 ]
 
