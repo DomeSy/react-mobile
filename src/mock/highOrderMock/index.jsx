@@ -1,6 +1,7 @@
-import ArrayTree from './ArrayTree'
+import { DAccordion } from '../constants/highOrder'
+import Accordion from './Accordion'
 
 const highOrderMock = [
-  { params: { data: 'ArrayTree' }, list: ArrayTree}
+  { params: { data: DAccordion }, list: Accordion}
 ]
 export default highOrderMock;
