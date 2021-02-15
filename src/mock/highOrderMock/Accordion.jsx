@@ -95,6 +95,7 @@ const Accordion = [
       }
     `,
     method: 'edit',
+    copy: true
   },
   {
     title: '完整代码',
