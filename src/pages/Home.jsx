@@ -10,11 +10,20 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-    // console.log(this.props,'--')
-
-    // const arr = [19, 3, 4, 10, 1, 3, 8]
-    // const res = Method.QuickSort(arr)
-    // console.log(res, '11')
+    function* g() {
+      yield 'a',
+      yield 'b',
+      yield 'c';
+      return 'ending';
+    }
+    const gen = g();
+    function next() {
+      let {value, done} = gen.next();
+      console.log(value);  // 依次打印 a b c ending
+      if(!done)
+      next();    // 直到全部打印完成
+    }
+    next();
   }
 
   render() {
