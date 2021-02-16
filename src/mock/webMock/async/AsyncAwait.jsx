@@ -1,4 +1,4 @@
-const Generator = [
+const AsyncAwait = [
   {
     title: '',
     content: 'async 和 await是ES7提供的语法，可以说是异步终极解决方案',
@@ -84,4 +84,4 @@ const Generator = [
   }
 ]
 
-export default Generator
+export default AsyncAwait
