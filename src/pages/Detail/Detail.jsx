@@ -31,7 +31,16 @@ import './Detail.less'
  */
 @connect(({ detail }) => ({...detail}))
 class Detail extends Component {
-  
+  constructor(props){
+    super(props)
+  }
+
+  componentDidMount = () => {
+    const { name, extra:{noTitle = false} } = this.props.detail;
+    Jump.title(noTitle ? Jump.get().name : name)
+  }
+
+
   render() {
     const { data, name, extra:{noTitle = false} } = this.props.detail;
 
