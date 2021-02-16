@@ -13,6 +13,14 @@ const webMock = [
       {
         name: 'Generator',
         value: 'Generator'
+      },
+      {
+        name: 'async await',
+        value: 'AsyncAwait'
+      },
+      {
+        name: 'Promise的使用',
+        value: 'Promise'
       }
     ]
   }
