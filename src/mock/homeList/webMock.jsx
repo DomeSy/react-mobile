@@ -3,10 +3,16 @@ const webMock = [
     name: '异步编程',
     children: [
       {
-        name: 'Promise'
+        name: '定时器',
+        value: 'Timer'
       },
       {
-        name: 'Generator'
+        name: 'Promise',
+        value: 'Promise'
+      },
+      {
+        name: 'Generator',
+        value: 'Generator'
       }
     ]
   }
