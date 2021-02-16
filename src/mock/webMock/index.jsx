@@ -1,6 +1,6 @@
-import Timer from './Timer'
-import PromiseIntroduce from './PromiseIntroduce'
-import Generator from './Generator'
+import Timer from './async/Timer'
+import PromiseIntroduce from './async/PromiseIntroduce'
+import Generator from './async/Generator'
 
 const webMock = [
   { params: { data: 'Timer' }, extra:{noTitle: true}, list: Timer},
