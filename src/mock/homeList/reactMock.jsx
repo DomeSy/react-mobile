@@ -19,6 +19,17 @@ const reactMock = [
         value: 'ReactRequest'
       }
     ]
+  },{
+    name: 'React核心',
+    children: [
+      {
+        name: '组件通信',
+        value: 'ReactCommunication'
+      },{
+        name: 'setState是异步还是同步'
+        
+      }
+    ]
   }
 ]
 export default reactMock
