@@ -48,26 +48,28 @@ class Detail extends Component {
     return (
       <div className="Detail">
         <Title>{Jump.get().name}{noTitle ? '':  <>({name})</>}</Title>
-        {
-          data.map((item, index) => (
-            <div key={index}>
-              { item.title &&  <Title blue>{item.title}</Title>}
-              {
-                item.method === 'edit' ?
-                <EditHight copy={item.copy}>{item.content}</EditHight> :
-                item.method === 'content' ?
-                <ContentList content={item.content} type={item.type} /> :
-                item.method === 'component' ? 
-                  ComponentShow[item.content]() :
-                item.method === 'imgs' ?
-                <div className='Detail-img'> 
-                  <img  style={{height: item.height}} src={item.content} /> 
-                </div> :
-                <></>
-              }
-            </div>
-          ))
-        }
+        <div className="Detail-Content">
+          {
+            data.map((item, index) => (
+              <div key={index}>
+                { item.title &&  <Title blue>{item.title}</Title>}
+                {
+                  item.method === 'edit' ?
+                  <EditHight copy={item.copy}>{item.content}</EditHight> :
+                  item.method === 'content' ?
+                  <ContentList content={item.content} type={item.type} /> :
+                  item.method === 'component' ? 
+                    ComponentShow[item.content]() :
+                  item.method === 'imgs' ?
+                  <div className='Detail-img'> 
+                    <img  style={{height: item.height}} src={item.content} /> 
+                  </div> :
+                  <></>
+                }
+              </div>
+            ))
+          }
+        </div>
         <Buttom content={noTitle ? Jump.get().name : name} />
       </div>
     );
