@@ -1,14 +1,15 @@
 const Index = [
   {
     title: '',
-    content: 'src是指向外部资源的位置，指向的内容会嵌⼊到⽂档中当前标签所在的位置，在请求src资源时会将其指向的资源 下载并应⽤到⽂档内，如js脚本，img图⽚和frame等元素。当浏览器解析到该元素时，会暂停其他资源的下载和处 理，知道将该资源加载、编译、执⾏完毕，所以⼀般js脚本会放在底部⽽不是头部。',
+    content: [
+      'link属于XHTML标签，⽽@import是CSS提供的。',
+      '⻚⾯被加载时，link会同时被加载，⽽@import引⽤的CSS会等到⻚⾯被加载完再加载。',
+      'import只在IE 5以上才能识别，⽽link是XHTML标签，⽆兼容问题。',
+      'link⽅式的样式权重⾼于@import的权重。',
+      '使⽤dom控制样式时的差别。当使⽤javascript控制dom去改变样式的时候，只能使⽤link标签，因为@import不是 dom可以控制的。'
+    ],
     method: 'content',
-    type: 'blue'
-  },{
-    title: '',
-    content: 'href是指向⽹络资源所在位置（的超链接），⽤来建⽴和当前元素或⽂档之间的连接，当浏览器识别到它他指向的 ⽂件时，就会并⾏下载资源，不会停⽌对当前⽂档的处理。',
-    method: 'content',
-    type: 'blue'
+    type: 'listAll'
   }
 ]
 
