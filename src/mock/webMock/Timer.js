@@ -103,7 +103,7 @@ const Timer = [
   },
   {
     content: [
-      '这个不怎么常用，再次就不介绍了',
+      '这个不怎么常用，这个就不介绍了',
     ],
     method: 'content',
     type: 'listAll'
