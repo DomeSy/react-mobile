@@ -23,6 +23,14 @@ const webMock = [
         value: 'Promise'
       }
     ]
+  },{
+    name: 'HTML知识库',
+    children: [
+      {
+        name: 'src和href的区别',
+        value: 'srcHref'
+      }
+    ]
   }
 ]
 export default webMock
