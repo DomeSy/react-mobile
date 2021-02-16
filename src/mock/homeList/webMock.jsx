@@ -8,7 +8,7 @@ const webMock = [
       },
       {
         name: 'Promise',
-        value: 'Promise'
+        value: 'PromiseIntroduce'
       },
       {
         name: 'Generator',
