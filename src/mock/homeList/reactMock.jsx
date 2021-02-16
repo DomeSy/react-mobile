@@ -26,8 +26,11 @@ const reactMock = [
         name: '组件通信',
         value: 'ReactCommunication'
       },{
-        name: 'setState是异步还是同步'
-        
+        name: 'setState是异步还是同步',
+        value: 'setState'
+      },{
+        name: 'key',
+        value: 'reactKey'
       }
     ]
   }
