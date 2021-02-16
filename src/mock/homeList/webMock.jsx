@@ -31,6 +31,22 @@ const webMock = [
         value: 'srcHref'
       }
     ]
+  },{
+    name: 'CSS知识库',
+    children: [
+      {
+        name: 'link和@import的区别',
+        value: 'LinkImport'
+      }
+    ]
+  },{
+    name: 'JS知识库',
+    children: [
+      {
+        name: '闭包',
+        value: 'closure'
+      }
+    ]
   }
 ]
 export default webMock
