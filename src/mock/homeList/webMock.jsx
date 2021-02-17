@@ -45,6 +45,13 @@ const webMock = [
       {
         name: '闭包',
         value: 'closure'
+      },{
+        name: 'this',
+        value: 'jsThis'
+      },
+      {
+        name: '箭头函数的this',
+        value: 'jsArrowThis'
       }
     ]
   }

@@ -1,9 +1,23 @@
 const AsyncAwait = [
   {
     title: '',
-    content: 'async 和 await是ES7提供的语法，可以说是异步终极解决方案',
+    content: 'async 和 await是ES7提供的语法，可以说是异步终极解决方案,并且async 函数，就是 Generator 函数的语法糖，它建⽴在Promises上，并且与所有现有的基于Promise的API兼容。',
     method: 'content',
     type: 'blue'
+  },{
+    title: '特性',
+    content: [
+      'Async—声明⼀个异步函数(async function someName(){...})',
+      '⾃动将常规函数转换成Promise，返回值也是⼀个Promise对象',
+      '只有async函数内部的异步操作执⾏完，才会执⾏then⽅法指定的回调函数',
+      '异步函数内部可以使⽤await',
+      'Await—暂停异步的功能执⾏(var result = await someAsyncCall();)',
+      '放置在Promise调⽤之前，await强制其他代码等待，直到Promise完成并返回结果',
+      '只能与Promise⼀起使⽤，不适⽤与回调',
+      '只能在async函数内部使⽤'
+    ],
+    method: 'content',
+    type: 'listAll'
   },
   {
     title: '特点',
