@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { List,  InputItem } from 'antd-mobile';
+// import { createForm } from 'rc-form';
 import './index.less';
 
 // 问题1： type除了money，无法向右
@@ -108,6 +109,7 @@ const list = [
  * 
  * 
  */
+// @createForm()
 class Index extends Component {
   constructor(props){
     super(props)
@@ -122,6 +124,8 @@ class Index extends Component {
     const Item = List.Item;
     const Brief = Item.Brief;
     const { type } = this.state
+
+    console.log(this.props)
     
     return (
 
