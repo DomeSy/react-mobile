@@ -46,7 +46,7 @@ const webMock = [
         name: '闭包',
         value: 'closure'
       },{
-        name: 'this',
+        name: 'this的指向',
         value: 'jsThis'
       },
       {
