@@ -54,6 +54,26 @@ const webMock = [
         value: 'jsArrowThis'
       }
     ]
+  },{
+    name: 'DOM',
+    children: [
+      {
+        name: '事件冒泡',
+        value: 'eventBubbling'
+      },
+      {
+        name: '事件捕获',
+        value: 'eventCatch'
+      },
+      {
+        name: '事件流',
+        value: 'eventL'
+      },
+      {
+        name: '事件委托',
+        value: 'eventWt'
+      }
+    ]
   }
 ]
 export default webMock

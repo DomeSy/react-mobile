@@ -2,7 +2,7 @@ const Index = [
   {
     title: '',
     content: '闭包是函数和声明该函数的词法环境的组合',
-    method: 'this的指向不是在编写时确定的,⽽是在执⾏时确定的，同时，this不同的指向在于遵循了⼀定的规则。',
+    method: 'content',
     type: 'blue'
   },{
     title: '',
