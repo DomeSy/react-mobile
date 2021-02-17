@@ -44,6 +44,32 @@ class Method{
   }
 
   /**
+   * @module 获取地址栏参数
+   * 
+   * @param id 获取的id名
+   * @param path 路径
+   */
+  static getUrlParam = (id, path) => {
+    let url = "";
+    if (path) {
+      url = path
+    } else {
+      if(location.href.indexOf('#/') !== -1){
+        url = location.href.replace('#/', '')
+      } else{
+        url = location.href
+      }
+    }
+    url = url + "";
+    let regstr = "/(\\?|\\&)" + id + "=([^\\&]+)/";
+    let reg = eval(regstr); //eval可以将 regstr字符串转换为 正则表达式
+    let result = url.match(reg); //匹配的结果是：result[0]=?sid=22 result[1]=sid result[2]=22。所以下面我们返回result[2]
+    if (result && result[2]) {
+      return result[2];
+    }
+  }
+
+  /**
    * @module 防抖
    * 
    * @param fn 包裹的函数

@@ -10,6 +10,12 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
+
+    // const url = 'http://www.domesy.cn/?name=React';
+    // const url = 'http://www.domesy.cn/#/?name=React';
+    const url = 'http://www.domesy.cn/#/?url=https://www.baidu.com/?name=React';
+    const res = Method.getUrlParam('name', url)
+    console.log(res,'00')
   }
 
   render() {
