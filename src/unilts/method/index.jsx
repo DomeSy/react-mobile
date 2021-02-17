@@ -2,6 +2,7 @@ import copy from 'copy-to-clipboard'
 import { Modal } from '@unilts';
 import { ArrayRepeat } from './array'
 import { BubbleSort, ShellSort, MergeSort, QuickSort } from './sort'
+import { getDate, getDateTime } from './date'
 
 /**
  * @module 通用方法
@@ -111,5 +112,8 @@ class Method{
   static QuickSort = QuickSort
   static ShellSort = ShellSort
   static MergeSort = MergeSort
+
+  static getDate = getDate
+  static getDateTime = getDateTime
 }
 export default Method
