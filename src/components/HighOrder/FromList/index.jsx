@@ -137,7 +137,6 @@ class Index extends Component {
   }
 
   onSubmit = (list) => {
-    console.log(this.props.form.getFieldsValue(),'00')
     // 首先判断哪些是必填的
     const res = this.getValidate(list, this.props.form.getFieldsValue());
     if(res.result){
@@ -277,7 +276,7 @@ class Index extends Component {
         </List>
         <Button onClick={() => {this.onSubmit(list)}}>{submit}</Button>
         {
-          hidden ? '' : <Button onClick={() => {this.onReset(list)}}>{reset}</Button>
+          hidden ? '' : <Button type='default' onClick={() => {this.onReset(list)}}>{reset}</Button>
         }
       </div>
     )

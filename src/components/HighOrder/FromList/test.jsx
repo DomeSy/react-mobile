@@ -1,3 +1,5 @@
+import { Method } from '@unilts';
+
 const listTest = [
   {
     name: '正常标题',
@@ -83,7 +85,7 @@ const listTest = [
     validate: '176****9673'
   },
   {
-    name: '手机号',
+    name: '手机号+验证',
     valueName: 'value12',
     value: '',
     type: 'number',
