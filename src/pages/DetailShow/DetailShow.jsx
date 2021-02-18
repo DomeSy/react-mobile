@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Button } from '@components/AntD'
 import { FromList } from '@components/HighOrder'
-import { Modal } from '@unilts' 
-import { ComponentShow } from '@unilts'
+import { Modal, Method, ComponentShow, Jump } from '@unilts' 
 import { Picker, List, WhiteSpace } from 'antd-mobile';
 
 const lists = [
@@ -39,14 +38,7 @@ const lists = [
   //   disabled: '',
   //   clear: '',
   //   max: ''
-  // },
-  {
-    name: '手机号',
-    valueName: 'value1',
-    type: 'phone',
-    value: '111'
-  },
-  // {
+  // },{
   //   name: '密码',
   //   valueName: 'value2',
   //   type: 'password'
@@ -88,7 +80,7 @@ const lists = [
   //   extra: '注释',
   //   placeholder: '',
   //   clear: true,
-  //   require: true,
+  //   required: true,
   // },
   // {
   //   name: '脱敏',
@@ -96,12 +88,30 @@ const lists = [
   //   value: '1769313673',
   //   validate: '176****9673'
   // },
-  // {
-  //   name: '脱敏',
-  //   valueName: 'value12',
-  //   value: '1769313673',
-  //   edit: true
-  // }
+  {
+    name: '手机号',
+    valueName: 'value12',
+    value: '',
+    type: 'number',
+    max: 11,
+    rules: (e) => Method.validatePhone(e),
+    rulesMsg: '请输入正确的手机号',
+  },
+  {
+    name: '是否必填',
+    valueName: 'value13',
+    value: '',
+    type: 'text',
+    max: 11,
+    required: true
+  },
+  {
+    name: '是否测',
+    valueName: 'value14',
+    value: '',
+    type: 'text',
+    max: 11,
+  }
 ]
 class Index extends Component {
   constructor(props){
@@ -112,11 +122,14 @@ class Index extends Component {
   }
 
   click = (list) => {
-    console.log(list,'00')
     list.map(item => item.value = '3333')
     this.setState({
       list
     })
+  }
+  onSubmit = (form) => {
+    console.log(form, '00')
+    // Jump.go('sooo')
   }
 
   render() {
@@ -124,7 +137,7 @@ class Index extends Component {
 
     return (
       <div>
-        <FromList />
+        <FromList  onSubmit={(form) => this.onSubmit(form)}></FromList>
         {/* <Button onClick={() => this.click(list)} /> */}
       </div>
     )

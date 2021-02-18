@@ -15,7 +15,6 @@ class Home extends Component {
     // const url = 'http://www.domesy.cn/#/?name=React';
     const url = 'http://www.domesy.cn/#/?url=https://www.baidu.com/?name=React';
     const res = Method.getUrlParam('name', url)
-    console.log(res,'00')
 
     // 解决键盘弹起后遮挡输入框的问题
     window.addEventListener("resize", () => {

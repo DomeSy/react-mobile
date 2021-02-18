@@ -22,7 +22,6 @@ const validateIdCard = (idcard) => {
  * @param phoneNumber 手机号
  */
 const validatePhone = (phoneNumber) => {
-  console.log(phoneNumber,'000')
   if (!(/^1[3456789]\d{9}$/.test(phoneNumber))) {
     return false;
   } else {
