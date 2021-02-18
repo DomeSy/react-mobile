@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { List,  InputItem } from 'antd-mobile';
 import { Button } from '@components/AntD'
 import { createForm } from 'rc-form';
+import { Method } from '@unilts';
+
 import './index.less';
 
 // 问题1： type除了money，无法向右
@@ -46,11 +48,6 @@ const lists = [
   //   disabled: '',
   //   clear: '',
   //   max: ''
-  // },{
-  //   name: '手机号',
-  //   valueName: 'value1',
-  //   type: 'phone',
-  //   value: '111'
   // },{
   //   name: '密码',
   //   valueName: 'value2',
@@ -105,7 +102,8 @@ const lists = [
     name: '电话号码',
     valueName: 'value12',
     value: '',
-    type: 'phone',
+    type: 'number',
+    max: 11
   }
 ]
 
@@ -137,15 +135,6 @@ const lists = [
  * 
  */
 
-const validateTel = (rule, value, callback) => {
-  if (value && value.length===13) {
-      callback();
-  } else if(value.length===0){
-      callback(new Error('请输入电话号码'));
-  } else {
-      callback(new Error('电话号码不合法'));
-  }
-}
 @createForm()
 class Index extends Component {
   constructor(props){
@@ -161,19 +150,17 @@ class Index extends Component {
     console.log(this.props.form.getFieldsValue(),'11')
   }
 
-  validateTel = (rule, value, callback) => {
-    if (value && value.length===13) {
-        callback();
-    } else if(value.length===0){
-        callback(new Error('请输入电话号码'));
-    } else {
-        callback(new Error('电话号码不合法'));
-    }
-  }
-
   onChange = (e, item, list) => {
-    if(item.validate) return
-    list.map(ele => item.name === ele.name ? ele.value = e : '');
+    if(item.validate) return;
+    if(item.type === 'phone'){
+      e = e.replace(/\s*/g,"")
+    }
+    const isValidate = Method.validatePhone(e);
+    console.log(isValidate,'--')
+    list.map(ele => {
+      item.name === ele.name ? ele.value = e : ''
+      item.error = isValidate ?  false : true
+    });
     console.log(list,'000')
     this.setState({
       list
@@ -206,8 +193,7 @@ class Index extends Component {
                     {...getFieldProps(item.valueName, {
                       initialValue: item.value ? item.value : ''
                     })}
-                    // error={!!getFieldError(item.valueName)}
-                    // error={true}
+                    error={item.error ? true : false}
                     onErrorClick={() => {
                       // console.log(getFieldError(item.valueName))
                       // Toast.info(getFieldError(item.valueName), 1);
@@ -217,7 +203,7 @@ class Index extends Component {
                     type={item.type ? item.type : 'text'}
                     extra={item.extra ? item.extra : ''}
                     value={item.validate ? item.validate : item.value}
-                    onChange={(e)=> this.onChange(e, item, list)}
+                    onChange={(e)=> Method.Debounce(this.onChange(e, item, list))}
                     placeholder={item.placeholder ? item.placeholder === null ? '': item.placeholder : `请输入${item.name}`}
                     editable={item.validate ? false : item.edit ? false : true}
                     disabled={item.disabled ? true : false}
