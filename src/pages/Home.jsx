@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import _404Page from "@pages/Router/_404Page"
-import { Method } from '@unilts'
+import { Method, Modal } from '@unilts'
 
 class Home extends Component {
   constructor(props){
@@ -24,7 +24,17 @@ class Home extends Component {
         }, 0);
       }
     })
+
+    // console.log();
+    this.IsPC()
   }
+
+  IsPC() {  
+    let width = screen.width;
+    if(width > 1100){
+      Modal.alert('请在开发者模式查看，效果更佳')
+    }
+  }  
 
   render() {
     const Component = this.props.children
