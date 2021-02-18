@@ -7,6 +7,8 @@ import './index.less'
  
 /**
  * @module 按钮
+ * 
+ * @param type primary蓝色（默认）default 白色 warning 红色
 */
 function Index({children, onClick=()=>{}, type="primary"}) {
   return (
