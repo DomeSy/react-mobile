@@ -100,7 +100,7 @@ class Index extends Component {
 
   // 错误提示
   onError = (item, flag) => {
-    if((item.value.length !== 0 && item.rulesMsg) && (item.rules && item.rulesMsg)){
+    if((item.value && item.rulesMsg) && (item.rules && item.rulesMsg)){
       if(!flag) Modal.info(item.rulesMsg, 1)
       return item.rulesMsg
     }
@@ -149,7 +149,6 @@ class Index extends Component {
   getValidate = (list, form) => {
     let result = false;
     let errorMsg = '';
-    console.log(list,'00')
     for(let i = list.length - 1; i >= 0; i--){
       if(list[i].method === 'picker' || list[i].method === 'date'){
         if(!form[list[i].valueName]){
@@ -202,7 +201,6 @@ class Index extends Component {
     const Brief = Item.Brief;
     const { list } = this.state
     const { form:{getFieldProps}, left, submit ='提交', reset='重置', hidden = false } = this.props;
-    console.log(list,'000')
 
     return (
       <div className="FromList">
