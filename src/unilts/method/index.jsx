@@ -2,6 +2,7 @@ import copy from 'copy-to-clipboard'
 import { Modal } from '@unilts';
 import { ArrayRepeat } from './array'
 import { BubbleSort, ShellSort, MergeSort, QuickSort } from './sort'
+import { validateIdCard, validatePhone, validateEmail, validateUpwd, validateCardCode } from './validate'
 import { getDate, getDateTime } from './date'
 
 /**
@@ -113,7 +114,15 @@ class Method{
   static ShellSort = ShellSort
   static MergeSort = MergeSort
 
+  // 日期
   static getDate = getDate
   static getDateTime = getDateTime
+
+  //验证
+  static validateIdCard = validateIdCard
+  static validatePhone = validatePhone
+  static validateEmail = validateEmail
+  static validateUpwd = validateUpwd
+  static validateCardCode = validateCardCode
 }
 export default Method
