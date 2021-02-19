@@ -18,9 +18,9 @@
     |   |-- mock                              # 模拟接口数据
     |   |-- components                        # 业务组件
     |   |   |-- Animation                     # 动画组件库
-    |   |   |-- G2                            # G2组件库
+    |   |   |-- AntD                          # AntD的组件库
     |   |   |-- Icon                          # 小组件
-    |   |   |-- ShowTime                      # 展示组件
+    |   |   |-- HighOrder                     # 高阶组件
     |   |-- constants                         # constants
     |   |-- images                            # 存储图片 
     |   |-- pages                             # 页面模板
@@ -74,3 +74,6 @@
   - [x] redux-persist：数据持久化（默认以session存储）
   - [x] 实现路由懒加载
 
+## 项目展示
+
+![Domesy](http://www.domesy.cn/showTime/domesy01.jpg)
