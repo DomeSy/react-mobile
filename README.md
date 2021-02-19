@@ -1,6 +1,10 @@
 # React-mobile
   移动端React框架，使用react + redux + reack-keeper打造移动端框架，本框架主要是个人博客，里面有文章，antd的使用，web技术栈，jS方法，高阶组件等封装
 
+  线上地址 [Domesy](http://www.domesy.cn/#/)
+
+  请在开发者模式下查看
+
 ## 前言
   本框架适用于移动端项目，项目中有过多的使用案例，如redux的使用，redux配置请求的封装，跳转，路由等皆有案例，另外提供antd-mobile等框架的一些组件封装，帮助开发更加简单。
 
@@ -45,7 +49,6 @@
   - [x] postcss-px2rem-exclude：px转化为rem（页面以375为标准）
   - [x] lib-flexible：移动端适配问题
   - [x] @babel/plugin-proposal-decorators: 装饰器语法
-  - [x] hot-react-loader react-app-rewire-hot-loader @hot-loader/react-dom: 实现局部刷新，即同个页面上，某一处的数据修改不会让整个页面一起刷新
   - [x] react-router-dom: 路由
   - [x] react-keeper: 更适用于移动端，原因是具备缓存页面的功能，类似于具备Vue的keep-alive的功能
   - [x] redux: 态管理工具
@@ -74,7 +77,3 @@
   - [x] redux-persist：数据持久化（默认以session存储）
   - [x] 实现路由懒加载
 
-## 项目展示
-
-线上地址： [Domesy](http://www.domesy.cn/#/)
-请在开发者模式下查看
