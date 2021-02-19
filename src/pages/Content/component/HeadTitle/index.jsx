@@ -15,7 +15,7 @@ export default function index({data={}}) {
       <Circular block src={data.src} />
       <div className="HeadTitle-title-name">{data.title}</div>
     </div>
-    <MagicText text={`${data.content}，如果对你有帮助，请点击右上方的gitHub，给个Star！`} />
+    <MagicText text={`${data.content}`} />
   </div>
   )
 }
