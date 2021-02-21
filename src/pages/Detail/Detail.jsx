@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { EditHight, Title, ContentList, Buttom } from '@components/Icon'
 import { connect } from 'react-redux'
-import Zmage from 'react-zmage'
+import { PhotoProvider, PhotoConsumer } from 'react-photo-view'
 import { Jump, ComponentShow } from '@unilts'
+import 'react-photo-view/dist/index.css'
+
 
 import './Detail.less'
 
@@ -62,9 +64,13 @@ class Detail extends Component {
                   item.method === 'component' ? 
                     ComponentShow[item.content]() :
                   item.method === 'imgs' ?
-                  <div className='Detail-img'> 
-                    <Zmage style={{height: item.height}} src={item.content} /> 
-                  </div> :
+                  <PhotoProvider>
+                    <div className='Detail-img'>
+                    <PhotoConsumer key={index} src={item.content} intro={item.name ? item.name : ''}>
+                      <img style={{height: item.height}} src={item.content} /> 
+                    </PhotoConsumer>
+                    </div>
+                  </PhotoProvider> :
                   <></>
                 }
               </div>
