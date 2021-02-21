@@ -55,6 +55,12 @@ const webMock = [
       {
         name: '箭头函数的this',
         value: 'jsArrowThis'
+      },{
+        name: 'new',
+        value: 'jsNew'
+      },{
+        name: 'call',
+        value:  'jsCall'
       }
     ]
   },{
