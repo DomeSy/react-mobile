@@ -62,7 +62,7 @@
   - [x] react-highlight: React语法高亮
   - [x] react-typewriter-hook: 打字机效果
   - [x] copy-to-clipboard: 复制
-  - [x] react-zmage: 图片放大缩小等操作
+  - [x] react-photo-view: 图片放大缩小等操作
   
 
 ## 项目功能
