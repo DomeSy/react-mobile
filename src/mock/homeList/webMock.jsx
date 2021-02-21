@@ -29,6 +29,9 @@ const webMock = [
       {
         name: 'src和href的区别',
         value: 'srcHref'
+      },{
+        name: '前端存储的方式',
+        value: 'webStorage'
       }
     ]
   },{
