@@ -3,6 +3,12 @@ import { Button } from '@components/AntD'
 import { FromList } from '@components/HighOrder'
 import { Modal, Method, ComponentShow, Jump } from '@unilts' 
 import { Picker, List, WhiteSpace } from 'antd-mobile';
+import Zmage from 'react-zmage'
+import img1 from '../../images/react/v160.png'
+import img2 from '../../images/react/v164.png'
+import { PhotoProvider, PhotoConsumer } from 'react-photo-view';
+import 'react-photo-view/dist/index.css';
+import './index.less'
 
 const lists = [
   // {
@@ -137,7 +143,16 @@ class Index extends Component {
 
     return (
       <div>
-        <FromList  onSubmit={(form) => this.onSubmit(form)}></FromList>
+        niasd1
+        <PhotoProvider maskClassName>
+            <PhotoConsumer src={img1} intro={img1}>
+              <img className="ooo" src={img1} alt="" />
+            </PhotoConsumer>
+            <PhotoConsumer src={img2} intro={img2}>
+              <img className="ooo" src={img2} alt="" />
+            </PhotoConsumer>
+        </PhotoProvider>
+        {/* <FromList  onSubmit={(form) => this.onSubmit(form)}></FromList> */}
         {/* <Button onClick={() => this.click(list)} /> */}
       </div>
     )
