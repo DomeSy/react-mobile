@@ -3,7 +3,6 @@ import { Button } from '@components/AntD'
 import { FromList } from '@components/HighOrder'
 import { Modal, Method, ComponentShow, Jump } from '@unilts' 
 import { Picker, List, WhiteSpace } from 'antd-mobile';
-import Zmage from 'react-zmage'
 import img1 from '../../images/react/v160.png'
 import img2 from '../../images/react/v164.png'
 import { PhotoProvider, PhotoConsumer } from 'react-photo-view';
