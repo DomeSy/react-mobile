@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { EditHight, Title, ContentList, Buttom } from '@components/Icon'
 import { connect } from 'react-redux'
+import Zmage from 'react-zmage'
 import { Jump, ComponentShow } from '@unilts'
 
 import './Detail.less'
@@ -62,7 +63,7 @@ class Detail extends Component {
                     ComponentShow[item.content]() :
                   item.method === 'imgs' ?
                   <div className='Detail-img'> 
-                    <img  style={{height: item.height}} src={item.content} /> 
+                    <Zmage style={{height: item.height}} src={item.content} /> 
                   </div> :
                   <></>
                 }
