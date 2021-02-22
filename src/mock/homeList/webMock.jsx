@@ -83,6 +83,29 @@ const webMock = [
         value: 'eventWt'
       }
     ]
+  },{
+    name: '浏览器原理',
+    children: [
+      {
+        name: '常见的浏览器内核',
+        value: 'browser'
+      },{
+        name: '浏览器的主要组成部分',
+        value: 'browserFrom'
+      },{
+        name: '浏览器是如何渲染UI的',
+        value: 'browserUI'
+      },{
+        name: '浏览器如何解析css选择器',
+        value: 'browserCSS'
+      },{
+        name: 'DOM Tree是如何构建的',
+        value: 'browserTree'
+      },{
+        name: '重绘与重排',
+        value: 'browserAgain'
+      }
+    ]
   }
 ]
 export default webMock
