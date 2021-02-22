@@ -10,7 +10,6 @@ const Reactv160 = [
     name: '生命周期16.0',
     content: img,
     height: '200px',
-    style: 'height:200px;width:100%',
     method: 'imgs'
   },
   {
