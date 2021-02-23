@@ -34,6 +34,12 @@ const reactMock = [
       },{
         name: '高阶组件',
         value: 'HOC'
+      },{
+        name: '虚拟DOM',
+        value: 'VirtualDOM'
+      },{
+        name: 'diff 算法',
+        value: 'diff'
       }
     ]
   }
