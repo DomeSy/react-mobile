@@ -40,6 +40,15 @@ const reactMock = [
       },{
         name: 'diff 算法',
         value: 'diff'
+      },{
+        name: 'tree diff',
+        value: 'treeDiff'
+      },{
+        name: 'component diff',
+        value: 'componentDiff'
+      },{
+        name: 'element diff',
+        value: 'elementDiff'
       }
     ]
   }
