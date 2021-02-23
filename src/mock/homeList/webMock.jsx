@@ -108,10 +108,15 @@ const webMock = [
     ]
   },{
     name: 'HTTP',
-    children: [{
-      name: 'HTTP请求方法',
-      value: 'HttpRequest'
-    }]
+    children: [
+      {
+        name: 'HTTP请求方法',
+        value: 'HttpRequest'
+      },{
+        name: 'GET和POST有什么区别',
+        value: 'HttpGETPOST'
+      }
+    ]
   }
 ]
 export default webMock
