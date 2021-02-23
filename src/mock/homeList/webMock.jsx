@@ -118,6 +118,9 @@ const webMock = [
       },{
         name: '请求报文和响应报文',
         value: 'HttpCount'
+      },{
+        name: 'HTTP的状态码',
+        value: 'HttpCode'
       }
     ]
   }
