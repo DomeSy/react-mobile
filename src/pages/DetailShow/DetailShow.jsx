@@ -8,6 +8,7 @@ import img2 from '../../images/react/v164.png'
 import { PhotoProvider, PhotoConsumer } from 'react-photo-view';
 import 'react-photo-view/dist/index.css';
 import './index.less'
+import { Carousel } from '@components/AntD'
 
 const lists = [
   // {
@@ -142,15 +143,7 @@ class Index extends Component {
 
     return (
       <div>
-        niasd1
-        <PhotoProvider maskClassName>
-            <PhotoConsumer src={img1} intro={img1}>
-              <img className="ooo" src={img1} alt="" />
-            </PhotoConsumer>
-            <PhotoConsumer src={img2} intro={img2}>
-              <img className="ooo" src={img2} alt="" />
-            </PhotoConsumer>
-        </PhotoProvider>
+        <Carousel />
         {/* <FromList  onSubmit={(form) => this.onSubmit(form)}></FromList> */}
         {/* <Button onClick={() => this.click(list)} /> */}
       </div>
