@@ -35,6 +35,17 @@ const reactMock = [
         name: '高阶组件',
         value: 'HOC'
       },{
+        name: 'fiber',
+        value: 'reactFiber'
+      },{
+        name: '时间分⽚',
+        value: 'TimeSlice'
+      }
+    ]
+  },{
+    name: '虚拟DOM',
+    children: [
+      {
         name: '虚拟DOM',
         value: 'VirtualDOM'
       },{
