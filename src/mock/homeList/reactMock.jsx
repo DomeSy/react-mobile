@@ -31,6 +31,9 @@ const reactMock = [
       },{
         name: 'key',
         value: 'reactKey'
+      },{
+        name: '高阶组件',
+        value: 'HOC'
       }
     ]
   }
