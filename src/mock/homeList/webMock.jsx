@@ -115,6 +115,9 @@ const webMock = [
       },{
         name: 'GET和POST有什么区别',
         value: 'HttpGETPOST'
+      },{
+        name: '请求报文和响应报文',
+        value: 'HttpCount'
       }
     ]
   }
