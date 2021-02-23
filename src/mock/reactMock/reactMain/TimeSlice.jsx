@@ -1,13 +1,20 @@
 const TimeSlice = [
   {
-    title: '',
+    title: '时间分⽚(Time Slice)',
     content: [
-      'React Fiber 是⼀种基于浏览器的单线程调度算法.',
-      'React 16之前 ， reconcilation 算法实际上是递归，想要中断递归是很困难的，React 16 开始使⽤了循环来代替之前 的递归.',
-      'Fiber ：⼀种将 recocilation （递归 diff），拆分成⽆数个⼩任务的算法；它随时能够停⽌，恢复。停⽌恢复的时机 取决于当前的⼀帧（16ms）内，还有没有⾜够的时间允许计算。'
+      'React 在渲染（render）的时候，不会阻塞现在的线程',
+      '如果你的设备⾜够快，你会感觉渲染是同步的',
+      '如果你设备⾮常慢，你会感觉还算是灵敏的',
+      '虽然是异步渲染，但是你将会看到完整的渲染，⽽不是⼀个组件⼀⾏⾏的渲染出来',
+      '同样书写组件的⽅式'
     ],
     method: 'content',
     type: 'listAll'
+  },{
+    title: '',
+    content: '也就是说，这是React背后在做的事情，对于我们开发者来说，是透明的',
+    method: 'content',
+    type: 'blue'
   }
 ]
 
