@@ -1,45 +1,25 @@
 const componentDiff = [
   {
-    title: '传统Diff',
+    title: '',
     content: [
-      'diff算法即差异查找算法。',
-      '对于Html DOM结构即为tree的差异查找算法；而对于计算两颗树的差异时间复杂度为O（n^3）,显然成本太高，React不可能采用这种传统算法'
+      'React对不同的组件间的比较，有三种策略'
     ],
     method: 'content',
-    type: 'listAll'
+    type: 'blue'
   },{
     title: 'React 中的 diff 算法',
     content: [
-      'diff算法是调和的具体实现。',
-      '将Virtual DOM树转换成真是 DOM树的最少操作的过程 称为 调和'
+      '同一类型的两个组件，按原策略（层级比较）继续比较Virtual DOM树即可。',
+      '同一类型的两个组件，组件A变化为组件B时，可能Virtual DOM没有任何变化，如果知道这点（变换的过程中，Virtual DOM没有改变），可节省大量计算时间，所以 用户 可以通过 shouldComponentUpdate() 来判断是否需要 判断计算。',
+      '不同类型的组件，将一个（将被改变的）组件判断为dirty component（脏组件），从而替换 整个组件的所有节点。'
     ],
     method: 'content',
     type: 'listAll'
-  },
-  {
-    title: 'diff 算法的作用',
-    content: '计算出Virtual DOM中真正变化的部分，并只针对该部分进行原生DOM操作，而非重新渲染整个页面。',
-    method: 'content',
   },{
-    title: 'diff 策略',
-    content: 'React用 三大策略 将O(n^3)复杂度 转化为 O(n)复杂度',
+    title: '',
+    content: '如果组件D和组件G的结构相似，但是 React判断是 不同类型的组件，则不会比较其结构，而是删除 组件D及其子节点，创建组件G及其子节点。',
     method: 'content',
-  },{
-    title: 'diff 策略的三个策略',
-    content: [
-      {
-        name: 'tree diff',
-        value: '同级比较，Web UI 中 DOM 节点跨层级的移动操作特别少，可以忽略不计。'
-      },{
-        name: 'component diff',
-        value: '拥有相同类的两个组件将会生成相似的树形结构，拥有不同类的两个组件将会生成不同的树形结构。'
-      },{
-        name: 'element diff',
-        value: '对于同一层级的一组子节点，通过唯一的key进行区分。'
-      }
-    ],
-    method: 'content',
-    type: 'list'
+    type: 'red'
   }
 ]
 
