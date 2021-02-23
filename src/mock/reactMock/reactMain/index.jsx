@@ -8,8 +8,8 @@ import diff from './diff'
 import treeDiff from './treeDiff'
 import componentDiff from './TimeSlice'
 import elementDiff from './elementDiff'
-import reactFiber from './reactFiber'
-import TimeSlice from './componentDiff'
+import reactFiber from './componentDiff'
+import TimeSlice from './reactFiber'
 
 const ReactMain = [
   { params: { data: 'ReactCommunication' }, extra:{ noTitle: true }, list: ReactCommunication},
