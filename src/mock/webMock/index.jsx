@@ -4,6 +4,7 @@ import css from './css'
 import js from './js'
 import DOM from './DOM'
 import browser from './browser'
+import http from './http'
 
 const webMock = [
   ...async,
@@ -11,6 +12,7 @@ const webMock = [
   ...css,
   ...js,
   ...DOM,
-  ...browser
+  ...browser,
+  ...http
 ]
 export default webMock;

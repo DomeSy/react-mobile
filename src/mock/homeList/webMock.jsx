@@ -106,6 +106,12 @@ const webMock = [
         value: 'browserAgain'
       }
     ]
+  },{
+    name: 'HTTP',
+    children: [{
+      name: 'HTTP请求方法',
+      value: 'HttpRequest'
+    }]
   }
 ]
 export default webMock
