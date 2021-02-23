@@ -6,10 +6,10 @@ import HOC from './HOC'
 import VirtualDOM from './VirtualDOM'
 import diff from './diff'
 import treeDiff from './treeDiff'
-import componentDiff from './componentDiff'
+import componentDiff from './TimeSlice'
 import elementDiff from './elementDiff'
 import reactFiber from './reactFiber'
-import TimeSlice from './TimeSlice'
+import TimeSlice from './componentDiff'
 
 const ReactMain = [
   { params: { data: 'ReactCommunication' }, extra:{ noTitle: true }, list: ReactCommunication},
