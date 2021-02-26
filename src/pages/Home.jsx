@@ -10,7 +10,6 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-
     // 解决键盘弹起后遮挡输入框的问题
     window.addEventListener("resize", () => {
       if (document.activeElement.tagName == "INPUT" || document.activeElement.tagName == "TEXTAREA") {
