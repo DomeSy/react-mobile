@@ -40,6 +40,9 @@ const webMock = [
       {
         name: 'link和@import的区别',
         value: 'LinkImport'
+      },{
+        name: '定位方式',
+        value: 'cssPosition'
       }
     ]
   },{
