@@ -43,6 +43,9 @@ const webMock = [
       },{
         name: '定位方式',
         value: 'cssPosition'
+      },{
+        name: 'animation',
+        value: 'animation'
       }
     ]
   },{
