@@ -79,8 +79,11 @@ const webMock = [
         name: 'TypeScript 基础类型',
         value: 'TsBasicType'
       },{
-        name: 'Ts 断言',
+        name: '断言',
         value: 'TsSpeack'
+      },{
+        name: '接口',
+        value: 'TsInterface'
       },
     ]
   },{
