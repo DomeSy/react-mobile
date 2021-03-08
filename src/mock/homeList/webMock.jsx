@@ -82,9 +82,12 @@ const webMock = [
         name: '断言',
         value: 'TsSpeack'
       },{
+        name: 'TS 对象',
+        value: 'TsObject'
+      },{
         name: '接口',
         value: 'TsInterface'
-      },
+      }
     ]
   },{
     name: 'DOM',
