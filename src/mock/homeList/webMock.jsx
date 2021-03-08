@@ -70,6 +70,17 @@ const webMock = [
       }
     ]
   },{
+    name: 'TypeScript',
+    children: [
+      {
+        name: 'TS与JS的区别',
+        value: 'TsDifference'
+      },{
+        name: 'TypeScript 基础类型',
+        value: 'TsBasicType'
+      },
+    ]
+  },{
     name: 'DOM',
     children: [
       {
