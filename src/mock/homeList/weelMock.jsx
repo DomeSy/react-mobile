@@ -17,7 +17,7 @@ const WeelMock = [
     children: [
       {
         name: ' 同源策略',
-        value: 'K'
+        value: 'KCros'
       },{
         name: '跨域场景',
         value: 'Karea'
