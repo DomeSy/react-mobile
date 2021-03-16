@@ -3,7 +3,7 @@ import { Head, List } from './component'
 import { connect } from 'react-redux'
 import * as homeActions from '@actions/home'
 
-import './ListView'
+import './ListView.less'
 
 @connect(({ home }) => ({ ...home }), { ...homeActions })
 class ListView extends Component {
@@ -25,6 +25,7 @@ class ListView extends Component {
       <div className="ListView">
         <Head />
         <List list={Object.values(homeList)}/>
+
       </div>
     )
   }
