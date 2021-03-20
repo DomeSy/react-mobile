@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-
-import { Button } from '@components'
-import { Jump } from '@unilts'
+import { Button } from '@components/AntD'
+import { Modal } from '@unilts'
 
 import './index.less'
 
@@ -20,7 +19,13 @@ const test = [
   }
 ]
 
-class Radion extends Component {
+/**
+ * @param list 列表数据
+ * @param name 名称
+ * @param disabled 是否禁用
+ * @param active 是否被选中
+ */
+class Index extends Component {
 
   constructor(props){
     super(props);
@@ -94,10 +99,13 @@ class Radion extends Component {
             }
           </div>
         </div>
-        <Button onClick={() => console.log(list)}>确定</Button>
+        <Button onClick={() => {
+          const result = list.filter(item => item.active)
+          Modal.info(`你选择了${result.length}个`)
+        }}>确定</Button>
       </div>
     )
   }
 }
 
-export default Radion
+export default Index

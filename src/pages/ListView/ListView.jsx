@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Head, List } from './component'
 import { connect } from 'react-redux'
+import { Radion } from '@components/HighOrder'
 import * as homeActions from '@actions/home'
 
 import './ListView.less'
@@ -23,8 +24,9 @@ class ListView extends Component {
     const { homeList } = this.props;
     return (
       <div className="ListView">
-        <Head />
-        <List list={Object.values(homeList)}/>
+        <Radion />
+        {/* <Head /> */}
+        {/* <List list={Object.values(homeList)}/> */}
 
       </div>
     )
