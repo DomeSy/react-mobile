@@ -91,7 +91,6 @@ class Index extends Component {
     list.map(item => {
       const arr = {
         value: item.value || '',
-        error: item.error ? false : true
       }
       FromList = [...FromList, arr] 
     })
@@ -156,7 +155,17 @@ class Index extends Component {
           errorMsg = `请选择${list[i].name}`
         }
       }else if((list[i].method === 'input' || !list[i].method) && (list[i].required || list[i].rules)){
-        list[i].error = list[i].error === undefined ? true : list[i].error ? true : false
+
+        if(list[i].error === undefined){
+          let flag = false;
+          if(!list[i].value){
+            flag=true
+          }else if(list[i].rules && !list[i].rules(list[i].value)){
+            flag=true
+          }
+          list[i].error = flag
+        }
+        
         if(list[i].error){
           result = true;
           errorMsg = this.onError(list[i], true)
@@ -184,7 +193,7 @@ class Index extends Component {
         this.props.form.resetFields();
       }else if(item.method === 'input' || !item.method){
         item.value = FromList[index].value
-        if(item.error !== undefined) item.error = FromList[index].error
+        item.error = undefined;
       }
     })
     this.setState({
