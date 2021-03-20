@@ -36,7 +36,7 @@ import './index.less';
  * @param name 左边文字（必填）
  * @param extra 右边文字
  * @param method 方式（不填默认为input）
- * @param itemValue 表单的属性值，（必填）
+ * @param valueName 表单的属性值，（必填）
  * 
  * @method 为item独有的参数
  * @param wrap 右边文字是否隐藏，默认隐藏
