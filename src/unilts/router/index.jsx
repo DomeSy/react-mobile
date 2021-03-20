@@ -8,6 +8,8 @@ import Home from '@pages/Home';
  * 
  * @param routes 数组，包含所需要的每项
  * @param exact 是否完全匹配(默认完全匹配)
+ * cache属性可以添加属性值，React-Keeper支持的属性值有root（default）、parent。
+ * @param catch 页面缓存 支持两种形式 一种是root(默认)，这种为永久缓存，只要根组件不解绑，页面将永久缓存，另一种是parent为父组件缓存，在父组件不解绑的情况下会维持缓存状态
  * @param path 页面路径
  * @param title 页面标题
  * @param component 组件
@@ -44,6 +46,7 @@ class Index extends Component {
                   index={item.index ? true : false}
                   miss={item.miss ? true : false}
                   path={item.path}
+                  cache={item.cache ? item.cache === "parent" ? "parent" : "root" : false}
                   children={item.component}
                   // component={item.component}
                   loadComponent = {(callback) => {
