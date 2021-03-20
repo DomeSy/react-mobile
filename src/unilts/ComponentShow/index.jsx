@@ -1,5 +1,5 @@
 import { Skeleton } from '@components/Animation'
-import { Accordion, FromList } from '@components/HighOrder'
+import { Accordion, FromList, Radio } from '@components/HighOrder'
 import { Modal } from './AntD'
 
 class ComponentShow {
@@ -13,6 +13,10 @@ class ComponentShow {
 
   static FromIntroduce = () => {
     return <FromList />
+  }
+
+  static Radio = () => {
+    return <Radio />
   }
 
   static Modal = Modal

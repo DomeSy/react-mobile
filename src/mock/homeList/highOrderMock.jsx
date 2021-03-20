@@ -10,6 +10,14 @@ const highOrderMock = [
         value: 'FromIntroduce'
       }
     ]
+  },{
+    name: '单选全选',
+    children: [
+      {
+        name: '基础Radio',
+        value: 'Radio'
+      }
+    ]
   }
 ]
 export default highOrderMock
