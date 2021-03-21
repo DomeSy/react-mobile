@@ -1,4 +1,3 @@
-import { render } from 'less';
 import React from 'react'
 
 import {DraggableArea} from 'react-draggable-tags';

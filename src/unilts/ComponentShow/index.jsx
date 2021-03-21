@@ -22,8 +22,8 @@ class ComponentShow {
 
   static DragSort = () => {
     return <DragSort onChange={(list) => {
-      console.log(list,'---')
-      Modal.info('调换成功')
+      console.log(list,'改变后的数据')
+      Modal.info('调换成功，详情数据请看打印情况')
     }}/>
   }
 
