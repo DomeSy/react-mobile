@@ -9,15 +9,6 @@ import * as homeActions from '@actions/home'
 
 import './ListView.less'
 
-const TestDarg = [
-  {name: 'apple'},
-  {name: 'watermelon'},
-  {name: 'banana'},
-  {name: 'lemon'},
-  {name: 'orange'},
-]
-
-
 @connect(({ home }) => ({ ...home }), { ...homeActions })
 class ListView extends Component {
 
@@ -50,7 +41,6 @@ class ListView extends Component {
       <div className="ListView">
         <Head />
         <List list={Object.values(homeList)}/>
-        {/* <DragSort list={TestDarg} render={(e) => this.renderTset(e)} onChange={(list) => this.onChange(list)}></DragSort> */}
       </div>
     )
   }
