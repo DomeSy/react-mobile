@@ -48,10 +48,9 @@ class ListView extends Component {
     const { homeList } = this.props;
     return (
       <div className="ListView">
-        {/* <Head />
-        <List list={Object.values(homeList)}/> */}
+        <Head />
+        <List list={Object.values(homeList)}/>
         {/* <DragSort list={TestDarg} render={(e) => this.renderTset(e)} onChange={(list) => this.onChange(list)}></DragSort> */}
-        <DragSort />
       </div>
     )
   }

@@ -18,6 +18,9 @@ const highOrderMock = [
         value: 'Radio'
       }
     ]
+  },{
+    name: '拖拽排序',
+    value: 'DragSort'
   }
 ]
 export default highOrderMock
