@@ -63,7 +63,7 @@
   - [x] react-typewriter-hook: 打字机效果
   - [x] copy-to-clipboard: 复制
   - [x] react-photo-view: 图片放大缩小等操作
-  
+  - [x] react-draggable-tags: 组件拖拽，可适用于移动端排序
 
 ## 项目功能
 
