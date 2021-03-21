@@ -24,6 +24,7 @@
     "react": "^17.0.1",
     "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.1",
+    "react-draggable-tags": "^1.0.2",
     "react-highlight": "^0.13.0",
     "react-keeper": "^2.2.3",
     "react-loadable": "^5.5.0",
