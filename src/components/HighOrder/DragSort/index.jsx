@@ -27,6 +27,7 @@ function Index({list = DargTest, onChange=onChangeTest, render=renderTset}) {
   return (
     <div className="DDragSort">
       <DraggableArea
+        isList
         initialTags={list}
         render ={({tag}) => render(tag)}
         onChange={(tags) => onChange(tags)}
