@@ -64,6 +64,7 @@
   - [x] copy-to-clipboard: 复制
   - [x] react-photo-view: 图片放大缩小等操作
   - [x] react-draggable-tags: 组件拖拽，可适用于移动端排序
+  - [x] js-md5: md5加密
 
 ## 项目功能
 
