@@ -20,7 +20,7 @@ const DragSort = [
   {
     title: '完整代码',
     content:  `
-      function Index({list = [], onChange=()=>{}, render=()=>}) {
+      function Index({list = [], inLine = false, onChange=()=>{}, render=()=>{}}) {
 
         if(!list[0].id){
           list.map((item, index) => item.id = index)
@@ -29,6 +29,7 @@ const DragSort = [
         return (
           <div className="DDragSort">
             <DraggableArea
+              isList={inLine ? false : true}
               initialTags={list}
               render ={({tag}) => render(tag)}
               onChange={(tags) => onChange(tags)}
@@ -52,6 +53,9 @@ const DragSort = [
       },{
         name: 'render',
         value: '渲染的内容，接收list数组中的每一项，这里当做循环的div就可以（必传）'
+      },{
+        name: 'inLine',
+        value: '是否为inline模式，默认为block'
       }
     ],
     method: 'content',
@@ -73,7 +77,7 @@ const DragSort = [
   },
   {
     title: 'render',
-    content: '这里需要注意Draggable组件包裹的组件是有一些默认样式的，比如说display，如果要独占一行，建议使用100vw来沾满',
+    content: '这里需要注意Draggable组件包裹的组件是有一些默认样式的',
     method: 'content',
     type: 'red'
   },
@@ -81,7 +85,6 @@ const DragSort = [
     title: '使用示例 Css代码',
     content:  `
       .DDragTest{
-        width: 100vw;
         &-tag{
           padding: 4px 16px;
           div{
