@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Head, List } from './component'
 import { connect } from 'react-redux'
 
-import { Method } from '@unilts';
+import { Method, Secret } from '@unilts';
 import { DragSort, FromList, Radio } from '@components/HighOrder'
 
 import * as homeActions from '@actions/home'

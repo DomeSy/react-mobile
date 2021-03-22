@@ -17,6 +17,7 @@
     "copy-to-clipboard": "^3.3.1",
     "customize-cra": "^1.0.0",
     "figlet": "^1.5.0",
+    "js-md5": "^0.7.3",
     "marked": "^1.2.8",
     "mockjs": "^1.1.0",
     "qs": "^6.9.6",
