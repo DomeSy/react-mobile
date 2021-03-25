@@ -1,5 +1,5 @@
-import { Control } from 'react-keeper';
-
+import { Control, CacheLink } from 'react-keeper';
+import React from 'react'
 /**
  * @module 跳转逻辑封装（并获取参数）
  * 

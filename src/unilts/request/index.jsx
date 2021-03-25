@@ -10,7 +10,7 @@ const local = '/api/'
  * @param method 请求方式
  * @param url部分地址 
  */
-axios.defaults.headers['ContentType'] = 'application/x-www-form-urlencoded'; 
+axios.defaults.headers['ContentType'] = 'application/json'; 
 axios.defaults.timeout = 20000;
 async function Axios(payload = {},{method = 'get', url = '', path = false}){
 
