@@ -6,7 +6,6 @@ import * as counterActions from '@actions/counter'
 
 @connect(({counter}) => ({counter}), {...counterActions})
 class Counter extends Component {
-
   render() {
     return (
       <div className="Counter">
