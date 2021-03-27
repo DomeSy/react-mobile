@@ -39,9 +39,8 @@ class ListView extends Component {
     const { homeList } = this.props;
     return (
       <div className="ListView">
-        {/* <Head />
-        <List list={Object.values(homeList)}/> */}
-        <RadioCity />
+        <Head />
+        <List list={Object.values(homeList)}/>
       </div>
     )
   }

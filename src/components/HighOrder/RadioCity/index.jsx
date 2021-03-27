@@ -15,7 +15,7 @@ import './index.less'
  * @param disabled 是否禁用
  * @param active 是否被选中
  */
- class Index extends Component {
+class Index extends Component {
 
   constructor(props){
     super(props);

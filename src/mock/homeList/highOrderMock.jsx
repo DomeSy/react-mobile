@@ -11,11 +11,14 @@ const highOrderMock = [
       }
     ]
   },{
-    name: '单选全选',
+    name: '城市单选全选',
     children: [
       {
         name: '基础Radio',
         value: 'Radio'
+      },{
+        name: '三级城市单选多选',
+        value: 'RadioCity'
       }
     ]
   },{
