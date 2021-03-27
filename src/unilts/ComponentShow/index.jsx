@@ -1,5 +1,5 @@
 import { Skeleton } from '@components/Animation'
-import { Accordion, FromList, Radio, DragSort } from '@components/HighOrder'
+import { Accordion, FromList, Radio, DragSort, RadioCity } from '@components/HighOrder'
 import { ModalTest } from './AntD'
 import { Modal } from '@unilts'
 
@@ -18,6 +18,10 @@ class ComponentShow {
 
   static Radio = () => {
     return <Radio />
+  }
+
+  static RadioCity = () => {
+    return <RadioCity />
   }
 
   static DragSort = () => {

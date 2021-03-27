@@ -1,0 +1,107 @@
+.RadioCity{
+  background: @white;
+  &-center{
+    height: calc(100vh - 77px);
+    overflow-y: auto;
+    // min-height: calc(100vh - 57px);
+    padding: 0 16px 20px;
+    &-all{
+      padding-top: 16px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      color: @color;
+      font-size: 15px;
+      span{
+        color: @blue;
+      }
+      p{
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+    }
+    &-List{
+      margin-top: 20px;
+      &-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div{
+          &:nth-of-type(1){
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            p{
+              font-size: 15px;
+              line-height: 25px;
+              color: @color;
+              &:nth-of-type(1){
+                width: 18px;
+                height: 18px;
+                margin-right: 8px;
+              }
+            }
+          }
+          &:nth-of-type(2){
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            p{
+              &:nth-of-type(1){
+                font-size: 15px;
+                line-height: 25px;
+                color: @blue;
+              }
+            }
+          }
+        }
+      }
+      &-city{
+        padding: 10px 16px 0 16px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-none{
+          border-bottom: none !important;
+        }
+        div{
+          width: 50%;
+          border-bottom: 1px solid #E8E9EA;
+          padding: 7px 0px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          p{
+            font-size: 13px;
+            line-height: 23px;
+            color: @color;
+            &:nth-of-type(1){
+              width: 15px;
+              height: 15px;
+              margin: 0 8px 0 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-radio{
+    background: url('../../../images/HeighOrder/Radio/radio.png');
+    background-size: 100% 100%;
+  }
+  &-radioActive{
+    background: url('../../../images/HeighOrder/Radio/radioActive.png');
+    background-size: 100% 100%;
+  }
+  &-radioNone{
+    background: url('../../../images/HeighOrder/Radio/radioNone.png');
+    background-size: 100% 100%;
+  }
+  &-colorActive{
+    color: @blue;
+  }
+  &-colorNone{
+    color: @tip;
+  }
+}
