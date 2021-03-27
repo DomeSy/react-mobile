@@ -26,6 +26,9 @@ const WeelMock = [
         value: 'Kjsonp'
       }
     ]
+  },{
+    name: '加解密',
+    value: 'Secret'
   }
 ]
 export default WeelMock

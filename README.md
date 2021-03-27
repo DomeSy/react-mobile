@@ -65,6 +65,9 @@
   - [x] react-photo-view: 图片放大缩小等操作
   - [x] react-draggable-tags: 组件拖拽，可适用于移动端排序
   - [x] js-md5: md5加密
+  - [x] jsencrypt: RSA加密解密
+  - [x] crypto-js: DES加密，AES加密解密
+
 
 ## 项目功能
 
