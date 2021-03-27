@@ -20,11 +20,6 @@ class ListView extends Component {
   }
 
   componentDidMount =  async () => {
-    const AESEncrypt = Secret.AESEncrypt('Domsey')
-    const AESDecrypt = Secret.AESDecrypt('BBC78BF045AD7A44566217C2FE942836')
-
-    
-    console.log(AESDecrypt, '----')
     this.props.DHomeInit()
   }
 
