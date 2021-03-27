@@ -7,41 +7,39 @@ const Secret = [
   },
   {
     title: '适用场景',
-    content: 'md5',
+    content: 'md5 RSA DES AES',
     method: 'content',
   },
   {
-    title: 'md5',
+    title: '代码示例',
     content:  `
-      static Debounce = (fn, delay=1000) => {
-        let timer = null;
-        return (...args) => {
-          clearTimeout(timer);
-          timer = setTimeout(() => {
-            fn.apply(this, args);
-          }, delay);
-        };
-      };
+      import { Secret } from '@unilts';
+
+      const md5 = Secret.md5('Domsey')
+      //加密：5b60a82d8454836348cc7c5d7ec3cbc4
+
+      const RSAEncrypt = Secret.RSAEncrypt('Domsey')
+      const RSAdecrypt = Secret.RSAdecrypt('fH6G3zfkjb2RQhIF8kG8YMC10ifwj5A9Fw21u4IPMcd2APEBZHb6oYL4cSWl1nw25dOOtgSY3jYhC1H5JD0ErB2eODFS9qfsD7EpJqlgp9gAnN+9lNd7E7rHQOZo4Gi4+0x3aQ/PvN3hxKYizqgCi7ZNiQEWSLQAGvqiWzb0aOk=')
+
+      const DESEncrypt = Secret.DESEncrypt('Domsey', 'Secret')
+      const DESDecrypt = Secret.DESDecrypt('eda6d335d7ee41d4', 'Secret')
+      // DES
+      // 加密的第一个参数是数据
+      // 第二个是加密的key
+
+      const AESEncrypt = Secret.AESEncrypt('Domsey')
+      const AESDecrypt = Secret.AESDecrypt('BBC78BF045AD7A44566217C2FE942836')
+      // AES
+      // 加密的第一个参数是数据
+      // 第二个是加密的key（默认：十六位十六进制数作为密钥）
+      // 第三个是偏移量iv （默认：十六位十六进制数作为密钥偏移量）
     `,
     method: 'edit',
     copy: true
   },
   {
     title: '',
-    content: [
-      {
-        name: 'fn',
-        value: '包裹的函数'
-      },{
-        name: 'delay',
-        value: '时长，默认1000'
-      }
-    ],
-    method: 'content',
-    type: 'list'
-  },{
-    title: '',
-    content: '注：防抖和节流都是为了防止出现延迟，假死或卡顿的现象，不同的是，防抖是合并多次执行最后一次，节流是在一定时间内，只执行一遍',
+    content: '加密的key需要具体项目来定！',
     method: 'content',
     type: 'red'
   }
