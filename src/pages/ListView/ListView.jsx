@@ -23,18 +23,6 @@ class ListView extends Component {
     this.props.DHomeInit()
   }
 
-  renderTset = (tag) => {
-    return <div className="DDragTest">
-      <div className="DDragTest-tag">
-        <div>{tag.name}</div>
-      </div>
-    </div>
-  }
-
-  onChange = (list) => {
-    console.log(list)
-  }
-
   render() {
     const { homeList } = this.props;
     return (
