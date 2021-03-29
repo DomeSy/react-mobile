@@ -90,6 +90,14 @@ const webMock = [
       }
     ]
   },{
+    name: 'Git',
+    children:[
+      {
+        name: 'git基础',
+        value: 'gitBasic'
+      }
+    ]
+  },{
     name: 'DOM',
     children: [
       {
