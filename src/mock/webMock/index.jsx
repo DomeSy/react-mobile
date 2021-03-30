@@ -4,6 +4,7 @@ import css from './css'
 import js from './js'
 import DOM from './DOM'
 import browser from './browser'
+import git from './git'
 import http from './http'
 import ts from './ts'
 
@@ -13,6 +14,7 @@ const webMock = [
   ...css,
   ...js,
   ...DOM,
+  ...git,
   ...browser,
   ...http,
   ...ts,
