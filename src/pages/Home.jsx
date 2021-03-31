@@ -18,9 +18,8 @@ class Home extends Component {
         }, 0);
       }
     })
-
     // console.log();
-    this.IsPC()
+    // this.IsPC()
   }
 
   IsPC() {  
