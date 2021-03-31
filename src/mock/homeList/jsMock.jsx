@@ -13,6 +13,10 @@ const jsMock = [
       {
         name: '数组去重',
         value: 'ArrayUniqe'
+      },
+      {
+        name: '数组、链表的相互转换',
+        value: 'ArrayLink'
       }
     ]
   }
