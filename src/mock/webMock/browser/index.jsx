@@ -3,6 +3,7 @@ import browserFrom from './browserFrom'
 import browserUI from './browserUI'
 import browserCSS from './browserCSS'
 import browserTree from './browserTree'
+import browserUrl from './browserUrl'
 import browserAgain from './browserAgain'
 
 const browser = [
@@ -11,6 +12,7 @@ const browser = [
   { params: { data: 'browserUI' }, extra:{noTitle: true}, list: browserUI},
   { params: { data: 'browserCSS' }, extra:{noTitle: true}, list: browserCSS},
   { params: { data: 'browserTree' }, extra:{noTitle: true}, list: browserTree},
+  { params: { data: 'browserUrl' }, extra:{noTitle: true}, list: browserUrl},
   { params: { data: 'browserAgain' }, extra:{noTitle: true}, list: browserAgain},
 ]
 export default browser
