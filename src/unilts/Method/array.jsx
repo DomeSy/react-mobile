@@ -3,6 +3,15 @@
  */
 
 /**
+ * @module 数组去重
+ * 
+ * @param {*} arr 数组 
+ */
+const ArrayUnique = (arr = []) => {
+  return Array.from(new Set(arr))
+} 
+
+/**
  * @module 两数组去重
  * 
  * @param a 数组a （总数组） 
@@ -22,5 +31,6 @@ const ArrayRepeat = (a, b, id) => {
 }
 
 export {
-  ArrayRepeat
+  ArrayRepeat,
+  ArrayUnique
 }

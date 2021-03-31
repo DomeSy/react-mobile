@@ -1,24 +1,21 @@
-const Radio = [
+const Index = [
   {
     title: '',
-    content: '在开发中，有时会遇到单选页面和全选页面，而选择的样式是由图片构成，并且有时要求禁用的无法选择，还能全选显示数字，这篇是最基本的，所以没什么可讲的，下篇会做一个三级的单选全选',
+    content: '数组去重，实际中基本不会遇到，一般而言是面试的时候才会用到',
     method: 'content',
     type: 'blue'
   },
   {
-    title: '适用场景',
-    content: '地区选择，二级单选多选',
+    title: '案例：（以此为测试数据）',
+    content: "const arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];",
     method: 'content',
+    type: 'blue'
+
   },
   {
     title: '设计思路',
     content: '单选控制全选，全选控制单选',
     method: 'content',
-  }, 
-  {
-    title: '效果展示',
-    content: "Radio",
-    method: 'component'
   },
   {
     title: '代码 CSS',
@@ -201,4 +198,4 @@ const Radio = [
   }
 ]
 
-export default Radio
+export default Index
