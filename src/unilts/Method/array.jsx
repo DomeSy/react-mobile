@@ -35,9 +35,11 @@ const ArrayRepeat = (a, b, id) => {
 
 /**
  * @module 数组扁平化
+ * 
+ * @param arr 数组
  */
-const ArrayFlat = () => {
-
+const ArrayFlat = (arr = []) => {
+  return arr.flat(Infinity)
 }
 
 export {
