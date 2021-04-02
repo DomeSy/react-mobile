@@ -2,6 +2,27 @@ import { DSkeleton } from '../constants/weel'
 
 const WeelMock = [
   {
+    name: '方法',
+    children: [
+      {
+        name: 'concat',
+        value: 'newConCat'
+      },
+      {
+        name: 'object.assign()',
+        value: 'newAssign'
+      },
+      // {
+      //   name: 'v16.0对比v16.4',
+      //   value: 'ReactLife'
+      // },
+      // {
+      //   name: 'React请求应该放在哪个⽣命周期',
+      //   value: 'ReactRequest'
+      // }
+    ]
+  },
+  {
     name: '骨架屏',
     value: DSkeleton
   },
