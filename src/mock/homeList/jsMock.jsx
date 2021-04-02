@@ -17,6 +17,10 @@ const jsMock = [
       {
         name: '数组、链表的相互转换',
         value: 'ArrayLink'
+      },
+      {
+        name: '数组扁平化',
+        value: 'ArrayFlat'
       }
     ]
   }

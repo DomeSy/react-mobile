@@ -18,9 +18,6 @@ class Home extends Component {
         }, 0);
       }
     })
-    const arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
-    const result = Method.ArrayUnique(arr)
-    console.log(result);
     this.IsPC()
   }
 

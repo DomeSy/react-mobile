@@ -33,7 +33,15 @@ const ArrayRepeat = (a, b, id) => {
   return a;
 }
 
+/**
+ * @module 数组扁平化
+ */
+const ArrayFlat = () => {
+
+}
+
 export {
   ArrayRepeat,
-  ArrayUnique
+  ArrayUnique,
+  ArrayFlat
 }
