@@ -165,6 +165,10 @@ const webMock = [
       {
         name: '从输入URL到页面加载发生了什么',
         value: 'browserUrl'
+      },
+      {
+        name: 'DNS',
+        value: 'browserDNS'
       }
     ]
   }
