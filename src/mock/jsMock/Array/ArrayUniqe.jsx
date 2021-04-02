@@ -40,7 +40,8 @@ const Index = [
         value: '这种方法还无法去掉“{}”空对象'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   },
   {
     title: 'indexOf去重',
@@ -79,7 +80,8 @@ const Index = [
         value: 'NaN、{}没有去重'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   }, 
   {
     title: '利用for嵌套for，然后splice去重（ES5中最常用）',
@@ -116,7 +118,8 @@ const Index = [
         value: 'NaN和{}没有去重，两个null直接消失了'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   }, {
     title: 'sort()',
     content:  `
@@ -155,7 +158,8 @@ const Index = [
         value: 'NaN、{}没有去重'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   }, {
     title: '利用includes',
     content:  `
@@ -193,7 +197,8 @@ const Index = [
         value: '{}没有去重 '
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   },
   {
     title: 'hasOwnProperty',
@@ -225,7 +230,8 @@ const Index = [
         value: '所有的都去重了'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   },{
     title: '利用filter',
     content:  `
@@ -248,7 +254,8 @@ const Index = [
         value: '[1, "true", true, 15, false, undefined, null, "NaN", 0, "a", {…}, {…}]'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   },{
     title: '利用递归去重',
     content:  `
@@ -292,7 +299,8 @@ const Index = [
         value: '所有的都去重了'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   },{
     title: '利用Map数据结构去重',
     content:  `
@@ -326,7 +334,8 @@ const Index = [
         value: '创建一个空Map数据结构，遍历需要去重的数组，把数组的每一个元素作为key存到Map中。由于Map中不会出现相同的key值，所以最终得到的就是去重后的结果。'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   },{
     title: 'reduce+includes',
     content:  `
@@ -346,7 +355,8 @@ const Index = [
         value: '[1, "true", true, 15, false, undefined, null, NaN, "NaN", 0, "a", {…}, {…}]'
       }
     ],
-    method: 'list'
+    method: 'content',
+    type: 'list'
   }
 ]
 
