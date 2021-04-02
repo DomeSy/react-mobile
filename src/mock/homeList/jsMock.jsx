@@ -11,6 +11,10 @@ const jsMock = [
     name: '数组',
     children: [
       {
+        name: '数组排序',
+        value: 'ArraySort'
+      },
+      {
         name: '数组去重',
         value: 'ArrayUniqe'
       },

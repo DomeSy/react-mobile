@@ -18,10 +18,9 @@ class Home extends Component {
         }, 0);
       }
     })
-    // let arr1=[1,2,3]
-    // let arr2=[2,3,4]
-    // const result = Method.TwoArrayUnique(arr1, arr2)
-    // console.log(result)
+
+    // const result = Method.ArraySort(arr, 'number')
+    // console.log(JSON.stringify(result))
 
     this.IsPC()
   }

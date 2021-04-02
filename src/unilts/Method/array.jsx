@@ -42,8 +42,34 @@ const ArrayFlat = (arr = []) => {
   return arr.flat(Infinity)
 }
 
+/**
+ * @module 数组排序
+ * 
+ * @param list 数组
+ * @param isSort 升序方式 true 升序  false 降序
+ * @param name 以对象中的那个字段进行排序，为false，则走正常的排序
+ */
+const ArraySort = (list = [], name = false, isSort = true) => {
+  if(name){
+    const reuslt = list.sort((a, b) => {
+      if(a[name] > b[name]){
+        return isSort ? 1 : -1
+      }else if(a[name] < b[name]){
+        return isSort ? -1 : 1
+      }else{
+        return 0
+      }
+    })
+    return reuslt
+  }else{
+    const result = list.sort((a, b) => isSort ? a - b : b - a)
+    return result
+  }
+}
+
 export {
   ArrayRepeat,
   ArrayUnique,
   ArrayFlat,
+  ArraySort
 }

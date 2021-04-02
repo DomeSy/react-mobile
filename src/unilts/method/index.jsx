@@ -1,6 +1,6 @@
 import copy from 'copy-to-clipboard'
 import { Modal } from '@unilts';
-import { ArrayUnique, ArrayRepeat, ArrayFlat } from './array'
+import { ArrayUnique, ArrayRepeat, ArrayFlat, ArraySort } from './array'
 import { BubbleSort, ShellSort, MergeSort, QuickSort } from './sort'
 import { validateIdCard, validatePhone, validateEmail, validateUpwd, validateCardCode } from './validate'
 import { getDate, getDateTime } from './date'
@@ -110,6 +110,7 @@ class Method{
   static ArrayRepeat = ArrayRepeat
   static ArrayUnique = ArrayUnique
   static ArrayFlat = ArrayFlat
+  static ArraySort = ArraySort
 
   // 排序
   static BubbleSort = BubbleSort
