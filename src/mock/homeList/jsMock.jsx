@@ -15,6 +15,10 @@ const jsMock = [
         value: 'ArrayUniqe'
       },
       {
+        name: '两数组去重并和并',
+        value: 'TwoArrayUnique'
+      },
+      {
         name: '数组、链表的相互转换',
         value: 'ArrayLink'
       },

@@ -45,5 +45,5 @@ const ArrayFlat = (arr = []) => {
 export {
   ArrayRepeat,
   ArrayUnique,
-  ArrayFlat
+  ArrayFlat,
 }
