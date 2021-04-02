@@ -136,14 +136,12 @@ const webMock = [
         name: 'DOM Tree是如何构建的',
         value: 'browserTree'
       },{
-        name: '从输入URL到页面加载发生了什么',
-        value: 'browserUrl'
-      },{
         name: '重绘与重排',
         value: 'browserAgain'
       }
     ]
-  },{
+  },
+  {
     name: 'HTTP',
     children: [
       {
@@ -158,6 +156,15 @@ const webMock = [
       },{
         name: 'HTTP的状态码',
         value: 'HttpCode'
+      }
+    ]
+  },
+  {
+    name: '浏览器渲染',
+    children: [
+      {
+        name: '从输入URL到页面加载发生了什么',
+        value: 'browserUrl'
       }
     ]
   }
