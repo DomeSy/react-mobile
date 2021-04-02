@@ -169,6 +169,10 @@ const webMock = [
       {
         name: 'DNS',
         value: 'browserDNS'
+      },
+      {
+        name: 'TCP链接',
+        value: 'browserTCP'
       }
     ]
   }
