@@ -21,7 +21,14 @@ class Home extends Component {
 
     // const result = Method.ArraySort(arr, 'number')
     // console.log(JSON.stringify(result))
+    const target = [{ a: 1 }];
 
+    const source1 = { b: 2 };
+    const source2 = { c: 1 };
+    
+    const arr =  Object.assign(target, source1, source2);
+    console.log(Object.assign(target, source1, source2))
+    console.log(arr)
     this.IsPC()
   }
 
