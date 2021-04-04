@@ -21,6 +21,10 @@ const webMock = [
       {
         name: 'Promise的使用',
         value: 'Promise'
+      },
+      {
+        name: 'Promise的应用',
+        value: 'PromiseUse'
       }
     ]
   },{
