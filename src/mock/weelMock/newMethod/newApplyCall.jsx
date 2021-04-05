@@ -61,7 +61,7 @@ const Index = [
       '如果要使用数组而不是参数列表，则 apply() 方法非常方便。'
     ],
     method: 'content',
-    type: 'list'
+    type: 'listAll'
   },
 ]
 
