@@ -1,35 +1,64 @@
 const Index = [
   {
     title: '',
-    content: 'Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。',
+    content: 'call和apply用法十分相似',
     method: 'content',
     type: 'blue'
   },
   {
-    title: '案例',
+    title: '',
+    content: '使用 call() 方法，可以编写能够在不同对象上使用的方法。',
+    method: 'content',
+    type: 'blue'
+  },
+  {
+    title: '',
+    content: '通过 apply() 方法，能够编写用于不同对象的方法。',
+    method: 'content',
+    type: 'blue'
+  },
+  {
+    title: 'call()',
     content:  `
-    const target = { a: 1 };
-
-    const source1 = { b: 2 };
-    const source2 = { c: 3 };
-
-    console.log(Object.assign(target, source1, source2))
-    // {a: 1, b: 2, c: 3}
-
-    // 等价于下面这种
-
-    const arr =  Object.assign(target, source1, source2);
-    console.log(arr)
-    // {a: 1, b: 2, c: 3}
-
+      const person = {
+        fullName: function() {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+      const person1 = {
+        firstName:"Bill",
+        lastName: "Gates"
+      }
+      const result = person.fullName.call(person1);
+      console.log(result)
+      // Bill Gates
     `,
     method: 'edit',
   },
   {
-    title: '',
+    title: 'apply()',
+    content:  `
+      const person = {
+        fullName: function() {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+      const person1 = {
+        firstName:"Bill",
+        lastName: "Gates"
+      }
+      const result = person.fullName.apply(person1);
+      console.log(result)
+      // Bill Gates
+    `,
+    method: 'edit',
+  },
+  {
+    title: 'call() 和 apply() 之间的区别',
     content: [
-      '如果有相同的对象会去重，只保留一个',
-      ' 可以处理数组，会当做对象处理，也会返回一个数组'
+      'call() 方法分别接受参数',
+      'apply() 方法接受数组形式的参数。',
+      '如果要使用数组而不是参数列表，则 apply() 方法非常方便。'
     ],
     method: 'content',
     type: 'list'
