@@ -20,7 +20,7 @@ const RadioCity = [
           value: ary[start],
           next: null
         }
-        let rest = array2list(ary, start + 1)
+        let rest = arrayList(ary, start + 1)
         node.next = rest
         return node 
       }
@@ -36,7 +36,7 @@ const RadioCity = [
             return []
         }
         const result = [head.value]
-        const restValues = list2array(head.next)
+        const restValues = listArray(head.next)
         return result.concat(restValues)
       }
     `,
