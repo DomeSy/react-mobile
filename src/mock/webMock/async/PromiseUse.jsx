@@ -25,7 +25,7 @@ const PromiseUse = [
     content: [
       {
         name: '运行结果',
-        value: '1,2,3,4'
+        value: '1,2,4,3'
       },
       {
         name: '解释',
