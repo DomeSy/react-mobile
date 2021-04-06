@@ -9,6 +9,7 @@ import * as homeActions from '@actions/home'
 
 import './ListView.less'
 
+
 @connect(({ home }) => ({ ...home }), { ...homeActions })
 class ListView extends Component {
 

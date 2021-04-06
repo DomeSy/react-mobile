@@ -55,6 +55,7 @@ import './index.less';
  * @param required 是否必填
  * @param errorMsg 错误信息 （默认是placeholder)
  * @param rulesMsg 错误信息 （rules必须存在,不满足条件的情况，为空的则是errorMsg)
+ * @param onKeyUp 键盘输入时的函数，函数，返回符合要求的数字 （用于限制键盘的输入）
  * 
  * @method 为pick独有的参数
  * @param data 数组 格式 label名称， value值， children 子数组
@@ -133,6 +134,17 @@ class Index extends Component {
     this.setState({
       list
     })
+  }
+
+  // 键盘输入
+  onKeyUp = (list,index) => {
+    if(list[index].onKeyUp){
+      let { onKeyUp, value } = list[index]
+      list[index].value = onKeyUp(value)
+      this.setState({
+        list
+      })
+    }
   }
 
   onSubmit = (list) => {
@@ -260,6 +272,7 @@ class Index extends Component {
                     {...getFieldProps(item.valueName, {
                       initialValue: item.value ? item.value : '',
                     })}
+                    onKeyUp={() => this.onKeyUp(list, index)}
                     error={item.error ? true : false}
                     onErrorClick={() => this.onError(item)}
                     className={left ? "FromList-Input" : "FromList-Input FromList-Right"}

@@ -94,8 +94,14 @@ const listTest = [
     rulesMsg: '请输入正确的手机号',
   },
   {
-    name: '是否必填',
+    name: '只输入数字（onKeyUp）',
     valueName: 'value13',
+    type: 'text',
+    onKeyUp: (e) => e.replace(/[^0-9]/g,'')
+  },
+  {
+    name: '是否必填',
+    valueName: 'value14',
     value: '',
     type: 'text',
     max: 11,
@@ -103,7 +109,7 @@ const listTest = [
   },
   {
     name: '是否测',
-    valueName: 'value14',
+    valueName: 'value15',
     value: '',
     type: 'text',
     max: 11,
