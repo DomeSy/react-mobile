@@ -16,10 +16,10 @@ const WeelMock = [
         name: 'call和apply',
         value: 'newApplyCall'
       },
-      // {
-      //   name: 'React请求应该放在哪个⽣命周期',
-      //   value: 'ReactRequest'
-      // }
+      {
+        name: 'typeof和instanceof',
+        value: 'newTypeof'
+      }
     ]
   },
   {
