@@ -1,4 +1,4 @@
-import eventBubbling from './eventCatch'
+import eventBubbling from './eventBubbling'
 import eventCatch from './eventCatch'
 import eventL from './eventL'
 import eventWt from './eventWt'
