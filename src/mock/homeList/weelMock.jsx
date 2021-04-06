@@ -19,6 +19,10 @@ const WeelMock = [
       {
         name: 'typeof和instanceof',
         value: 'newTypeof'
+      },
+      {
+        name: 'hash和history',
+        value: 'newHash'
       }
     ]
   },
