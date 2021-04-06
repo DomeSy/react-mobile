@@ -142,6 +142,9 @@ const webMock = [
       },{
         name: '重绘与重排',
         value: 'browserAgain'
+      },{
+        name: '优化性能',
+        value: 'browserPower'
       }
     ]
   },
