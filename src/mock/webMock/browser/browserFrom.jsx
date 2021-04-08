@@ -33,7 +33,8 @@ const Index = [
     ],
     method: 'content',
     type: 'list'
-  },{
+  },
+  {
     title: '',
     content: '注：和⼤多数浏览器不同，Chrome 浏览器的每个标签⻚都分别对应⼀个呈现引擎实例。每个标签⻚都是⼀个独⽴的进程。',
     method: 'content',
