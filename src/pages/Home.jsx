@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import _404Page from "@pages/Router/_404Page"
 import { Method, Modal } from '@unilts'
+import img from '@images/browser/webkit.png'
 
 class Home extends Component {
   constructor(props){
@@ -18,7 +19,7 @@ class Home extends Component {
         }, 0);
       }
     })
-
+    // console.log(,'--')
     // const result = Method.ArraySort(arr, 'number')
     // console.log(JSON.stringify(result))
 
