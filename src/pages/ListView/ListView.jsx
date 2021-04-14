@@ -8,7 +8,6 @@ import { DragSort, FromList, Qrcode } from '@components/HighOrder'
 import * as homeActions from '@actions/home'
 
 import './ListView.less'
-import img from '@images/Info/touxiang.png'
 
 
 @connect(({ home }) => ({ ...home }), { ...homeActions })
@@ -29,9 +28,8 @@ class ListView extends Component {
     const { homeList } = this.props;
     return (
       <div className="ListView">
-        {/* <Head /> */}
-        {/* <List list={Object.values(homeList)}/> */}
-        <Qrcode logo={img}/>
+        <Head />
+        <List list={Object.values(homeList)}/>
       </div>
     )
   }

@@ -24,6 +24,9 @@ const highOrderMock = [
   },{
     name: '拖拽排序',
     value: 'DragSort'
+  },{
+    name: '二维码',
+    value: 'Qrcode'
   }
 ]
 export default highOrderMock
