@@ -6,7 +6,7 @@ import './index.less'
 /**
  * @module 二维码
  * 
- * @param src 二维码的链接
+ * @param value 二维码的链接
  * @param size Number 二维码的宽高，默认200
  * @param level 等级
  * @param bgColor 二维码的背景颜色
