@@ -67,6 +67,7 @@
   - [x] js-md5: md5加密
   - [x] jsencrypt: RSA加密解密
   - [x] crypto-js: DES加密，AES加密解密
+  - [x] qrcode.react: 生成二维码
 
 
 ## 项目功能
