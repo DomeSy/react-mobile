@@ -1,4 +1,4 @@
-const { override, fixBabelImports, addLessLoader, addWebpackAlias, addPostcssPlugins, addDecoratorsLegacy } = require('customize-cra');
+const { override, fixBabelImports, addLessLoader, addWebpackAlias, addPostcssPlugins, addDecoratorsLegacy, disableEsLint } = require('customize-cra');
 const path = require('path')
 const theme = require('./src/style/theme.jsx')
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
@@ -28,7 +28,7 @@ const addCustomize = () => config => {
 
 module.exports = override(
   fixBabelImports('import', {
-    libraryName: 'antd-mobile',
+    libraryName: 'antd-mobile-v2',
     style: 'less',
   }),
   addLessLoader({
@@ -53,5 +53,6 @@ module.exports = override(
   }),
   process.env.NODE_ENV === 'production' ? addPostcssPlugins([require("postcss-px2rem-exclude")({ remUnit: 37.5, exclude: /node_modules/i })]) : null,
   addDecoratorsLegacy(),
+  disableEsLint(), //忽略eslint警告
   addCustomize(),
 );

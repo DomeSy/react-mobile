@@ -5,7 +5,7 @@ import './index.less'
 /**
  * @module 列表展示组件
 */
-import { Carousel, WingBlank } from 'antd-mobile';
+import { Carousel, WingBlank } from 'antd-mobile-v2';
 
 class Index extends React.Component {
   state = {

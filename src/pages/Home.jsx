@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import _404Page from "@pages/Router/_404Page"
 import { Method, Modal } from '@unilts'
+import { Button } from 'antd-mobile'
 import img from '@images/browser/webkit.png'
 
 class Home extends Component {

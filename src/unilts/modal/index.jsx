@@ -1,4 +1,4 @@
-import { Modal, Toast } from 'antd-mobile';
+import { Modal, Toast } from 'antd-mobile-v2';
 
 /**
  * @module 弹出框、轻提示

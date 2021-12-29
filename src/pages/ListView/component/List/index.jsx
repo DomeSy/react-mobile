@@ -1,6 +1,6 @@
 import React from 'react'
 import { Circular } from '@components/Icon'
-import { Icon } from 'antd-mobile'
+import { Icon } from 'antd-mobile-v2'
 import { Jump } from '@unilts';
 
 import './index.less'

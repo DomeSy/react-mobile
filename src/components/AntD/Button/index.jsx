@@ -1,6 +1,6 @@
 import React from 'react'
 import { Circular } from '@components/Icon'
-import { Button } from 'antd-mobile';
+import { Button } from 'antd-mobile-v2';
 
 import './index.less'
 // import { listTest } from './test'

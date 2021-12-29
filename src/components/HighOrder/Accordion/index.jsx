@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon } from 'antd-mobile';
+import { Icon } from 'antd-mobile-v2';
 import { Jump, Modal } from '@unilts';
 import listTest from './test'
 

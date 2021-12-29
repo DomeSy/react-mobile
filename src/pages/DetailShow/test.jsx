@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { DatePicker, List } from 'antd-mobile';
+import { DatePicker, List } from 'antd-mobile-v2';
 import enUs from 'antd-mobile/lib/date-picker/locale/en_US';
 
 const nowTimeStamp = Date.now();

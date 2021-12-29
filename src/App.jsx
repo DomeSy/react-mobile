@@ -1,12 +1,11 @@
 
-
 import routes from './router';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { Router } from './unilts';
 import configStore from './store';
 
-import 'antd-mobile/dist/antd-mobile.less';
+import 'antd-mobile-v2/dist/antd-mobile.less';
 import './App.less'
 
 const config = configStore()

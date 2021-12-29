@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { List,  InputItem, Picker, DatePicker } from 'antd-mobile';
+import { List,  InputItem, Picker, DatePicker } from 'antd-mobile-v2';
 import { Button } from '@components/AntD'
 import { createForm } from 'rc-form';
 import { Method, Modal } from '@unilts';
