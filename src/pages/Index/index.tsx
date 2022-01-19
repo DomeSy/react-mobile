@@ -30,7 +30,7 @@ const Index:React.FC<IndexProps> = ({app, dispatch})=> {
             <img src={info}></img>
           </div>
           <div>
-            <p>react-mobile1</p>  
+            <p>react-mobile</p>  
             <img onClick={() => Jump.href('https://github.com/DomeSy/react-mobile')} src="https://img.shields.io/github/stars/DomeSy/react-mobile.svg?style=social" alt=""/>
           </div>
           <div>
