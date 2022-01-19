@@ -1,0 +1,37 @@
+.DList{
+  padding: 16px 12px;
+  &-Show{
+    background: @white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 8px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .04);
+    margin-bottom: 8px;
+    &:last-of-type{
+      margin-bottom: 0px;
+    }
+    &-Text{
+      width: calc(100% - 100px);
+      p{
+        color: @color;
+        font-size: 16px;
+        line-height: 26px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:nth-of-type(1){
+          font-weight: bolder;
+        }
+        &:nth-of-type(2){
+          font-size: 14px;
+          font-weight: 22px;
+        }
+      }
+    }
+    &-Arrow{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
