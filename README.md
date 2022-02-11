@@ -10,6 +10,14 @@
 
   另外有通用方法，高阶组件的封装及使用，让移动端项目一键式开发
 
+## cli 安装
+```bash
+$ npm install domesy -g
+
+// 在命令行中使用 domesy 命令即可
+```
+
+![](http://mobile.domesy.cn/img/img3.png)
 
 #### 如果本项目对你有帮助，请不要吝啬你的star
 
